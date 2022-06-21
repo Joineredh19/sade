@@ -1,4 +1,4 @@
 <?php 
 	header("location: Views/pages/index.php");
-	echo"";
+	echo"que onda plebes";
 ?>
