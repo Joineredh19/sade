@@ -13,7 +13,7 @@ if(!isset($_SESSION["Usuario"])){
 
     <title>Traslados</title>
 
-
+<link href="../Resource/css/login.css">
 
 </head>
 <style type="text/css">
