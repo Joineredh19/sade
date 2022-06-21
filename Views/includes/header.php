@@ -1,8 +1,8 @@
 <?php
-session_start();
+/*session_start();
 if(!isset($_SESSION["Usuario"])){
     header("location: ../../Views/pages/login.php");
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -19,5 +19,5 @@ if(!isset($_SESSION["Usuario"])){
 <style type="text/css">
    
 </style>
-<?php date_default_timezone_set('America/Bogota'); ?>
+
 <body>
