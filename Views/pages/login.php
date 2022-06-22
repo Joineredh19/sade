@@ -31,7 +31,7 @@
     <!-- Remind Passowrd -->
     <label> ¿Aún no tiene cuenta? </label>
     <div id="formFooter">
-      <a class="underlineHover" href="#">Registrarse</a>
+      <a class="underlineHover" href="Registro.php">Registrarse</a>
     </div>
 
   </div>
