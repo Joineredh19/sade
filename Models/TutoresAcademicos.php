@@ -1,5 +1,5 @@
 <?php
-class Tutores_Academicos
+class TutoresAcademicos
 {
     private $id;
     private $CalleyNum;
