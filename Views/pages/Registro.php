@@ -33,8 +33,6 @@
     <!---Agregando ComboBox -->
    <br>
     <div class="dropdown">
-<<<<<<< HEAD
-      <br>
   <button class="dropbtn">   Roles</button>
   <br>
   <div class="dropdown-content">
@@ -45,16 +43,6 @@
     <a href="#">Alumno</a>
     <a href="#">Padres de familia</a>
     <br>
-=======
-  <button class="dropbtn">Roles</button>
-  <div class="dropdown-content">
-    <a id="cordinadorTutores" name ="cordinadorTutores">Coordinador de tutores</a>
-    <a id="orientadorEduca" name ="orientadorEduca">Orientador educativo</a>
-    <a id="administrador" name ="administrador">Administrador</a>
-    <a id="tutorAcademico" name ="tutorAcademico">Tutor académico</a>
-    <a id="alumno" name ="alumno">Alumno</a>
-    <a id="padreFamilia" name ="padreFamilia">Padres de familia</a>
->>>>>>> 8973576c7bd964537765f866c8c8d4843413394c
   </div>
   <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
     </form>
