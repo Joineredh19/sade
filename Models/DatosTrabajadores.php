@@ -1,5 +1,5 @@
 <?php 
-class Usuario
+class DatosTrabajadores
 {
     private $id;
     private $Codigo;
