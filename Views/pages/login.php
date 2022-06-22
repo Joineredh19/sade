@@ -32,7 +32,7 @@
     </form>
 
     <!-- Remind Passowrd -->
-    <label> ¿Eres Administrador? </label>
+    <label> ¿Eres administrador? </label>
     <div id="formFooter">
       <a class="underlineHover" href="loginAdmin.php">Iniciar sesión</a>
     </div>

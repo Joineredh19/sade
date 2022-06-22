@@ -19,7 +19,7 @@
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
-      <h3>SADE ADMINISTRADOR</h3>
+      <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
     </div>
 
