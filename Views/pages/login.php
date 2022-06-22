@@ -31,9 +31,9 @@
     </form>
 
     <!-- Remind Passowrd -->
-    <label> ¿Aún no tiene cuenta? </label>
+    <label> ¿Eres Administrador? </label>
     <div id="formFooter">
-      <a class="underlineHover" href="Registro.php">Registrarse</a>
+      <a class="underlineHover" href="loginAdmin.php">Iniciar sesión</a>
     </div>
 
   </div>
