@@ -20,17 +20,18 @@
     <div class="fadeIn first">
       <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
       <h3>SADE</h3>
+      <h3>Sistema Acceso De Estudiantes</h3>
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú codigo">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú dirección">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú número de seguro social">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú RFC (13 digitos)">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú CURP (18 digitos)">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú tipo de sangre">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa si tienes alguna alergía">
+    <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
+      <input type="text" id="codigoUsuario" class="fadeIn second" name="codigoUsuario" placeholder="Ingresa tú codigo">
+      <input type="text" id="direccionUsuario" class="fadeIn second" name="direccionUsuario" placeholder="Ingresa tú dirección">
+      <input type="text" id="nss" class="fadeIn second" name="nss" placeholder="Ingresa tú número de seguro social">
+      <input type="text" id="rfc" class="fadeIn second" name="rfc" placeholder="Ingresa tú RFC (13 digitos)">
+      <input type="text" id="curp" class="fadeIn second" name="curp" placeholder="Ingresa tú CURP (18 digitos)">
+      <input type="text" id="tipoSangre" class="fadeIn second" name="tipoSangre" placeholder="Ingresa tú tipo de sangre">
+      <input type="text" id="alergia" class="fadeIn second" name="alergia" placeholder="Ingresa si tienes alguna alergía">
       <input type="submit" class="fadeIn fourth" value="Registrarse">
     </form>
 

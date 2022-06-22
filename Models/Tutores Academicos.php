@@ -1,5 +1,5 @@
 <?php
-class Ota_Informe_Liquidos
+class Tutores_Academicos
 {
     private $id;
     private $CalleyNum;
