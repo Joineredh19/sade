@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>SADE</title>
+    <title>Sistema Acceso De Estudiantes</title>
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -19,7 +19,7 @@
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
-      <h3>SADE</h3>
+      <h3>Sistema Acceso De Estudiantes</h3>
     </div>
 
     <!-- Login Form -->

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>SADE ADMINISTRADOR</title>
+    <title>Sistema Acceso De Estudiantes ADMINISTRADOR</title>
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

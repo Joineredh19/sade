@@ -11,7 +11,7 @@
           <!-- <p>CT</p> -->
         </a>
         <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
-          SADE
+        Sistema Acceso De Estudiantes
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->
