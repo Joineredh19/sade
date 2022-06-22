@@ -3,7 +3,7 @@ class BitacorasAlumnos
 {
     private $id;
     private $HoraEntrada;
-    private $HoraSalids;
+    private $HoraSalida;
     private $Observacion;
     private $DatosAlumnos_id;
 
