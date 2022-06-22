@@ -25,6 +25,8 @@
 
     <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
+     <select name="Roles" id="Roles" class="fadeIn second" value="">
+                    </select>
       <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="Nombre">
       <input type="text" id="apellidosUsuario" class="fadeIn second" name="apellidosUsuario" placeholder="Apellidos">
       <input type="text" id="email" class="fadeIn second" name="email" placeholder="E-Mail">
