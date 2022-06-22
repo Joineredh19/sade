@@ -1,11 +1,13 @@
 <?php
-class BitacorasAlumnos
+class Visitantes
 {
     private $id;
-    private $HoraEntrada;
-    private $HoraSalida;
-    private $Observacion;
-    private $DatosAlumnos_id;
+    private $Codigo;
+    private $Nombres;
+    private $Apellidos;
+    private $Email;
+    private $Telefono;
+    private $AreasTrabajo_id;
 
     public function __GET($k)
     {
