@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
 
-    <title>SADE</title>
+    <title>SADE ADMINISTRADOR</title>
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -21,19 +19,15 @@
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
-      <h3>SADE</h3>
+      <h3>SADE ADMINISTRADOR</h3>
     </div>
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Contraseña">
       <input type="submit" class="fadeIn fourth" value="Ingresar">
     </form>
-
-    <!-- Remind Passowrd -->
-    <label> ¿Aún no tiene cuenta? </label>
-    <div id="formFooter">
-      <a class="underlineHover" href="Registro.php">Registrarse</a>
     </div>
 
   </div>
