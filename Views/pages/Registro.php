@@ -25,16 +25,15 @@
 
     <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-      <input type="text" id="codigoUsuario" class="fadeIn second" name="codigoUsuario" placeholder="Nombre">
-      <input type="text" id="direccionUsuario" class="fadeIn second" name="direccionUsuario" placeholder="Apellidos">
-      <input type="text" id="nss" class="fadeIn second" name="nss" placeholder="E-Mail">
-      <input type="text" id="rfc" class="fadeIn second" name="rfc" placeholder="Teléfono">
-      <input type="text" id="curp" class="fadeIn second" name="curp" placeholder="Contraseña">
-      <input type="text" id="alergia" class="fadeIn second" name="alergia" placeholder="Status">
-      <input type="text" id="alergia" class="fadeIn second" name="alergia" placeholder="Status">
+      <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="Nombre">
+      <input type="text" id="apellidosUsuario" class="fadeIn second" name="apellidosUsuario" placeholder="Apellidos">
+      <input type="text" id="email" class="fadeIn second" name="email" placeholder="E-Mail">
+      <input type="text" id="telefono" class="fadeIn second" name="telefono" placeholder="Teléfono">
+      <input type="text" id="contrasena" class="fadeIn second" name="contrasena" placeholder="Contraseña">
     <!---Agregando ComboBox -->
    <br>
     <div class="dropdown">
+<<<<<<< HEAD
       <br>
   <button class="dropbtn">   Roles</button>
   <br>
@@ -46,8 +45,18 @@
     <a href="#">Alumno</a>
     <a href="#">Padres de familia</a>
     <br>
+=======
+  <button class="dropbtn">Roles</button>
+  <div class="dropdown-content">
+    <a id="cordinadorTutores" name ="cordinadorTutores">Coordinador de tutores</a>
+    <a id="orientadorEduca" name ="orientadorEduca">Orientador educativo</a>
+    <a id="administrador" name ="administrador">Administrador</a>
+    <a id="tutorAcademico" name ="tutorAcademico">Tutor académico</a>
+    <a id="alumno" name ="alumno">Alumno</a>
+    <a id="padreFamilia" name ="padreFamilia">Padres de familia</a>
+>>>>>>> 8973576c7bd964537765f866c8c8d4843413394c
   </div>
-  <input type="submit" class="fadeIn fourth" value="Registrarse">
+  <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
     </form>
 
     <!-- Remind Passowrd -->
