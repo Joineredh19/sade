@@ -26,7 +26,7 @@
     <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
      <select name="Roles" id="Roles" class="fadeIn second" value="">
-                    </select>
+      </select>
       <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="Nombre">
       <input type="text" id="apellidosUsuario" class="fadeIn second" name="apellidosUsuario" placeholder="Apellidos">
       <input type="text" id="email" class="fadeIn second" name="email" placeholder="E-Mail">
@@ -35,7 +35,7 @@
     <!---Agregando ComboBox -->
    <br>
     <div class="dropdown">
-  <button class="dropbtn">   Roles</button>
+<!--  <button class="dropbtn">   Roles</button>
   <br>
   <div class="dropdown-content">
     <a href="#">Coordinador de tutores</a>
@@ -45,7 +45,7 @@
     <a href="#">Alumno</a>
     <a href="#">Padres de familia</a>
     <br>
-  </div>
+  </div>-->
   <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
     </form>
 
@@ -63,3 +63,21 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Roles/Roles.php',
+    data: {'peticion': 'Roles'}    
+})
+.done(function(Roles){
+    $('#Roles').html(Roles)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>
