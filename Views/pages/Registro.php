@@ -24,14 +24,13 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú codigo">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú dirección">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú número de seguro social">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú RFC (13 digitos)">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú CURP (18 digitos)">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa tú tipo de sangre">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingresa si tienes alguna alergía">
       <input type="submit" class="fadeIn fourth" value="Registrarse">
     </form>
 
