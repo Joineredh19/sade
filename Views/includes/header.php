@@ -11,13 +11,11 @@ if(!isset($_SESSION["Usuario"])){
 <head>
     <meta charset="utf-8">
 
-    <title>Traslados</title>
+    <title>SADE</title>
 
-<link href="../../Resource/css/login.css">
+    <link href="../Resource/css/login.css"  rel="stylesheet">
+    
 
 </head>
-<style type="text/css">
-   
-</style>
 
 <body>
