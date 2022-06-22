@@ -4,14 +4,14 @@
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../Resource/img/LogoUni2.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
+          SADE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->
