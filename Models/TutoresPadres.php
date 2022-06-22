@@ -1,5 +1,5 @@
 <?php 
-class Usuario
+class TutoresPadres
 {
     private $id;
     private $CalleyNum;

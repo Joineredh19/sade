@@ -1,11 +1,9 @@
 <?php 
-class DatosTrabajadores
+class TelefonosAlumnos
 {
     private $id;
-    private $Codigo;
-    private $CalleyNum;
-    private $Usuarios_id;
-    private $Colonias_id;
+    private $Telefono;
+    private $DatosAlumnos_id;
     
 
     public function __GET($k)

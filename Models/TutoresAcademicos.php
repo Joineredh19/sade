@@ -1,12 +1,10 @@
-<?php 
-class DatosTrabajadores
+<?php
+class TutoresAcademicos
 {
     private $id;
-    private $Codigo;
     private $CalleyNum;
     private $Usuarios_id;
     private $Colonias_id;
-    
 
     public function __GET($k)
     {

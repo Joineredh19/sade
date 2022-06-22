@@ -1,10 +1,11 @@
 <?php
-class Tutores_Academicos
+class BitacorasAlumnos
 {
     private $id;
-    private $CalleyNum;
-    private $Usuarios_id;
-    private $Colonias_id;
+    private $HoraEntrada;
+    private $HoraSalida;
+    private $Observacion;
+    private $DatosAlumnos_id;
 
     public function __GET($k)
     {

@@ -1,12 +1,13 @@
-<?php 
-class DatosTrabajadores
+<?php
+class Visitantes
 {
     private $id;
     private $Codigo;
-    private $CalleyNum;
-    private $Usuarios_id;
-    private $Colonias_id;
-    
+    private $Nombres;
+    private $Apellidos;
+    private $Email;
+    private $Telefono;
+    private $AreasTrabajo_id;
 
     public function __GET($k)
     {

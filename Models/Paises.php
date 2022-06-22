@@ -1,11 +1,8 @@
 <?php 
-class DatosTrabajadores
+class Paises
 {
     private $id;
-    private $Codigo;
-    private $CalleyNum;
-    private $Usuarios_id;
-    private $Colonias_id;
+    private $Pais;
     
 
     public function __GET($k)

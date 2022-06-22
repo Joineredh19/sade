@@ -1,12 +1,9 @@
 <?php 
-class DatosTrabajadores
+class CodigosPostales
 {
     private $id;
-    private $Codigo;
-    private $CalleyNum;
-    private $Usuarios_id;
-    private $Colonias_id;
-    
+    private $CodigoPostal;
+    private $Ciudades_id;
 
     public function __GET($k)
     {
