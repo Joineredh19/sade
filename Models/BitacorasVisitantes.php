@@ -1,5 +1,5 @@
 <?php
-class 
+class BitacorasVisistantes
 {
     private $id;
     private $HoraEntrada;
