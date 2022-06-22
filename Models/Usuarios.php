@@ -7,8 +7,8 @@ class Usuario
     private $Email;
     private $Telefono;
     private $Status;
-    private $Fecha_Alta;
-    private $Roles_id;
+    private $FechaAlta;
+    private $Rolesid;
     
 
     public function __GET($k)
