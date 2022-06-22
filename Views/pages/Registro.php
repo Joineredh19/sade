@@ -33,9 +33,11 @@
       <input type="text" id="alergia" class="fadeIn second" name="alergia" placeholder="Status">
       <input type="text" id="alergia" class="fadeIn second" name="alergia" placeholder="Status">
     <!---Agregando ComboBox -->
-
+   <br>
     <div class="dropdown">
+      <br>
   <button class="dropbtn">   Roles</button>
+  <br>
   <div class="dropdown-content">
     <a href="#">Coordinador de tutores</a>
     <a href="#">Orientador educativo</a>
@@ -43,6 +45,7 @@
     <a href="#">Tutor académico</a>
     <a href="#">Alumno</a>
     <a href="#">Padres de familia</a>
+    <br>
   </div>
   <input type="submit" class="fadeIn fourth" value="Registrarse">
     </form>
