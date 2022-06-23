@@ -10,6 +10,17 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 </head>
 
+<?php
+
+require_once('../../Controllers/HomeController.php');
+$HomeController = new HomeController();
+
+require '../../Lib/FlashMessages.php';
+if (!session_id()) @session_start();
+// Instantiate the class
+$msg = new \Plasticbrain\FlashMessages\FlashMessages();
+?>
+
 <body>
 
 <div class="wrapper fadeInDown">
@@ -24,7 +35,7 @@
     </div>
 
     <!-- Login Form -->
-    <form action="../../Actions/login/login.php">
+    <form action="../../Actions/login/login.php" method="post" >
       <input type="text" id="Email" class="fadeIn second" name="Email" placeholder="E-mail">
       <input type="text" id="Password" class="fadeIn second" name="Password" placeholder="Contraseña">
       <input type="submit" class="fadeIn fourth" value="Ingresar">
