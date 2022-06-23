@@ -34,7 +34,7 @@
       <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail">
       <br>
-      <input type="telefono" id="telefono" class="form-control" name="telefono" placeholder="Teléfono">
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono">
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
