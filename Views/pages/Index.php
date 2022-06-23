@@ -5,7 +5,7 @@
       <div class="logo">
         <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../Resource/img/LogoUni2.png">
+            <img src="../Resource/img/UDG - Vector Blanco.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
@@ -56,13 +56,7 @@
               <p>ADMINISTRADOR</p>
             </a>
           </li>
-<!--          <li>
-            <a href="./typography.html">
-              <i class="bi bi-box-arrow-left"></i>
-              <p>CERRAR SESION</p>
-            </a>
-          </li>
--->
+
           <li class="active-pro">
             <a href="./upgrade.html">
               <i class="nc-icon nc-spaceship"></i>
@@ -159,8 +153,8 @@
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
- <!--                 <i class="fa fa-refresh"></i>
--->                   <i class="fa fa-calendar-o"></i>
+         
+                   <i class="fa fa-calendar-o"></i>
                   Faltas diarias
                 </div>
               </div>
