@@ -262,7 +262,7 @@ html {
   }
 
   .dropbtn {
-    background-color: #56baed;
+background-color: #56baed;
     border: none;
     color: white;
     padding: 15px 100px;
@@ -281,11 +281,6 @@ html {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    -moz-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
   }
   
 
