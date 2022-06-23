@@ -5,6 +5,7 @@ class Usuario
     private $Nombres;
     private $Apellidos;
     private $Email;
+    private $Contrasenia;
     private $Telefono;
     private $Status;
     private $FechaAlta;

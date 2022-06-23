@@ -46,35 +46,28 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->Ota_UsuarioModel->Ver()");
 			}
 		}
-
-		public function VerxUsuario($Usuario)
+		*/
+		public function VerUsuario($Email)
 		{
 			try{
-				$stm = $this->pdo->prepare("SELECT * FROM Usuario WHERE Usuario = ?");
-				$stm->execute(array($Usuario));
+				$stm = $this->pdo->prepare("SELECT Email, Contrasenia FROM TUsuario WHERE Email = ?");
+				$stm->execute(array($Email));
 				$r = $stm->fetch(PDO::FETCH_OBJ);
 
 				if ($r) {
-					$entity = new Ota_Usuario();
-
-					$entity->__SET('IdUsuario',$r->IdUsuario);
-					$entity->__SET('Us_Nom1',$r->Us_Nom1);
-					$entity->__SET('Us_Nom2',$r->Us_Nom2);
-					$entity->__SET('Us_Ape1',$r->Us_Ape1);
-					$entity->__SET('Us_Ape2',$r->Us_Ape2);
-					
-					$entity->__SET('Usuario',$r->Usuario);
-					$entity->__SET('Clave',$r->Clave);
+					$entity = new Usuario();
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Contrasenia',$r->Contrasenia);
 				
 					return $entity;
 
 				}
 				return NULL;
 			}catch(Exception $e){
-				die($e->getMessage()." ->Ota_UsuarioModel->Ver()");
+				die($e->getMessage()." ->UsuarioModel->Ver()");
 			}
 		}
-
+/*
 		public function Listar()
 		{
 			try

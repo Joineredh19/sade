@@ -23,5 +23,9 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
-
+		public function VerUsuario($Email){
+			$model = new UsuarioModel();
+			$var = $model->VerUsuario($Email);
+			return $var;
+		}
 	}
