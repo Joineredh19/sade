@@ -25,16 +25,15 @@
 
     <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="fadeIn second" value="">
+     <select name="Roles" id="Roles" class="form-control form-control-lg" value="">
       </select>
       <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="Nombre">
       <input type="text" id="apellidosUsuario" class="fadeIn second" name="apellidosUsuario" placeholder="Apellidos">
       <input type="text" id="email" class="fadeIn second" name="email" placeholder="E-Mail">
       <input type="text" id="telefono" class="fadeIn second" name="telefono" placeholder="Teléfono">
-      <input type="text" id="contrasena" class="fadeIn second" name="contrasena" placeholder="Contraseña">
-    <!---Agregando ComboBox -->
-   <br>
-    <div class="dropdown">
+      <input type="text" type="password" class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
+        <!---Agregando ComboBox -->
+
 <!--  <button class="dropbtn">   Roles</button>
   <br>
   <div class="dropdown-content">
