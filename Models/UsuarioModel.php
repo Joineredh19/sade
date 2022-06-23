@@ -50,7 +50,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		public function VerUsuario($Email)
 		{
 			try{
-				$stm = $this->pdo->prepare("SELECT Email, Contrasenia FROM TUsuario WHERE Email = ?");
+				$stm = $this->pdo->prepare("SELECT Email, Contrasenia FROM tusuarios WHERE Email = ?");
 				$stm->execute(array($Email));
 				$r = $stm->fetch(PDO::FETCH_OBJ);
 

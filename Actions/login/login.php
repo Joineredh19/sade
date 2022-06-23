@@ -5,7 +5,7 @@
 
 <?php 
 
-	//session_start();
+	session_start();
 	require_once('../../Controllers/HomeController.php');
 	$HomeController = new HomeController();
 
@@ -16,17 +16,17 @@
 
 	$Email = $_POST['Email'];
 
-	if ($Usuario = $UsuarioModel->VerUsuario($Email,$contrasenia)) {
+	if ($Usuario = $HomeController->VerUsuario($Email)) {
 		if ($Usuario->__GET('Contrasenia') == md5($_POST['password'])) {
 			$_SESSION['Email'] = $Usuario->__GET('Email');
 			
 			header("location: ../../Views/pages/index.php");
 		}else{
 			$msg->error('ERROR, La contraseña no es valida..!');
-			echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$usuario."';</script>");
+			echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$Email."';</script>");
 		}
 	}else{
-		$msg->error('ERROR, El usuario '.$usuario.' no existe..!');
-		echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$usuario."';</script>");
+		$msg->error('ERROR, El usuario '.$Email.' no existe..!');
+		echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$Email."';</script>");
 	}
 ?>

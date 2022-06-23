@@ -25,7 +25,7 @@
 
     <!-- Login Form -->
     <form action="../../Actions/login/login.php">
-      <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="E-mail">
+      <input type="text" id="Email" class="fadeIn second" name="Email" placeholder="E-mail">
       <input type="text" id="Password" class="fadeIn second" name="Password" placeholder="Contraseña">
       <input type="submit" class="fadeIn fourth" value="Ingresar">
     </form>
