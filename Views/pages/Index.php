@@ -51,7 +51,7 @@
           </li>
           <li>
             <a href="./tables.html">
-              <i class="nc-icon nc-tile-56"></i>
+              <i class="bi bi-arrow-up"></i>
               <p>PADRES DE FAMILIA</p>
             </a>
           </li>
