@@ -56,12 +56,13 @@
               <p>ADMINISTRADOR</p>
             </a>
           </li>
-          <li>
+<!--          <li>
             <a href="./typography.html">
               <i class="bi bi-box-arrow-left"></i>
               <p>CERRAR SESION</p>
             </a>
           </li>
+-->
           <li class="active-pro">
             <a href="./upgrade.html">
               <i class="nc-icon nc-spaceship"></i>
@@ -83,7 +84,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="javascript:;">Estadísticas</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -93,7 +94,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text" value="" class="form-control" placeholder="Buscar...">
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="nc-icon nc-zoom-split"></i>
@@ -112,7 +113,7 @@
               </li>
               <li class="nav-item btn-rotate dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="nc-icon nc-bell-55"></i>
+                  <i class="bi bi-person-square"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Some Actions</span>
                   </p>
@@ -144,13 +145,13 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-globe text-warning"></i>
+                      <i class="bi bi-journal-text"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Capacity</p>
-                      <p class="card-title">150GB<p>
+                      <p class="card-category">Faltas</p>
+                      <p class="card-title">50<p>
                     </div>
                   </div>
                 </div>
@@ -158,8 +159,9 @@
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-refresh"></i>
-                  Update Now
+ <!--                 <i class="fa fa-refresh"></i>
+-->                   <i class="fa fa-calendar-o"></i>
+                  Faltas diarias
                 </div>
               </div>
             </div>
@@ -170,13 +172,13 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-money-coins text-success"></i>
+                      <i class="bi bi-journal-check text-success"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Revenue</p>
-                      <p class="card-title">$ 1,345<p>
+                      <p class="card-category">Faltas atendidas</p>
+                      <p class="card-title">30<p>
                     </div>
                   </div>
                 </div>
@@ -184,8 +186,8 @@
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-calendar-o"></i>
-                  Last day
+                  <i class="fa fa-check-square"></i>
+                  Faltas diarias atendidas
                 </div>
               </div>
             </div>
@@ -196,13 +198,13 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-vector text-danger"></i>
+                      <i class="bi bi-journal-x text-danger"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Errors</p>
-                      <p class="card-title">23<p>
+                      <p class="card-category">Faltas sin atender</p>
+                      <p class="card-title">20<p>
                     </div>
                   </div>
                 </div>
@@ -210,8 +212,8 @@
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-clock-o"></i>
-                  In the last hour
+                  <i class="fa fa-minus-square"></i>
+                  Faltas diarias sin atender
                 </div>
               </div>
             </div>
@@ -222,13 +224,13 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-favourite-28 text-primary"></i>
+                      <i class="bi bi-journals text-primary"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Followers</p>
-                      <p class="card-title">+45K<p>
+                      <p class="card-category">Faltas totales</p>
+                      <p class="card-title">500<p>
                     </div>
                   </div>
                 </div>
@@ -236,8 +238,8 @@
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-refresh"></i>
-                  Update now
+                  <i class="fa fa-bar-chart"></i>
+                  Faltas totales del curso
                 </div>
               </div>
             </div>
