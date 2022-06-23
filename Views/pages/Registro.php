@@ -25,13 +25,8 @@
     </div>
 
     <!-- Login Form -->
-<<<<<<< HEAD
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
      <select name="Roles" id="Roles" class="form-control" value=""> </select>
-=======
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-      <select name="Roles" id="Roles" class="form-control" value="">
->>>>>>> 834da584a692d4ca709350eb6d933414cb6075bb
       <br>
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre">
       <br> 
