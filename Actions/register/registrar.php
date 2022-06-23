@@ -21,15 +21,15 @@ if(!isset($_SESSION["Usuario"])){
     $RolesId = $_POST['RolesId'];
     $Nombres = $_POST['nombreUsuario'];
     $Apellidos = $_POST['apellidosUsuario'];
-    $FechaAlta = $_POST['FechaAlta'];
+    //$FechaAlta = $_POST['FechaAlta'];
     $Email = $_POST['email'];
     $Telefono = $_POST['telefono'];
     $Status = $_POST['Status'];
-    $Contraseña = $_POST['Contraseña'];
+    $Contrasenia =password_hash($_POST['Contraseña'], PASSWORD_DEFAULT);
 
 
 
-	if($HomeController->AgregarUsuario($Nombres,$Apellidos,$Email,$Telefono,$Status,$RolesId,$FechaAlta,$Contraseña) == true){
+	if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia) == true){
 
 		$msg->success('!Agregado con exito¡');
 		
