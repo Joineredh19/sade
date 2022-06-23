@@ -55,7 +55,7 @@ require_once('../../Models/Conexion/Conexion.php');
 				$r = $stm->fetch(PDO::FETCH_OBJ);
 
 				if ($r) {
-					$entity = new Usuario();
+					$entity = new Usuarios();
 					$entity->__SET('Email',$r->Email);
 					$entity->__SET('Contrasenia',$r->Contrasenia);
 				
