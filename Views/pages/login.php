@@ -28,7 +28,9 @@
     <!-- Login Form -->
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="E-mail o número telefónico">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Observaciones">
       <input type="submit" class="fadeIn fourth" value="Ingresar">
+      
     </form>
 
     <!-- Remind Passowrd -->

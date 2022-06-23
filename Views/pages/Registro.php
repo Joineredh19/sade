@@ -28,13 +28,13 @@
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
      <select name="Roles" id="Roles" class="form-control" value=""> </select>
       <br>
-      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre">
+      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
       <br> 
-      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos">
+      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
       <br>
-      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail">
+      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
       <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono">
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
