@@ -21,6 +21,7 @@
       <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
+      <br>
     </div>
 
     <!-- Login Form -->
@@ -54,6 +55,7 @@
     <a href="#">Padres de familia</a>
     <br>
   </div>-->
+  <br>
   <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
     </form>
 
