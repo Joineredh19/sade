@@ -1,5 +1,4 @@
 <?php include '../includes/header.php';?>
-
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
@@ -19,9 +18,17 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+          
+        <li class="active ">
+            <a href="./user.html">
+              <i class="bi bi-person"></i>
+              <p>ALUMNO</p>
+            </a>
+          </li>
+
+            <li>
             <a href="./dashboard.html">
-              <i class="bi bi-box-arrow-left"></i>
+              <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
           </li>
@@ -32,39 +39,33 @@
             </a>
           </li>
           <li>
-            <a href="./map.html">
-              <i class="nc-icon nc-pin-3"></i>
-              <p>ADMINISTRADOR</p>
-            </a>
-          </li>
-          <li>
             <a href="./notifications.html">
-              <i class="nc-icon nc-bell-55"></i>
+              <i class="bi bi-book"></i>
               <p>TUTOR ACADEMICO</p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
-              <i class="nc-icon nc-single-02"></i>
-              <p>ALUMNO</p>
-            </a>
-          </li>
-          <li>
             <a href="./tables.html">
-              <i class="bi bi-arrow-up"></i>
+              <i class="bi bi-people"></i>
               <p>PADRES DE FAMILIA</p>
             </a>
           </li>
           <li>
+            <a href="./map.html">
+              <i class="bi bi-gear"></i>
+              <p>ADMINISTRADOR</p>
+            </a>
+          </li>
+          <li>
             <a href="./typography.html">
-              <i class="nc-icon nc-caps-small"></i>
+              <i class="bi bi-box-arrow-left"></i>
               <p>CERRAR SESION</p>
             </a>
           </li>
           <li class="active-pro">
             <a href="./upgrade.html">
               <i class="nc-icon nc-spaceship"></i>
-              <p>XX</p>
+              <p>XXXXXXXXXXXXXX</p>
             </a>
           </li>
         </ul>
@@ -117,9 +118,9 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Crear usuario</a>
+                  <a class="dropdown-item" href="#">Ver perfil</a>
+                  <a class="dropdown-item" href="#">Cerrar sesión</a>
                 </div>
               </li>
               <li class="nav-item">
