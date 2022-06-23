@@ -26,7 +26,7 @@
 
     <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="form-control" value="">
+     <select name="Roles" id="Roles" class="form-control" value=""> </select>
       <br>
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre">
       <br> 
