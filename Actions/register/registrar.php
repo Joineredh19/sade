@@ -5,10 +5,10 @@
 
 <?php 
 
-session_start();
+/*session_start();
 if(!isset($_SESSION["Email"])){
 	header("location: ../../Views/pages/login.php");
-}else{
+}else{*/
 	require_once('../../Controllers/HomeController.php');
 	$HomeController = new HomeController();
 
@@ -16,7 +16,7 @@ if(!isset($_SESSION["Email"])){
 	if (!session_id()) @session_start();
 	// Instantiate the class
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
-	date_default_timezone_set('America/Mexico_Ciy');
+	date_default_timezone_set('America/Mexico_City');
 
     $RolesId = $_POST['Roles'];
     $Nombres = $_POST['nombreUsuario'];
@@ -37,5 +37,5 @@ if(!isset($_SESSION["Email"])){
 	}else{
 		$msg->error('¡ERROR, no se Agrego!..');
 	}
-}
+//}
 ?>
