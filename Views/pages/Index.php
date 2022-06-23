@@ -21,7 +21,7 @@
         <ul class="nav">
           <li class="active ">
             <a href="./dashboard.html">
-              <i class="nc-icon nc-bank"></i>
+              <i class="bi bi-box-arrow-left"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
           </li>
