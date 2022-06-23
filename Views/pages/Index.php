@@ -21,13 +21,13 @@
         <ul class="nav">
           <li class="active ">
             <a href="./dashboard.html">
-              <i class="nc-icon nc-bank"></i>
+              <i class="bi bi-box-arrow-left"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
           </li>
           <li>
             <a href="./icons.html">
-              <i class="nc-icon nc-diamond"></i>
+              <i class="bi bi-clipboard-check"></i>
               <p>ORIENTADOR EDUCATIVO</p>
             </a>
           </li>

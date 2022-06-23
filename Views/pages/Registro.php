@@ -24,14 +24,23 @@
     </div>
 
     <!-- Login Form -->
+
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="form-control form-control-lg" value="">
+     <select name="Roles" id="Roles" class="form-control" value="">
+
+     <form method="post" action="../../Actions/register/registrar.php">
+     <select name="Roles" id="Roles" class="fadeIn second" value="">
       </select>
-      <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="Nombre">
-      <input type="text" id="apellidosUsuario" class="fadeIn second" name="apellidosUsuario" placeholder="Apellidos">
-      <input type="text" id="email" class="fadeIn second" name="email" placeholder="E-Mail">
-      <input type="text" id="telefono" class="fadeIn second" name="telefono" placeholder="Teléfono">
-      <input type="text" type="password" class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
+      <br>
+      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre">
+      <br>
+      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos">
+      <br>
+      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail">
+      <br>
+      <input type="telefono" id="telefono" class="form-control" name="telefono" placeholder="Teléfono">
+      <br>
+      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
         <!---Agregando ComboBox -->
 
 <!--  <button class="dropbtn">   Roles</button>

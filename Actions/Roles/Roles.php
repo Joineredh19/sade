@@ -3,11 +3,14 @@ function Conexion(){
 
    // $serverName = "127.0.0.1";
   //  $connectionOptions = array("Database"=>"sade22","Uid"=>"root", "PWD"=>"", "CharacterSet"=>"UTF-8");
-    $conn = mysqli_connect("127.0.0.1", "root", "", "sade22");
+    $conn = mysqli_connect("bzya6emoafjbqjkolhiy-mysql.services.clever-cloud.com",
+     "ud5ggwh0iuxsr8up", "SttfR9Di2pih75lEFuum", "bzya6emoafjbqjkolhiy");
    //  mysqli_connect($serverName, $connectionOptions);
 
     return $conn;
 }	
+
+
 
 
 function getRoles(){

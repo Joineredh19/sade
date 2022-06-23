@@ -6,7 +6,7 @@
 <?php 
 
 session_start();
-if(!isset($_SESSION["Usuario"])){
+if(!isset($_SESSION["Email"])){
 	header("location: ../../Views/pages/login.php");
 }else{
 	require_once('../../Controllers/HomeController.php');
@@ -18,7 +18,7 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Mexico_Ciy');
 
-    $RolesId = $_POST['RolesId'];
+    $RolesId = $_POST['Roles'];
     $Nombres = $_POST['nombreUsuario'];
     $Apellidos = $_POST['apellidosUsuario'];
     //$FechaAlta = $_POST['FechaAlta'];
