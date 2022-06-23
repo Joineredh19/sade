@@ -5,7 +5,7 @@ require_once('../../Models/Conexion/Conexion.php');
 	/**
 	* 
 	*/
-	class Ota_UsuarioModel
+	class UsuarioModel
 	{
 		private $pdo;
 
@@ -142,7 +142,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		public function Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia)
 		{
 			try {
-				$sql = ("INSERT INTO tusuarios  (Nombres, Apellidos, Email, Telefono, estatus, Contrasenia,TRoles_id) VALUES (?,?,?,?,?,?,?)");
+				$sql = ("INSERT INTO tusuarios (Nombres, Apellidos, Email, Telefono, estatus, Contrasenia,TRoles_id) VALUES (?,?,?,?,?,?,?)");
 				$stm = $this->pdo->prepare($sql)->execute(array($Nombres,$Apellidos,$Email,$Telefono,"True",$Contrasenia,$RolesId));
 				if($stm){
 					return true;

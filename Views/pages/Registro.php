@@ -24,7 +24,7 @@
     </div>
 
     <!-- Login Form -->
-     <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/register/registrar.php">
+     <form method="post" action="../../Actions/register/registrar.php">
      <select name="Roles" id="Roles" class="fadeIn second" value="">
       </select>
       <input type="text" id="nombreUsuario" class="fadeIn second" name="nombreUsuario" placeholder="Nombre">
