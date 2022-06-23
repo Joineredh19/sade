@@ -5,7 +5,7 @@
 
 <?php 
 
-	session_start();
+	//session_start();
 	require_once('../../Controllers/HomeController.php');
 	$HomeController = new HomeController();
 
@@ -14,12 +14,11 @@
 	// Instantiate the class
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
-	$usuario = $_POST['usuario'];
+	$Email = $_POST['Email'];
 
-	if ($Usuario = $HomeController->VerUsuario($usuario)) {
-		if ($Usuario->__GET('Clave') == md5($_POST['password'])) {
-			$_SESSION['IdUsuario'] = $Usuario->__GET('IdUsuario');
-			$_SESSION['Usuario'] = $Usuario->__GET('Usuario');
+	if ($Usuario = $UsuarioModel->VerUsuario($Email,$contrasenia)) {
+		if ($Usuario->__GET('Contrasenia') == md5($_POST['password'])) {
+			$_SESSION['Email'] = $Usuario->__GET('Email');
 			
 			header("location: ../../Views/pages/index.php");
 		}else{
