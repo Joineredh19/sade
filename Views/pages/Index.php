@@ -27,7 +27,7 @@
           </li>
           <li>
             <a href="./icons.html">
-              <i class="nc-icon nc-diamond"></i>
+              <i class="bi bi-clipboard-check"></i>
               <p>ORIENTADOR EDUCATIVO</p>
             </a>
           </li>
