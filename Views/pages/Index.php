@@ -125,7 +125,7 @@ date_default_timezone_set('America/Mexico_City');
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">Crear usuario</a>
                   <a class="dropdown-item" href="#">Ver perfil</a>
-                  <a class="dropdown-item" href="#">Cerrar sesión</a>
+                  <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
               </li>
               <li class="nav-item">
