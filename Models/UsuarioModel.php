@@ -58,6 +58,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity = new Usuarios();
 					$entity->__SET('Email',$r->Email);
 					$entity->__SET('Contrasenia',$r->Contrasenia);
+					
 				
 					return $entity;
 
