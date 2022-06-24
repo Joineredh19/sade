@@ -32,12 +32,15 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
+      <br>
     </div>
 
     <!-- Login Form -->
     <form action="../../Actions/login/login.php" method="post" enctype="multipart/form-data" >
-      <input type="text" id="Email" class="fadeIn second" name="Email" placeholder="E-mail">
-      <input type="password" id="Password" class="fadeIn second" name="Password" placeholder="Contraseña">
+      <input type="E-mail" id="Email" class="form-control" name="Email" placeholder="E-mail">
+      <br>
+      <input type="password" id="Password" class="form-control" name="Password" placeholder="Contraseña">
+      <br>
       <input type="submit" class="fadeIn fourth" value="Ingresar">
     </form>
     <div class="mt-4">
