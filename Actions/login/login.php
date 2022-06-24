@@ -15,18 +15,20 @@
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 	$Email = $_POST['Email'];
-
+	$Password = $_POST['Password'];
+	
+	
 	if ($Usuario = $HomeController->VerUsuario($Email)) {
-		if ($Usuario->__GET('Contrasenia') == md5($_POST['password'])) {
+		if ($Usuario->__GET('Contrasenia') === ($Password)) {
 			$_SESSION['Email'] = $Usuario->__GET('Email');
 			
 			header("location: ../../Views/pages/index.php");
 		}else{
 			$msg->error('ERROR, La contraseña no es valida..!');
-			echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$Email."';</script>");
+			echo("<script language='javascript'>location.href='../../Views/pages/loginAdmin.php?email=".$Email."';</script>");
 		}
 	}else{
-		$msg->error('ERROR, El usuario '.$Email.' no existe..!');
-		echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$Email."';</script>");
+		$msg->error('ERROR, El correo '.$Email.' no existe..!');
+		echo("<script language='javascript'>location.href='../../Views/pages/loginAdmin.php?email=".$Email."';</script>");
 	}
 ?>

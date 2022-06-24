@@ -24,8 +24,9 @@ if(!isset($_SESSION["Email"])){
     //$FechaAlta = $_POST['FechaAlta'];
     $Email = $_POST['email'];
     $Telefono = $_POST['telefono'];
-    $Status = $_POST['Status'];
-    $Contrasenia =password_hash($_POST['Contraseña'], PASSWORD_DEFAULT);
+    $Status = 1;
+	$Contrasenia=($_POST['Contraseña']);
+    
 
 
 

@@ -40,6 +40,15 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <input type="text" id="Password" class="fadeIn second" name="Password" placeholder="Contraseña">
       <input type="submit" class="fadeIn fourth" value="Ingresar">
     </form>
+    <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+  
+                        <?php  $msg->display(); ?>
+                  
+                </div>
+					
+				</div>
+
     </div>
   </div>
 </div>
