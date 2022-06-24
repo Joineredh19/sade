@@ -1,12 +1,12 @@
 <?php include '../includes/header.php';
+
 require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
 
 require '../../Lib/FlashMessages.php';
-if (!session_id()) @session_start();
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
-date_default_timezone_set('America/Mexico_City');
+
 ?>
 
 <body class="">

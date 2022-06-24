@@ -1,11 +1,9 @@
 <?php
-/*session_start();
-if(!isset($_SESSION["Usuario"])){
-    header("location: ../../Views/pages/login.php");
-}*/
+session_start();
+if(!isset($_SESSION["Email"])){
+    header("location: ../../Views/pages/loginadmin.php");
+}
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
