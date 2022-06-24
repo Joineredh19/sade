@@ -25,7 +25,7 @@ if(!isset($_SESSION["Email"])){
     $Email = $_POST['email'];
     $Telefono = $_POST['telefono'];
     $Status = 1;
-	$Contrasenia=($_POST['Contraseña']);
+	$Contrasenia=($_POST['contrasena']);
     
 
 
