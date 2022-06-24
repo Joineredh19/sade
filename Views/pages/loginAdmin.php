@@ -37,7 +37,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
     <!-- Login Form -->
     <form action="../../Actions/login/login.php" method="post" enctype="multipart/form-data" >
       <input type="text" id="Email" class="fadeIn second" name="Email" placeholder="E-mail">
-      <input type="text" id="Password" class="fadeIn second" name="Password" placeholder="Contraseña">
+      <input type="password" id="Password" class="fadeIn second" name="Password" placeholder="Contraseña">
       <input type="submit" class="fadeIn fourth" value="Ingresar">
     </form>
     <div class="mt-4">
