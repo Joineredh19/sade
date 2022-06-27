@@ -17,6 +17,15 @@
     </div>
   </div>
   <!--   Core JS Files   -->
+<script>
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script>
+
   <script src="../Resource/js/core/jquery.min.js"></script>
   <script src="../Resource/js/core/popper.min.js"></script>
   <script src="../Resource/js/core/bootstrap.min.js"></script>
