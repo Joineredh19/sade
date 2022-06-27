@@ -31,6 +31,12 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           
         <li class="active ">
             <a href="./user.html">
+              <i class="bi bi-layout-text-window-reverse"></i>
+              <p>TABLERO</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
               <i class="bi bi-person"></i>
               <p>ALUMNO</p>
             </a>
