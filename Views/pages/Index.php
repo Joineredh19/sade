@@ -340,15 +340,12 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option value="M">Indefinido</option>
 
 </select>
-			<input input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required />
-      <input input type="text" id="apellidosUsuario"  name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required/>
-      <input type="text" id="email" name="email" placeholder="E-Mail" aria-label="Disabled input example" required/>
-      <input type="number" id="telefono" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required/>
-      <input type="password"   id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña"/>
+			<input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required />
+      <input  type="text"  class="form-control" id="apellidosUsuario"  name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required/>
+      <input type="text"   class="form-control" id="email"  class="form-control" name="email" placeholder="E-Mail" aria-label="Disabled input example" required/>
+      <input type="number"  class="form-control" id="telefono" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required/>
+      <input type="password"   class="form-control" id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña"/>
 </div>
-
-<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
       <div class="modal-footer">
         <button type="button" class="ghost" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-success">Registrar</button>
