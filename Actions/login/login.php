@@ -19,7 +19,7 @@
 	
 	
 	if ($Usuario = $HomeController->VerUsuario($Email)) {
-		if ($Usuario->__GET('Contrasenia') === ($Password)) {
+		if ($Usuario->__GET('Contrasenia') == md5($Password)) {
 			$_SESSION['Email'] = $Usuario->__GET('Email');
 			
 			header("location: ../../Views/pages/index.php");
