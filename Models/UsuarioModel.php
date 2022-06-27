@@ -57,7 +57,7 @@ require_once('../../Models/Conexion/Conexion.php');
 				if ($r) {
 					$entity = new Usuarios();
 					$entity->__SET('Email',$r->Email);
-					$entity->__SET('Contrasenia',$r->Contrasenia);
+					$entity->__SET('contrasenia',$r->contrasenia);
 					$entity->__SET('Nombres',$r->Nombres);
 					$entity->__SET('Apellidos',$r->Apellidos);
 					
