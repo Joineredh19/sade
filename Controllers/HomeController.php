@@ -16,10 +16,10 @@ spl_autoload_register(function($nombreClase)
 		public function __CONSTRUCT() {
 		}
 
-		public function AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia)
+		public function AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId)
 		{
 			$model = new UsuarioModel();
-			$var = $model->Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia);
+			$var = $model->Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId);
 			return $var;
 		}
 
