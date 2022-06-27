@@ -347,7 +347,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <input type="password"   class="form-control" id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña"/>
 </div>
       <div class="modal-footer">
-        <button type="button" class="ghost" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-success">Registrar</button>
       </div>
     </div>
