@@ -50,7 +50,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		public function VerUsuario($Email)
 		{
 			try{
-				$stm = $this->pdo->prepare("SELECT Email, Contrasenia FROM tusuarios WHERE Email = ?");
+				$stm = $this->pdo->prepare("SELECT * FROM tusuarios WHERE Email = ?");
 				$stm->execute(array($Email));
 				$r = $stm->fetch(PDO::FETCH_OBJ);
 
@@ -58,6 +58,8 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity = new Usuarios();
 					$entity->__SET('Email',$r->Email);
 					$entity->__SET('Contrasenia',$r->Contrasenia);
+					$entity->__SET('Nombres',$r->Nombres);
+					$entity->__SET('Apellidos',$r->Apellidos);
 					
 				
 					return $entity;
