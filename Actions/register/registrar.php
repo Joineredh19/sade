@@ -25,12 +25,14 @@ if(!isset($_SESSION["Email"])){
     $Email = $_POST['email'];
     $Telefono = $_POST['telefono'];
     $Status = 1;
-	$Contrasenia=md5($_POST['contrasena']);
+	$Contrasenia = password_hash( $_POST['contrasena'], PASSWORD_DEFAULT);
+	$generoId = 1;
+	//$Contrasenia=md5($_POST['contrasena']);
     
 
 
 
-	if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia) == true){
+	if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId) == true){
 
 		$msg->success('!Agregado con exito¡');
 		

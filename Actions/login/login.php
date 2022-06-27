@@ -17,9 +17,8 @@
 	$Email = $_POST['Email'];
 	$Password = $_POST['Password'];
 	
-	
 	if ($Usuario = $HomeController->VerUsuario($Email)) {
-		if ($Usuario->__GET('Contrasenia') == md5($Password)) {
+		if (password_verify($Password, $Usuario->__GET('contrasenia'))) {
 			$_SESSION['Email'] = $Usuario->__GET('Email');
 			
 			header("location: ../../Views/pages/index.php");
