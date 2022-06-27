@@ -124,8 +124,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear usuario</a>
-
-            
                   <a class="dropdown-item" href="#">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
@@ -328,11 +326,31 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
+     <select name="Roles" id="Roles" class="form-control" value="">
+     <option selected>Roles</option>  
+    </select>
+      <br>
+      <select class="form-select" aria-label="Default select example">
+  <option selected>Genero</option>
+  <option value="F">Femenino</option>
+  <option value="M">Masculino</option>
+</select>
+      <br>
+      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
+      <br> 
+      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
+      <br>
+      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
+      <br>
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
+      <br>
+      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
+  <br>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Registrar</button>
       </div>
     </div>
   </div>

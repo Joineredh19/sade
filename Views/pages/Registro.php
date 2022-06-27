@@ -38,6 +38,7 @@
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
+  
   <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
     </form>
 
