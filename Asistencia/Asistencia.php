@@ -1,8 +1,3 @@
-<?php 
-	session_start ();
-
- ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -157,19 +152,6 @@
 			}
 	}
 	?>
-
-	<!--menu-->
-		<div id="menu">
-			<div id="cabecera"><?php echo "Bienvenido administrador '" . $_SESSION["username"]; echo "'"; ?></div>
-			<hr/>
-			<ul>
-				<li id="volveraregistrar"><a href="entrada.php">Registrar otra asistencia</a></li>
-				<li id="volveraregistrar"><a href="lista_alumnos.php">Alumnos registrados en el sistema</a></li>
-				<li><a href="registro_ES_alumnos.php">Regresar</a></li>
-			</ul>
-		</div>
-		<div id="cerrar"><a href="cerrarsesion.php">Cerrar sesión</a></div>
-	<!--fin menu-->
 
 	<form action="#" method="POST">
 		<fieldset>
