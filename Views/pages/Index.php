@@ -335,22 +335,24 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option selected>Genero</option>
   <option value="F">Femenino</option>
   <option value="M">Masculino</option>
+  <option value="M">Indefinido</option>
+
 </select>
       <br>
-      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
+      <input type="text" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required>
       <br> 
-      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
+      <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required>
       <br>
-      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
+      <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail" aria-label="Disabled input example" required>
       <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required>
       <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
+      <input type="password"  class="form-control" id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña">
   <br>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Registrar</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Registrar</button>
       </div>
     </div>
   </div>
