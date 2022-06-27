@@ -20,6 +20,7 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2015 Daniel Eden
 */
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -4214,5 +4215,7 @@ License - nucleoapp.com/license/
   .card-timeline .timeline .timeline-panel {
     width: 38%;
     padding: 15px; } }
+
+    
 
 /*# sourceMappingURL=paper-dashboard.css.map */

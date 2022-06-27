@@ -339,11 +339,11 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 </select>
       <br>
-      <input type="text" id="nombreUsuario" class="form-control form-control-lg" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required>
+      <input type="text" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required>
       <br> 
-      <input type="text" id="apellidosUsuario" class="form-control form-control-lg" name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required>
+      <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required>
       <br>
-      <input type="text" id="email" class="form-control form-control-lg" name="email" placeholder="E-Mail" aria-label="Disabled input example" required>
+      <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail" aria-label="Disabled input example" required>
       <br>
       <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required>
       <br>
@@ -351,8 +351,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <br>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Registrar</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Registrar</button>
       </div>
     </div>
   </div>
