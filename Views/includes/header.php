@@ -1,8 +1,8 @@
 <?php
-session_start();
+/*session_start();
 if(!isset($_SESSION["Email"])){
     header("location: ../../Views/pages/loginadmin.php");
-}
+}*/
 ?>
 
 <!DOCTYPE html>
