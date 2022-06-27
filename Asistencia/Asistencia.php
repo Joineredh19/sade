@@ -71,6 +71,7 @@
 						$result_salida3 = mysqli_num_rows($query_salida3);
 				/*-----------------------------------------------*/
 				
+
 				if (empty($data_entrada['FH_entrada']) && empty($data_salida['FH_salida']) ) {
 					$insertar="INSERT INTO `alumnos_entrada`(`id`, `Codigoasis`, `FH_entrada`) VALUES 
 							( NULL,
@@ -78,8 +79,11 @@
 							 DEFAULT
 							)";
 							$query=mysqli_query($conexion, $insertar);
-		
-							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada</h2>";
+
+							$query=mysqli_query($conexion, "SELECT alumnos.Nombre, alumnos.Codigo, alumnos_entrada.FH_entrada  FROM alumnos_entrada INNER JOIN alumnos ON alumnos.Codigo = alumnos_entrada.Codigoasis WHERE Codigoasis = '$Codigoasis' ORDER BY FH_entrada DESC LIMIT 1");
+							$dato_registro = mysqli_fetch_assoc($query);
+
+							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada (". $dato_registro['Nombre'].")</h2>";
 
 				}else if ($fecha_hoy == $F_registro_entrada && $fecha_hoy == $F_registro_salida OR $fecha_hoy == $F_registro_entrada) {
 						
@@ -91,8 +95,11 @@
 							 DEFAULT
 							)";
 							$query=mysqli_query($conexion, $insertar);
-		
-							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada</h2>";
+							
+							$query=mysqli_query($conexion, "SELECT alumnos.Nombre, alumnos.Codigo, alumnos_entrada.FH_entrada  FROM alumnos_entrada INNER JOIN alumnos ON alumnos.Codigo = alumnos_entrada.Codigoasis WHERE Codigoasis = '$Codigoasis' ORDER BY FH_entrada DESC LIMIT 1");
+							$dato_registro = mysqli_fetch_assoc($query);
+
+							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada (". $dato_registro['Nombre'].")</h2>";
 	
 						}else{
 		
@@ -104,8 +111,11 @@
 								 DEFAULT
 								)";
 								$query=mysqli_query($conexion, $insertar2);
-		
-								echo "<h2 class='registrado'>Registrado con exito la asistencia de salida</h2>";
+								
+								$query=mysqli_query($conexion, "SELECT alumnos.Nombre, alumnos.Codigo, alumnos_entrada.FH_entrada  FROM alumnos_entrada INNER JOIN alumnos ON alumnos.Codigo = alumnos_entrada.Codigoasis WHERE Codigoasis = '$Codigoasis' ORDER BY FH_entrada DESC LIMIT 1");
+								$dato_registro = mysqli_fetch_assoc($query);
+
+								echo "<h2 class='registrado'>Registrado con exito la asistencia de salida (". $dato_registro['Nombre'].")</h2>";
 		
 							}
 		
@@ -120,8 +130,11 @@
 							 DEFAULT
 							)";
 							$query=mysqli_query($conexion, $insertar);
-		
-							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada</h2>";
+							
+							$query=mysqli_query($conexion, "SELECT alumnos.Nombre, alumnos.Codigo, alumnos_entrada.FH_entrada  FROM alumnos_entrada INNER JOIN alumnos ON alumnos.Codigo = alumnos_entrada.Codigoasis WHERE Codigoasis = '$Codigoasis' ORDER BY FH_entrada DESC LIMIT 1");
+							$dato_registro = mysqli_fetch_assoc($query);
+
+							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada (". $dato_registro['Nombre'].")</h2>";
 		
 						}else if ($result_entrada2 > $result_salida2) {
 	
@@ -131,8 +144,11 @@
 							 DEFAULT
 							)";
 							$query=mysqli_query($conexion, $insertar);
+
+							$query=mysqli_query($conexion, "SELECT alumnos.Nombre, alumnos.Codigo, alumnos_entrada.FH_entrada  FROM alumnos_entrada INNER JOIN alumnos ON alumnos.Codigo = alumnos_entrada.Codigoasis WHERE Codigoasis = '$Codigoasis' ORDER BY FH_entrada DESC LIMIT 1");
+							$dato_registro = mysqli_fetch_assoc($query);
 		
-							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada</h2>";
+							echo "<h2 class='registrado'>Registrado con exito la asistencia de entrada (". $dato_registro['Nombre'].")</h2>";
 		
 						}
 
@@ -141,6 +157,19 @@
 			}
 	}
 	?>
+
+	<!--menu-->
+		<div id="menu">
+			<div id="cabecera"><?php echo "Bienvenido administrador '" . $_SESSION["username"]; echo "'"; ?></div>
+			<hr/>
+			<ul>
+				<li id="volveraregistrar"><a href="entrada.php">Registrar otra asistencia</a></li>
+				<li id="volveraregistrar"><a href="lista_alumnos.php">Alumnos registrados en el sistema</a></li>
+				<li><a href="registro_ES_alumnos.php">Regresar</a></li>
+			</ul>
+		</div>
+		<div id="cerrar"><a href="cerrarsesion.php">Cerrar sesión</a></div>
+	<!--fin menu-->
 
 	<form action="#" method="POST">
 		<fieldset>
