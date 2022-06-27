@@ -10,8 +10,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 ?>
 
 <body class="">
-<link href="../Resource/css/paper-dashboard.css">
-
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
@@ -324,7 +322,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">REGISTRARSE</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -338,12 +336,18 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option value="F">Femenino</option>
   <option value="M">Masculino</option>
   <option value="M">Indefinido</option>
+  </select>
+  <br>
 
-</select>
+
 			<input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required />
+      <br>
       <input  type="text"  class="form-control" id="apellidosUsuario"  name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required/>
+      <br>
       <input type="text"   class="form-control" id="email"  class="form-control" name="email" placeholder="E-Mail" aria-label="Disabled input example" required/>
+      <br>
       <input type="number"  class="form-control" id="telefono" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required/>
+      <br>
       <input type="password"   class="form-control" id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña"/>
 </div>
       <div class="modal-footer">
