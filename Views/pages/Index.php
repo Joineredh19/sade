@@ -10,6 +10,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 ?>
 
 <body class="">
+<link href="../Resource/css/paper-dashboard.css">
+
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
@@ -338,24 +340,22 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option value="M">Indefinido</option>
 
 </select>
-      <br>
-      <input type="text" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required>
-      <br> 
-      <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required>
-      <br>
-      <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail" aria-label="Disabled input example" required>
-      <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required>
-      <br>
-      <input type="password"  class="form-control" id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña">
-  <br>
-      </div>
+			<input input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required />
+      <input input type="text" id="apellidosUsuario"  name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required/>
+      <input type="text" id="email" name="email" placeholder="E-Mail" aria-label="Disabled input example" required/>
+      <input type="number" id="telefono" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required/>
+      <input type="password"   id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña"/>
+</div>
+
+<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="ghost" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-success">Registrar</button>
       </div>
     </div>
   </div>
 </div>
       </div>
+</form>
       <?php include '../includes/footer.php';?>
