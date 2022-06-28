@@ -25,10 +25,11 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="email_tel" class="fadeIn second" name="email_tel" placeholder="E-mail o número telefónico">
+    <?php require_once '../../Asistencia/Asistencia.php'?>
+    <form action="#" method="POST">
+      <input type="text" id="email_tel" class="fadeIn second" name="email_tel" required placeholder="Codigo Institucional">
       <input type="text" id="observaciones" class="fadeIn second" name="observaciones" placeholder="Observaciones">
-      <input type="submit" class="fadeIn fourth" value="Ingresar">
+      <input type="submit" class="fadeIn fourth" value="Ingresar" name="enviar">
       
     </form>
 
