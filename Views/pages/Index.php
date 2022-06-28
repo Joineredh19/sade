@@ -176,7 +176,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -202,7 +202,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 2px;">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
