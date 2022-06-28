@@ -1,7 +1,7 @@
 <?php
 		function Conexion(){
-			 $conn = mysqli_connect("localhost",
-			  "root", "Antony1201", "sade22");
+			$conn = mysqli_connect("bzya6emoafjbqjkolhiy-mysql.services.clever-cloud.com",
+			"ud5ggwh0iuxsr8up", "SttfR9Di2pih75lEFuum", "bzya6emoafjbqjkolhiy");
 		 
 			 return $conn;
 		 }
