@@ -431,7 +431,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   
   <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Registrarse">
+        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Registrar">
        
       </div>
     </form>
