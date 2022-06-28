@@ -29,16 +29,23 @@ if(!isset($_SESSION["Email"])){
 	$generoId = 4;
 	//$Contrasenia=md5($_POST['contrasena']);
     
+	if ($Usuario = $HomeController->VerUsuario($Email)) {
+		$msg->error('ERROR, Un usuario con este correo existe');
+		echo("<script language='javascript'>location.href='../../Views/pages/Registro.php';</script>");
+		}else{
+			
+			if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId) == true){
+
+				$msg->success('!Agregado con exito¡');
+				
+				header("location: ../../Views/pages/index.php");
+			}else{
+				$msg->error('¡ERROR, no se Agrego!..');
+			}
+		}
+	
 
 
-
-	if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId) == true){
-
-		$msg->success('!Agregado con exito¡');
-		
-		header("location: ../../Views/pages/index.php");
-	}else{
-		$msg->error('¡ERROR, no se Agrego!..');
-	}
+	
 //}
 ?>

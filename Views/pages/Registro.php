@@ -1,3 +1,11 @@
+<?php 
+	require '../../Lib/FlashMessages.php';
+	if (!session_id()) @session_start();
+	// Instantiate the class
+	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
+	date_default_timezone_set('America/Mexico_City');
+  ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,6 +30,11 @@
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
       <br>
+      <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+                        <?php  $msg->display(); ?>                  
+                </div>					
+				</div>
     </div>
 
     <!-- Login Form -->
