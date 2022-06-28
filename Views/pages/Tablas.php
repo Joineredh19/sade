@@ -96,7 +96,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Estadísticas</a>
+            <a class="navbar-brand" href="javascript:;">USUARIOS REGISTRADOS</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -155,7 +155,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Simple Table</h4>
+              
               </div>
               <div class="card-body">
                 <div class="table-responsive">
