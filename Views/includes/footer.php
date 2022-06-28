@@ -26,14 +26,6 @@ myModal.addEventListener('shown.bs.modal', function () {
 })
 </script>
 
-<script>
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
-</script>
 
   <script src="../Resource/js/core/jquery.min.js"></script>
   <script src="../Resource/js/core/popper.min.js"></script>
@@ -69,6 +61,23 @@ $.ajax({
 })
 .done(function(Roles){
     $('#Roles').html(Roles)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Roles/Roles.php',
+    data: {'peticion': 'Roles'}    
+})
+.done(function(Roles){
+    $('#Rol').html(Roles)
 })
 .fail(function(){
     alert('Error')

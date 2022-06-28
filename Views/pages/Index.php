@@ -334,8 +334,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       </div>
       <div class="modal-body">
       <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="form-control" value="">
-     <option selected>Rol</option>  
+     <select name="Roles" id="Roles" class="form-control" value="">  
     </select>
       <br>
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
@@ -415,7 +414,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       </div>
       <div class="modal-body">
       <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="form-control" value=""> </select>
+     <select name="Roles" id="Rol" class="form-control" value=""> </select>
       <br>
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
       <br> 
