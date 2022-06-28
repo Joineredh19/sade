@@ -353,7 +353,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
       <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
+      <input type="text" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
