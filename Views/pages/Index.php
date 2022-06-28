@@ -341,7 +341,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option selected>Genero</option>
   <option value="F">Femenino</option>
   <option value="M">Masculino</option>
-  <option value="M">Indefinido</option>
+  <option value="I">Indefinido</option>
   </select>
   <br>
 

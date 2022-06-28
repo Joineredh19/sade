@@ -1,11 +1,3 @@
-<?php 
-	require '../../Lib/FlashMessages.php';
-	if (!session_id()) @session_start();
-	// Instantiate the class
-	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
-	date_default_timezone_set('America/Mexico_City');
-  ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -30,11 +22,6 @@
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
       <br>
-      <div class="mt-4">
-                <div class="d-flex justify-content-center links">
-                        <?php  $msg->display(); ?>                  
-                </div>					
-				</div>
     </div>
 
     <!-- Login Form -->
@@ -45,12 +32,54 @@
       <br> 
       <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
       <br>
-      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
+      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código de alumno">
+  <br>
+   <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Turno">
+  <br>
+      <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
       <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Status">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Número de seguro social">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="RFC">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="CURP">
+  <br>
+  <form>
+  <select class="form-select" aria-label="Default select example">
+  <option selected>Seleccione su tipo de sangre</option>
+  <option value="sangreaa">A+</option>
+  <option value="sangrea">A-</option>
+  <option value="sangrebb">B+</option>
+  <option value="sangreb">B-</option>
+  <option value="sangreoo">O+</option>
+  <option value="sangreo">O-</option>
+  <option value="sangreaabb">AB+</option>
+  <option value="sangreab">AB-</option>
+  </select>
+</form>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
+  <br>
+ 
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Calle y número">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Colonia">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código Postal">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Estado">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Ciudad">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="País">
+  <br>
+  
+  
   
   <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
     </form>
