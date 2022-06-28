@@ -85,3 +85,39 @@ $.ajax({
 })
 
 </script>
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Genero/Genero.php',
+    data: {'peticion': 'Genero'}    
+})
+.done(function(Genero){
+    $('#Genero').html(Genero)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Genero/Genero.php',
+    data: {'peticion': 'Genero'}    
+})
+.done(function(Genero){
+    $('#Generos').html(Genero)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>
