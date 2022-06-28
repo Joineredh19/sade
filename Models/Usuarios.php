@@ -9,7 +9,8 @@ class Usuarios
     private $Telefono;
     private $Status;
     private $FechaAlta;
-    private $Rolesid;
+    private $TRoles_id;
+    private $tgenero_id;
     
 
     public function __GET($k)
