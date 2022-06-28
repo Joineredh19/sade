@@ -28,4 +28,10 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->VerUsuario($Email);
 			return $var;
 		}
+
+		public function  VerUsuarioxId($id){
+			$model = new UsuarioModel();
+			$var = $model->VerUsuarioxId($id);
+			return $var;
+		}
 	}

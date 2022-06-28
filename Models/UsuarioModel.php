@@ -56,6 +56,32 @@ require_once('../../Models/Conexion/Conexion.php');
 
 				if ($r) {
 					$entity = new Usuarios();
+					$entity->__SET('id',$r->id);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('contrasenia',$r->contrasenia);
+					$entity->__SET('Nombres',$r->Nombres);
+					$entity->__SET('Apellidos',$r->Apellidos);
+					
+				
+					return $entity;
+
+				}
+				return NULL;
+			}catch(Exception $e){
+				die($e->getMessage()." ->UsuarioModel->Ver()");
+			}
+		}
+
+		public function VerUsuarioxId($id)
+		{
+			try{
+				$stm = $this->pdo->prepare("SELECT * FROM tusuarios WHERE id = ?");
+				$stm->execute(array($id));
+				$r = $stm->fetch(PDO::FETCH_OBJ);
+
+				if ($r) {
+					$entity = new Usuarios();
+					$entity->__SET('id',$r->id);
 					$entity->__SET('Email',$r->Email);
 					$entity->__SET('contrasenia',$r->contrasenia);
 					$entity->__SET('Nombres',$r->Nombres);

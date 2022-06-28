@@ -123,7 +123,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </li>
               <li class="nav-item btn-rotate dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="bi bi-person-square"><?= $HomeController->VerUsuario($_SESSION['Email'])->__GET('Nombres').' '.$HomeController->VerUsuario($_SESSION['Email'])->__GET('Apellidos')?></i>
+                  <i class="bi bi-person-square"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Nombres').' '.$HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Apellidos')?></i>
                   <p>
                     <span class="d-lg-none d-md-block">Some Actions</span>
                   </p>

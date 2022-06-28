@@ -19,7 +19,7 @@
 	
 	if ($Usuario = $HomeController->VerUsuario($Email)) {
 		if (password_verify($Password, $Usuario->__GET('contrasenia'))) {
-			$_SESSION['Email'] = $Usuario->__GET('Email');
+			$_SESSION['id'] = $Usuario->__GET('id');
 			
 			header("location: ../../Views/pages/index.php");
 		}else{
