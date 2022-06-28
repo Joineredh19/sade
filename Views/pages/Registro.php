@@ -34,7 +34,13 @@
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código de alumno">
   <br>
-   <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Turno">
+  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">
+  <option selected>Seleccione su turno</option>
+  <option value="sangreaa">Matutino</option>
+  <option value="sangrea">Vespertino</option>
+  <option value="sangrea">Mixto</option>
+  
+  </select>
   <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
       <br>
