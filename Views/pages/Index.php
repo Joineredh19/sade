@@ -27,7 +27,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav" style="width: 280px;">
+        <ul class="nav" >
           
         <li class="active ">
             <a href="./user.html" style="margin-left: 5px;">
@@ -43,7 +43,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           </li>
 
             <li>
-            <a href="./dashboard.html" style="margin-left: 5px;">
+            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.9px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
@@ -73,8 +73,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
 
-          <li class="active-pro" style="margin-left: 5px;">
-            <a href="./upgrade.html">
+          <li class="active-pro">
+            <a href="./upgrade.html"  style="margin-left: 5px;">
               <i class="nc-icon nc-spaceship"></i>
               <p>XXXXXXXXXXXXXX</p>
             </a>
