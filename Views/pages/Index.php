@@ -27,7 +27,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav" >
+        <ul class="nav" style="width: 280px;">
           
         <li class="active ">
             <a href="./user.html" style="margin-left: 5px;">
@@ -43,7 +43,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           </li>
 
             <li>
-            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.9px;">
+            <a href="./dashboard.html" style="margin-left: 5px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
@@ -73,8 +73,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
 
-          <li class="active-pro">
-            <a href="./upgrade.html"  style="margin-left: 5px;">
+          <li class="active-pro" style="margin-left: 5px;">
+            <a href="./upgrade.html">
               <i class="nc-icon nc-spaceship"></i>
               <p>XXXXXXXXXXXXXX</p>
             </a>
@@ -129,7 +129,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Completar información</a>
+                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#completar">Completar información</a>
+                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
                   <a class="dropdown-item" href="#">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
@@ -176,7 +177,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
+          <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -202,7 +203,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 2px;">
+          <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -324,11 +325,11 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="completar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">REGISTRARSE</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">COMPLETAR</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -403,4 +404,46 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 </div>
       </div>
 </form>
+
+<!-- Modal2 -->
+<div class="modal fade" id="registrar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">REGISTRO</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
+     <select name="Roles" id="Roles" class="form-control" value=""> </select>
+      <br>
+      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
+      <br> 
+      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
+      <br>
+      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
+      <br>
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
+      <br>
+      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
+  <br>
+  
+  
+  <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Registrarse">
+       
+      </div>
+    </form>
+
+   
+    </div>
+  </div>
+</div>
+      </div>
+</form>
+
+
+
       <?php include '../includes/footer.php';?>
+
