@@ -18,7 +18,7 @@ function getGenero(){
     $query = 'SELECT * FROM tgenero';
 
     $result = mysqli_query($conn,$query);
-    $listas = '<option value="0"> Seleccione Genero</option>';
+    $listas = '<option value="0"> Seleccione Género</option>';
 
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         $listas .= "<option value= '$row[id]'> $row[genero]</option>";
