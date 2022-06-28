@@ -90,6 +90,14 @@
  
     </form>
 
+    <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <label> ¿Ya tiene cuenta? </label>
+    <div id="formFooter">
+      <a class="underlineHover" href="Login.php">Iniciar sesión</a>
+    </div>
 
   </div>
 </div>
