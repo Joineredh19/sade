@@ -27,53 +27,53 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
+        <ul class="nav" style="width: 280px;">
           
         <li class="active ">
-            <a href="./user.html">
+            <a href="./user.html" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
               <p>TABLERO</p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
+            <a href="./user.html" style="margin-left: 5px;">
               <i class="bi bi-person"></i>
               <p>ALUMNO</p>
             </a>
           </li>
 
             <li>
-            <a href="./dashboard.html">
+            <a href="./dashboard.html" style="margin-left: 5px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="./icons.html" style="margin-left: 5px;">
               <i class="bi bi-clipboard-check"></i>
               <p>ORIENTADOR EDUCATIVO</p>
             </a>
           </li>
           <li>
-            <a href="./notifications.html">
+            <a href="./notifications.html" style="margin-left: 5px;">
               <i class="bi bi-book"></i>
               <p>TUTOR ACADEMICO</p>
             </a>
           </li>
           <li>
-            <a href="./tables.html">
+            <a href="./tables.html" style="margin-left: 5px;">
               <i class="bi bi-people"></i>
               <p>PADRES DE FAMILIA</p>
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="./map.html" style="margin-left: 5px;">
               <i class="bi bi-gear"></i>
               <p>ADMINISTRADOR</p>
             </a>
           </li>
 
-          <li class="active-pro">
+          <li class="active-pro" style="margin-left: 5px;">
             <a href="./upgrade.html">
               <i class="nc-icon nc-spaceship"></i>
               <p>XXXXXXXXXXXXXX</p>
