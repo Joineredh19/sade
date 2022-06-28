@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-
+    <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
     <title>SADE</title>
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
