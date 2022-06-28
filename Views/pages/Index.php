@@ -377,6 +377,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option value="sangreab">AB-</option>
   </select>
 <br>
+<select name="genero" id="Genero" class="form-control " aria-label="Default select example"></select>
+<br>
   <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
   <br>
  
@@ -419,6 +421,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
       <br> 
       <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
+      <br>
+      <select name="generos" id="Generos" class="form-control " aria-label="Default select example"></select>
       <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
       <br>
