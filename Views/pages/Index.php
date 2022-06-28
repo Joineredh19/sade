@@ -129,7 +129,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear usuario</a>
+                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Completar información</a>
                   <a class="dropdown-item" href="#">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
@@ -334,28 +334,66 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <div class="modal-body">
       <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
      <select name="Roles" id="Roles" class="form-control" value="">
-     <option selected>Roles</option>  
+     <option selected>Rol</option>  
     </select>
       <br>
-      <select class="form-select" aria-label="Default select example">
-  <option selected>Genero</option>
-  <option value="F">Femenino</option>
-  <option value="M">Masculino</option>
-  <option value="I">Indefinido</option>
+      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
+      <br> 
+      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
+      <br>
+      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código de alumno">
+  <br>
+  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">
+  <option selected>Seleccione su turno</option>
+  <option value="sangreaa">Matutino</option>
+  <option value="sangrea">Vespertino</option>
+  <option value="sangrea">Mixto</option>
+  
   </select>
   <br>
+      <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
+      <br>
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
+      <br>
+      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Status">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Número de seguro social">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="RFC">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="CURP">
+  <br>
+  <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
+  <option selected>Seleccione su tipo de sangre</option>
+  <option value="sangreaa">A+</option>
+  <option value="sangrea">A-</option>
+  <option value="sangrebb">B+</option>
+  <option value="sangreb">B-</option>
+  <option value="sangreoo">O+</option>
+  <option value="sangreo">O-</option>
+  <option value="sangreaabb">AB+</option>
+  <option value="sangreab">AB-</option>
+  </select>
+<br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
+  <br>
+ 
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Calle y número">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Colonia">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código Postal">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Estado">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Ciudad">
+  <br>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="País">
+  <br>
 
-
-			<input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre" aria-label="default input example"  required />
-      <br>
-      <input  type="text"  class="form-control" id="apellidosUsuario"  name="apellidosUsuario" placeholder="Apellidos" aria-label="Disabled input example" required/>
-      <br>
-      <input type="text"   class="form-control" id="email"  class="form-control" name="email" placeholder="E-Mail" aria-label="Disabled input example" required/>
-      <br>
-      <input type="number"  class="form-control" id="telefono" name="telefono" placeholder="Teléfono" aria-label="Disabled input example" required/>
-      <br>
-      <input type="password"   class="form-control" id="contrasena"  aria-label="Disabled input example"  name="contrasena" placeholder="Contraseña"/>
-</div>
+    </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-success">Registrar</button>
