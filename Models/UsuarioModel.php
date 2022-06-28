@@ -57,10 +57,13 @@ require_once('../../Models/Conexion/Conexion.php');
 				if ($r) {
 					$entity = new Usuarios();
 					$entity->__SET('id',$r->id);
-					$entity->__SET('Email',$r->Email);
-					$entity->__SET('contrasenia',$r->contrasenia);
 					$entity->__SET('Nombres',$r->Nombres);
 					$entity->__SET('Apellidos',$r->Apellidos);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Telefono',$r->Telefono);
+					$entity->__SET('TRoles_id',$r->TRoles_id);
+					$entity->__SET('tgenero_id',$r->tgenero_id);
+					$entity->__SET('contrasenia',$r->contrasenia);
 					
 				
 					return $entity;
@@ -82,10 +85,14 @@ require_once('../../Models/Conexion/Conexion.php');
 				if ($r) {
 					$entity = new Usuarios();
 					$entity->__SET('id',$r->id);
-					$entity->__SET('Email',$r->Email);
-					$entity->__SET('contrasenia',$r->contrasenia);
 					$entity->__SET('Nombres',$r->Nombres);
 					$entity->__SET('Apellidos',$r->Apellidos);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Telefono',$r->Telefono);
+					$entity->__SET('TRoles_id',$r->TRoles_id);
+					$entity->__SET('tgenero_id',$r->tgenero_id);
+					$entity->__SET('contrasenia',$r->contrasenia);
+					
 					
 				
 					return $entity;
