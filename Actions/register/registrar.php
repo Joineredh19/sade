@@ -26,7 +26,7 @@ if(!isset($_SESSION["Email"])){
     $Telefono = $_POST['telefono'];
     $Status = 1;
 	$Contrasenia = password_hash( $_POST['contrasena'], PASSWORD_DEFAULT);
-	$generoId = 4;
+	$generoId =  $_POST['generos'];
 	//$Contrasenia=md5($_POST['contrasena']);
     
 	if ($Usuario = $HomeController->VerUsuario($Email)) {
