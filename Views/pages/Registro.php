@@ -50,8 +50,7 @@
   <br>
   <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="CURP">
   <br>
-  <form>
-  <select class="form-select" aria-label="Default select example">
+  <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
   <option value="sangreaa">A+</option>
   <option value="sangrea">A-</option>
@@ -62,7 +61,7 @@
   <option value="sangreaabb">AB+</option>
   <option value="sangreab">AB-</option>
   </select>
-</form>
+<br>
   <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
   <br>
  
