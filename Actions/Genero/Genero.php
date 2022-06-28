@@ -13,7 +13,7 @@ function Conexion(){
 
 
 
-function getRoles(){
+function getGenero(){
     $conn = Conexion();
     $query = 'SELECT * FROM tgenero';
 
@@ -26,6 +26,6 @@ function getRoles(){
     return $listas;
 }
 
-echo getRoles();
+echo getGenero();
 
 ?>
