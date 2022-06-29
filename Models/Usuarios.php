@@ -11,6 +11,8 @@ class Usuarios
     private $FechaAlta;
     private $TRoles_id;
     private $tgenero_id;
+    private $genero;
+    private $rol;
     
 
     public function __GET($k)
