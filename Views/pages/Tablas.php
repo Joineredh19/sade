@@ -170,26 +170,38 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                       <th>
                         Apellido
                       </th>
-                      <th class="text-right">
+                      <th class="text-center">
                         E-mail
                       </th>
-                      <th class="text-right">
+                      <th class="text-center">
                         Teléfono
                       </th>
-                      <th class="text-right">
+                      <th class="text-center">
                     Género
                       </th>
-                      <th class="text-right">
+                      <th class="text-center">
                         Rol
                       </th>
-                      <th class="text-right">
+                      <th class="text-center">
                         Acción
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        
-                      </tr>
+                    <tbody>
+                      
+                            <?php foreach ($HomeController->ListarUsuario() as $key){ ?>
+                                <tr>
+                                    <td align="center"><?= $key->__GET('id') ?></td>
+                                    <td align="center"><?= $key->__GET('Nombres') ?></td>
+                                    <td  align="center"><?= $key->__GET('Apellidos') ?></td>
+                                    <td  align="center"><?= $key->__GET('Email') ?></td>
+                                    <td  align="center"><?= $key->__GET('Telefono') ?></td>
+                                    <td  align="center"><?= $key->__GET('tgenero_id') ?></td>
+                                    <td  align="center"><?= $key->__GET('TRoles_id') ?></td>
+                                    <td align="center" style="padding: 0;"><a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
+                                </tr>
+                          <?php } ?>
+                    </tbody>
                     </tbody>
                   </table>
                 </div>
@@ -198,5 +210,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           </div>
         </div>
       </div>
+
+      
 
 <?php include '../includes/footer.php';?>
