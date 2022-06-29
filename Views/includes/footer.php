@@ -122,7 +122,7 @@ $.ajax({
 
 </script>
 
-
+<!--
 <script>
 $(document).ready(function(){
 
@@ -158,3 +158,4 @@ $.ajax({
 })
 
 </script>
+-->
