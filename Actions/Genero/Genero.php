@@ -15,7 +15,7 @@ function Conexion(){
 
 function getGenero(){
     $conn = Conexion();
-    $query = 'SELECT * FROM tgenero';
+    $query = 'SELECT * FROM tgeneros';
 
     $result = mysqli_query($conn,$query);
     $listas = '<option value="0"> Seleccione Género</option>';
