@@ -199,7 +199,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		public function Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId)
 		{
 			try {
-				$sql = ("INSERT INTO tusuarios (Nombres, Apellidos, Email, Telefono, estatus, Contrasenia,TRoles_id,tgenero_id) VALUES (?,?,?,?,?,?,?,?)");
+				$sql = ("INSERT INTO tusuarios (Nombres, Apellidos, Email, Telefono, estatus, Contrasenia,TRoles_id,tgeneros_id) VALUES (?,?,?,?,?,?,?,?)");
 				$stm = $this->pdo->prepare($sql)->execute(array($Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$RolesId,$generoId));
 				if($stm){
 					return true;
