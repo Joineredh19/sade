@@ -87,7 +87,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Email',$r->Email);
 					$entity->__SET('Telefono',$r->Telefono);
 					$entity->__SET('TRoles_id',$r->TRoles_id);
-					$entity->__SET('tgenero_id',$r->tgenero_id);
+					$entity->__SET('tgeneros_id',$r->tgeneros_id);
 					$entity->__SET('contrasenia',$r->contrasenia);
 					
 					
