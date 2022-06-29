@@ -46,7 +46,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           </li>
 
             <li>
-            <a href="./dashboard.html" style="margin-left: 5px;">
+            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.5px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>

@@ -44,7 +44,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           </li>
 
             <li>
-            <a href="./dashboard.html" style="margin-left: 5px;">
+            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.5px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
@@ -178,7 +178,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -204,7 +204,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 2px;">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
