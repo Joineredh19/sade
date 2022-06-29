@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-
+    <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
     <title>SADE</title>
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
@@ -89,6 +90,14 @@
  
     </form>
 
+    <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <label> ¿Ya tiene cuenta? </label>
+    <div id="formFooter">
+      <a class="underlineHover" href="Login.php">Iniciar sesión</a>
+    </div>
 
   </div>
 </div>

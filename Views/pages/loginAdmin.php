@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
 
     <title>Sistema Acceso De Estudiantes ADMINISTRADOR</title>
 
