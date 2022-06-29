@@ -133,7 +133,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#completar">Completar información</a>
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
                   <a class="dropdown-item" href="#">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
@@ -200,8 +199,9 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?= $key->__GET('Telefono') ?></td>
                                     <td  align="center"><?= $key->__GET('genero') ?></td>
                                     <td  align="center"><?= $key->__GET('rol') ?></td>
-                                    <td align="center" style="padding: 0;"><a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
-                                </tr>
+                                    <td align="center" style="padding: 0;"><a  data-bs-toggle="modal" data-bs-target="#completar" data-bs-toggle="modal" data-bs-target="#completar" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                  
+                                  </tr>
                           <?php } ?>
                     </tbody>
                     </tbody>
