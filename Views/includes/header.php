@@ -3,7 +3,14 @@ session_start();
 if(!isset($_SESSION["id"])){
     header("location: ../../Views/pages/loginadmin.php");
 }
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 10*60)) {
+  session_unset();     
+  session_destroy();   
+  header("location: ../../Views/pages/loginadmin.php");
+}
+$_SESSION['LAST_ACTIVITY'] = time();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
