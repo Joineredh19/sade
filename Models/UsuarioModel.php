@@ -107,8 +107,8 @@ require_once('../../Models/Conexion/Conexion.php');
 			try{
 				$Array = array();
 				$stm = $this->pdo->prepare("
-				SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgenero.genero,troles.rol
-				FROM  tusuarios  INNER JOIN tgenero ON tusuarios.tgenero_id = tgenero.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id 	ORDER BY tusuarios.id  ASC ");
+				SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol
+				FROM  tusuarios  INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id 	ORDER BY tusuarios.id  ASC ");
 				$stm->execute(array());
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
