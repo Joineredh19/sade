@@ -77,8 +77,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
           <li class="active-pro" style="margin-left: 5px;">
             <a href="./upgrade.html">
-              <i class="nc-icon nc-spaceship"></i>
-              <p>XXXXXXXXXXXXXX</p>
+              <i class="bi bi-person-lines-fill"></i>
+              <p>USUARIOS</p>
             </a>
           </li>
         </ul>
