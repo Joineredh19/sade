@@ -106,7 +106,9 @@ require_once('../../Models/Conexion/Conexion.php');
 		{
 			try{
 				$Array = array();
-				$stm = $this->pdo->prepare("SELECT * FROM tusuarios");
+				$stm = $this->pdo->prepare("
+				SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgenero.genero,troles.rol
+				FROM  tusuarios  INNER JOIN tgenero ON tusuarios.tgenero_id = tgenero.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id");
 				$stm->execute(array());
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
@@ -117,8 +119,8 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Apellidos',$r->Apellidos);
 					$entity->__SET('Email',$r->Email);
 					$entity->__SET('Telefono',$r->Telefono);
-					$entity->__SET('TRoles_id',$r->TRoles_id);
-					$entity->__SET('tgenero_id',$r->tgenero_id);
+					$entity->__SET('rol',$r->rol);
+					$entity->__SET('genero',$r->genero);
 					$entity->__SET('contrasenia',$r->contrasenia);
 					
 					
