@@ -106,9 +106,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		{
 			try{
 				$Array = array();
-				$stm = $this->pdo->prepare("
-				SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgenero.genero,troles.rol
-				FROM  tusuarios  INNER JOIN tgenero ON tusuarios.tgenero_id = tgenero.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id");
+				$stm = $this->pdo->prepare("SELECT * FROM DatosUsuario");
 				$stm->execute(array());
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
