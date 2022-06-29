@@ -121,3 +121,40 @@ $.ajax({
 })
 
 </script>
+
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Direccion/Pais.php',
+    data: {'peticion': 'Pais'}    
+})
+.done(function(Pais){
+    $('#pais').html(Pais)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Direccion/Estados.php',
+    data: {'peticion': 'Estados'}    
+})
+.done(function(Estados){
+    $('#Estados').html(Estados)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>
