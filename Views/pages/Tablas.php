@@ -32,8 +32,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <div class="sidebar-wrapper">
         <ul class="nav" style="width: 280px;">
           
-        <li class="active ">
-            <a href="./user.html" style="margin-left: 5px;">
+        <li>
+            <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
               <p>TABLERO</p>
             </a>
@@ -76,8 +76,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
 
-          <li class="active-pro" style="margin-left: 5px;">
-            <a href="./upgrade.html">
+          <li class="active">
+            <a href="./Tablas.php" style="margin-left: 5px;">
               <i class="bi bi-person-lines-fill"></i>
               <p>USUARIOS</p>
             </a>
