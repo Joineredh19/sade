@@ -28,7 +28,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav" style="width: 280px;">
+        <ul class="nav">
           
         <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
