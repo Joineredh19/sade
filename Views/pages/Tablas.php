@@ -196,8 +196,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?= $key->__GET('Apellidos') ?></td>
                                     <td  align="center"><?= $key->__GET('Email') ?></td>
                                     <td  align="center"><?= $key->__GET('Telefono') ?></td>
-                                    <td  align="center"><?= $key->__GET('tgenero_id') ?></td>
-                                    <td  align="center"><?= $key->__GET('TRoles_id') ?></td>
+                                    <td  align="center"><?= $key->__GET('genero') ?></td>
+                                    <td  align="center"><?= $key->__GET('rol') ?></td>
                                     <td align="center" style="padding: 0;"><a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
                                 </tr>
                           <?php } ?>
