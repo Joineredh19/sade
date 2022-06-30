@@ -56,7 +56,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
           <li>
-            <a href="./notifications.html" style="margin-left: 5px;">
+            <a href="./tutoracademico.php" style="margin-left: 5px;">
               <i class="bi bi-book"></i>
               <p>TUTOR ACADEMICO</p>
             </a>
