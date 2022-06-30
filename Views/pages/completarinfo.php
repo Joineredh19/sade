@@ -95,7 +95,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;"></a>
+            <a class="navbar-brand" href="javascript:;">REGISTRAR USUARIO</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -218,7 +218,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
  
     </form>
 
-    <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
+    <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
         </div>
         <!-- Button trigger modal -->
@@ -250,12 +250,11 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
   
-  
-  <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Registrar">
-       
-      </div>
+
+  <div class="d-grid gap-1 d-md-block">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Modificar</button>>
+  </div>
+ 
     </form>
 
    
