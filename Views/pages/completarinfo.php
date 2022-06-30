@@ -30,7 +30,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <div class="sidebar-wrapper">
         <ul class="nav">
           
-        <li class="active ">
+        <li >
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
               <p>TABLERO</p>

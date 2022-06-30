@@ -75,7 +75,7 @@
 
 
 
-    <!--JAVASCRIPT------------------------------------------------------------------>
+    <!--JAVASCRIPTbbb 
 		<script type="text/javascript">
 /*-------------------Selector de dirección--------------------*/
 			$(document).ready(function(){

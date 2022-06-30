@@ -11,6 +11,7 @@ class Usuarios
     private $FechaAlta;
     private $TRoles_id;
     private $tgenero_id;
+    private $FechaNacimiento;
     private $genero;
     private $rol;
     
