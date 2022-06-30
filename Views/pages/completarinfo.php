@@ -4,8 +4,18 @@ require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
 
 require '../../Lib/FlashMessages.php';
+if (!session_id()) @session_start();
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
+date_default_timezone_set('America/Bogota');
+
+if (isset($_GET['id'])) {
+  $IdUsuario = $_GET['id'];
+  $data = $HomeController->VerUsuarioxId($IdUsuario);
+}else{
+
+  $data = NULL;
+}
 
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
