@@ -38,15 +38,15 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <p>TABLERO</p>
             </a>
           </li>
-          <li  class="active">
+          <li>
             <a href="./alumnos.php" style="margin-left: 5px;">
               <i class="bi bi-person"></i>
               <p>ALUMNO</p>
             </a>
           </li>
 
-            <li>
-            <a href="./coordinadores.php" style="margin-left: 5px; font-size: 11.5px; margin-right: 1px;">
+            <li class="active">
+            <a href="./coordinadores.php" style="margin-left: 5px; font-size: 11.5px; margin-right: 2px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
@@ -97,7 +97,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">ALUMNOS</a>
+            <a class="navbar-brand" href="javascript:;">COORDINADORES DE TUTORES</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -200,7 +200,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?= $key->__GET('Telefono') ?></td>
                                     <td  align="center"><?= $key->__GET('genero') ?></td>
                                     <td  align="center"><?= $key->__GET('rol') ?></td>
-                                    <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Alumnos" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                    <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
                                   
                                   </tr>
                           <?php } ?>
