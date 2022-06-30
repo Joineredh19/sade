@@ -1,4 +1,3 @@
-
 <?php include '../includes/header.php';
 
 require_once('../../Controllers/HomeController.php');
@@ -9,8 +8,7 @@ require '../../Lib/FlashMessages.php';
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 ?>
-
-<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
  <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
 <body class="">
   <div class="wrapper ">
@@ -32,7 +30,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <div class="sidebar-wrapper">
         <ul class="nav">
           
-        <li>
+        <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
               <p>TABLERO</p>
@@ -76,7 +74,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
 
-          <li class="active">
+          <li>
             <a href="./Tablas.php" style="margin-left: 5px;">
               <i class="bi bi-person-lines-fill"></i>
               <p>USUARIOS</p>
@@ -97,7 +95,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">USUARIOS REGISTRADOS</a>
+            <a class="navbar-brand" href="javascript:;"></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -131,10 +129,9 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <span class="d-lg-none d-md-block">Some Actions</span>
                   </p>
                 </a>
-
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
-                  <a class="dropdown-item" href="#">Ver perfil</a>
+                  <a class="dropdown-item" href="./perfil.php">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
               </li>
@@ -151,81 +148,12 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         </div>
       </nav>
       <!-- End Navbar -->
+
       <div class="content">
         <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-              
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th>
-                        ID
-                      </th>
-                      <th>
-                        Nombre
-                      </th>
-                      <th>
-                        Apellido
-                      </th>
-                      <th class="text-center">
-                        E-mail
-                      </th>
-                      <th class="text-center">
-                        Teléfono
-                      </th>
-                      <th class="text-center">
-                    Género
-                      </th>
-                      <th class="text-center">
-                        Rol
-                      </th>
-                      <th class="text-center">
-                        Acción
-                      </th>
-                    </thead>
-                    <tbody>
-                    <tbody>
-                      
-                            <?php foreach ($HomeController->ListarUsuario() as $key){ ?>
-                                <tr>
-                                    <td align="center"><?= $key->__GET('id') ?></td>
-                                    <td align="center"><?= $key->__GET('Nombres') ?></td>
-                                    <td  align="center"><?= $key->__GET('Apellidos') ?></td>
-                                    <td  align="center"><?= $key->__GET('Email') ?></td>
-                                    <td  align="center"><?= $key->__GET('Telefono') ?></td>
-                                    <td  align="center"><?= $key->__GET('genero') ?></td>
-                                    <td  align="center"><?= $key->__GET('rol') ?></td>
-                                    <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
-                                  
-                                  </tr>
-                          <?php } ?>
-                    </tbody>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="completar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">COMPLETAR</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="form-control" value="">  
-    </select>
+       <!-- Login Form -->
+     <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
+     <select name="Roles" id="Roles" class="form-control" value=""> </select>
       <br>
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
       <br> 
@@ -241,19 +169,19 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   
   </select>
   <br>
-      <input type="form" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
+      <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
       <br>
-      <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail" required>
+      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
-  <input type="text"  class="form-control" id="estatus"  name="estatus" placeholder="Status">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Status">
   <br>
-  <input type="text"  class="form-control" id="nfs"  name="nfs" placeholder="Número de seguro social">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Número de seguro social">
   <br>
-  <input type="text"  class="form-control" id="rfc"  name="rfc" placeholder="RFC">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="RFC">
   <br>
-  <input type="text"  class="form-control" id="curp"  name="curp" placeholder="CURP">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="CURP">
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
@@ -267,39 +195,33 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option value="sangreab">AB-</option>
   </select>
 <br>
-<select name="genero" id="Genero" class="form-control " aria-label="Default select example"></select>
-<br>
-  <input type="password"  class="form-control" id="alergias"  name="alergias" placeholder="Alergias">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
   <br>
  
-  <input type="password"  class="form-control" id="calleNo"  name="calleNo" placeholder="Calle y número">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Calle y número">
   <br>
-  <input type="password"  class="form-control" id="colonia"  name="colonia" placeholder="Colonia">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Colonia">
   <br>
-  <input type="password"  class="form-control" id="cp"  name="cp" placeholder="Código Postal">
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código Postal">
   <br>
-  <select name="pais" id="pais" class="form-control" value="">  
-    </select>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Estado">
   <br>
-       <select name="estado" id="estado" class="form-control" value="">  
-    </select>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Ciudad">
   <br>
-  <select name="ciudad" id="ciudad" class="form-control" value="">  
-    </select>
+  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="País">
   <br>
+  
+  
+  
  
-  <br>
-
     </form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success">Registrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-</form>
+
+    <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
+    </form>
+        </div>
+        <!-- Button trigger modal -->
+
+
 
 <!-- Modal2 -->
 <div class="modal fade" id="registrar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -342,4 +264,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 </form>
 
 
-<?php include '../includes/footer.php';?>
+
+      <?php include '../includes/footer.php';?>
+
