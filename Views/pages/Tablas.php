@@ -159,6 +159,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               
               </div>
               <div class="card-body">
+              <?php  $msg->display(); ?>
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">

@@ -62,7 +62,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
       <br>
-      <input type="date"  class="form-control" id="contrasena"  name="fechanacimiento" placeholder="Fecha de nacimiento">
+      <input type="date"  class="form-control" id="fechanacimiento"  name="fechanacimiento" placeholder="Fecha de nacimiento">
   <br>
   
   
