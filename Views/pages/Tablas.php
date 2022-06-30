@@ -134,7 +134,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
-                  <a class="dropdown-item" href="#">Ver perfil</a>
+                  <a class="dropdown-item" href="./perfil.php">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
               </li>
