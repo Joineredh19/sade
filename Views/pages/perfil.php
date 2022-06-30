@@ -38,14 +38,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
           <li>
-            <a href="./user.html" style="margin-left: 5px;">
+            <a href="./alumnos.php" style="margin-left: 5px;">
               <i class="bi bi-person"></i>
               <p>ALUMNO</p>
             </a>
           </li>
 
             <li>
-            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.5px;">
+            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.5px; margin-right: 1px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
