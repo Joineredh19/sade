@@ -27,14 +27,15 @@ if(!isset($_SESSION["Email"])){
     $Status = 1;
 	$Contrasenia = password_hash( $_POST['contrasena'], PASSWORD_DEFAULT);
 	$generoId =  $_POST['generos'];
+	$Fnto =  $_POST['fechanacimiento'];
 	//$Contrasenia=md5($_POST['contrasena']);
     
 	if ($Usuario = $HomeController->VerUsuario($Email)) {
 		$msg->error('ERROR, Un usuario con este correo existe');
-		echo("<script language='javascript'>location.href='../../Views/pages/Registro.php';</script>");
+		echo("<script language='javascript'>location.href='../../Views/pages/index.php';</script>");
 		}else{
 			
-			if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId) == true){
+			if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId,$Fnto) == true){
 
 				$msg->success('!Agregado con exito¡');
 				

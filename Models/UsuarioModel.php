@@ -90,8 +90,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('tgeneros_id',$r->tgeneros_id);
 					$entity->__SET('contrasenia',$r->contrasenia);
 					
-					
-				
+
 					return $entity;
 
 				}
@@ -196,11 +195,11 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}*/
 
-		public function Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId)
+		public function Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId,$Fnto)
 		{
 			try {
-				$sql = ("INSERT INTO tusuarios (Nombres, Apellidos, Email, Telefono, estatus, Contrasenia,TRoles_id,tgeneros_id) VALUES (?,?,?,?,?,?,?,?)");
-				$stm = $this->pdo->prepare($sql)->execute(array($Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$RolesId,$generoId));
+				$sql = ("INSERT INTO tusuarios (Nombres, Apellidos, Email, Telefono, estatus,FechaNacimiento Contrasenia,TRoles_id,tgeneros_id) VALUES (?,?,?,?,?,?,?,?,?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($Nombres,$Apellidos,$Email,$Telefono,$Status,$Fnto,$Contrasenia,$RolesId,$generoId));
 				if($stm){
 					return true;
 				} else {
