@@ -62,7 +62,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
           <li>
-            <a href="./tables.html" style="margin-left: 5px;">
+            <a href="./padresfamilia.php" style="margin-left: 5px;">
               <i class="bi bi-people"></i>
               <p>PADRES DE FAMILIA</p>
             </a>
