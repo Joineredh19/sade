@@ -16,7 +16,7 @@ spl_autoload_register(function($nombreClase)
 		public function __CONSTRUCT() {
 		}
 
-		public function AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId)
+		public function AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId,$Fnto)
 		{
 			$model = new UsuarioModel();
 			$var = $model->Agregar($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId,$Fnto);

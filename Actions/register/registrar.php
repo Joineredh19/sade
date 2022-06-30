@@ -39,7 +39,7 @@ if(!isset($_SESSION["Email"])){
 
 				$msg->success('!Agregado con exito¡');
 				
-				header("location: ../../Views/pages/index.php");
+				header("location: ../../Views/pages/tablas.php");
 			}else{
 				$msg->error('¡ERROR, no se Agrego!..');
 			}
