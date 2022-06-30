@@ -181,7 +181,7 @@
 						}
 
 				}else{
-					$msg->error('No se realizó la asistencia');
+					$msg->error('No se realizó la asistencia!');
 					$msg->display();
 				}
 			
