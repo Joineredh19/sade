@@ -105,7 +105,7 @@ if (isset($_GET['id'])) {
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;"></a>
+            <a class="navbar-brand" href="javascript:;">REGISTRAR USUARIO</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -181,17 +181,19 @@ if (isset($_GET['id'])) {
   <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
       <br>
+      <select name="Roles" id="Rol" class="form-control" value=""> </select>
+      <br>
       <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Status">
+  <input type="password"  class="form-control" id="contrasena"  name="status" placeholder="Status">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Número de seguro social">
+  <input type="password"  class="form-control" id="contrasena"  name="numerosocial" placeholder="Número de seguro social">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="RFC">
+  <input type="password"  class="form-control" id="contrasena"  name="rfc" placeholder="RFC">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="CURP">
+  <input type="password"  class="form-control" id="contrasena"  name="curp" placeholder="CURP">
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
@@ -205,20 +207,20 @@ if (isset($_GET['id'])) {
   <option value="sangreab">AB-</option>
   </select>
 <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
+  <input type="text"  class="form-control" id="contrasena"  name="alergia" placeholder="Alergias">
   <br>
  
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Calle y número">
+  <select name="selepais" id="selepais" class="form-control " aria-label="Seleccione su país">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Colonia">
+  <select name="seleestado" id="seleestado" class="form-control " aria-label="Seleccione su estado">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código Postal">
+  <select name="seleciudad" id="seleciudad" class="form-control " aria-label="Seleccione su ciudad">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Estado">
+  <select name="selepostal" id="selepostal" class="form-control " aria-label="Seleccione su código postal">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Ciudad">
+  <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="País">
+  <input type="text"  class="form-control" id="contrasena"  name="calleynumero" placeholder="Calle y número">
   <br>
   
   
@@ -226,7 +228,7 @@ if (isset($_GET['id'])) {
  
     </form>
 
-    <input type="submit" class="fadeIn fourth" id="btnRegistrarse" value="Registrarse">
+    <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
         </div>
         <!-- Button trigger modal -->
@@ -258,12 +260,11 @@ if (isset($_GET['id'])) {
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
   
-  
-  <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Registrar">
-       
-      </div>
+
+  <div class="d-grid gap-1 d-md-block">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Modificar</button>>
+  </div>
+ 
     </form>
 
    

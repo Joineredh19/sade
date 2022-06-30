@@ -131,7 +131,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#completar">Completar información</a>
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
                   <a class="dropdown-item" href="#">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
@@ -367,94 +366,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         <!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="completar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">COMPLETAR</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Roles" class="form-control" value="">  
-    </select>
-      <br>
-      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
-      <br> 
-      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
-      <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código de alumno">
-  <br>
-  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">
-  <option selected>Seleccione su turno</option>
-  <option value="sangreaa">Matutino</option>
-  <option value="sangrea">Vespertino</option>
-  <option value="sangrea">Mixto</option>
-  
-  </select>
-  <br>
-      <input type="form" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
-      <br>
-      <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail" required>
-      <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
-  <br>
-  <input type="text"  class="form-control" id="estatus"  name="estatus" placeholder="Status">
-  <br>
-  <input type="text"  class="form-control" id="nfs"  name="nfs" placeholder="Número de seguro social">
-  <br>
-  <input type="text"  class="form-control" id="rfc"  name="rfc" placeholder="RFC">
-  <br>
-  <input type="text"  class="form-control" id="curp"  name="curp" placeholder="CURP">
-  <br>
-  <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
-  <option selected>Seleccione su tipo de sangre</option>
-  <option value="sangreaa">A+</option>
-  <option value="sangrea">A-</option>
-  <option value="sangrebb">B+</option>
-  <option value="sangreb">B-</option>
-  <option value="sangreoo">O+</option>
-  <option value="sangreo">O-</option>
-  <option value="sangreaabb">AB+</option>
-  <option value="sangreab">AB-</option>
-  </select>
-<br>
-<select name="genero" id="Genero" class="form-control " aria-label="Default select example"></select>
-<br>
-  <input type="password"  class="form-control" id="alergias"  name="alergias" placeholder="Alergias">
-  <br>
- 
-  <input type="password"  class="form-control" id="calleNo"  name="calleNo" placeholder="Calle y número">
-  <br>
-  <input type="password"  class="form-control" id="colonia"  name="colonia" placeholder="Colonia">
-  <br>
-  <input type="password"  class="form-control" id="cp"  name="cp" placeholder="Código Postal">
-  <br>
-  <select name="pais" id="pais" class="form-control" value="">  
-    </select>
-  <br>
-       <select name="estado" id="estado" class="form-control" value="">  
-    </select>
-  <br>
-  <select name="ciudad" id="ciudad" class="form-control" value="">  
-    </select>
-  <br>
- 
-  <br>
 
-    </form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success">Registrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-</form>
-
-<!-- Modal2 -->
+<!-- Modal1 -->
 <div class="modal fade" id="registrar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
