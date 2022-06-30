@@ -171,17 +171,19 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
       <br>
+      <select name="Roles" id="Rol" class="form-control" value=""> </select>
+      <br>
       <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Status">
+  <input type="password"  class="form-control" id="contrasena"  name="status" placeholder="Status">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Número de seguro social">
+  <input type="password"  class="form-control" id="contrasena"  name="numerosocial" placeholder="Número de seguro social">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="RFC">
+  <input type="password"  class="form-control" id="contrasena"  name="rfc" placeholder="RFC">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="CURP">
+  <input type="password"  class="form-control" id="contrasena"  name="curp" placeholder="CURP">
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
@@ -195,20 +197,20 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <option value="sangreab">AB-</option>
   </select>
 <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Alergias">
+  <input type="text"  class="form-control" id="contrasena"  name="alergia" placeholder="Alergias">
   <br>
  
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Calle y número">
+  <select name="selepais" id="selepais" class="form-control " aria-label="Seleccione su país">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Colonia">
+  <select name="seleestado" id="seleestado" class="form-control " aria-label="Seleccione su estado">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código Postal">
+  <select name="seleciudad" id="seleciudad" class="form-control " aria-label="Seleccione su ciudad">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Estado">
+  <select name="selepostal" id="selepostal" class="form-control " aria-label="Seleccione su código postal">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Ciudad">
+  <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="País">
+  <input type="text"  class="form-control" id="contrasena"  name="calleynumero" placeholder="Calle y número">
   <br>
   
   
