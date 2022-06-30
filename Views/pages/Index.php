@@ -326,45 +326,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
 <!-- Modal2 -->
-<div class="modal fade" id="registrar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">REGISTRO</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Rol" class="form-control" value=""> </select>
-      <br>
-      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
-      <br> 
-      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
-      <br>
-      <select name="generos" id="Generos" class="form-control " aria-label="Default select example"></select>
-      <br>
-      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
-      <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
-      <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
-  <br>
-  
-  
-  <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Registrar">
-       
-      </div>
-    </form>
-
-   
-    </div>
-  </div>
-</div>
-      </div>
-</form>
-
 
 
       <?php include '../includes/footer.php';?>
