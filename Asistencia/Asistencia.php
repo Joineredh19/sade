@@ -1,7 +1,7 @@
 <?php
 		function Conexion(){
-			$conn = mysqli_connect("bzya6emoafjbqjkolhiy-mysql.services.clever-cloud.com",
-     		"ud5ggwh0iuxsr8up", "SttfR9Di2pih75lEFuum", "bzya6emoafjbqjkolhiy");
+			$conn = mysqli_connect("cuc-udg22.mysql.database.azure.com",
+  			"SADE22@cuc-udg22", "Sade_2022", "bzya6emoafjbqjkolhiy");
 		 
 			 return $conn;
 		 }
