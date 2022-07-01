@@ -58,7 +58,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
       <br>
       <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
       <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
+      <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
       <br>
