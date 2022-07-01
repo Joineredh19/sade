@@ -7,6 +7,10 @@ require '../../Lib/FlashMessages.php';
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
+
+  $data = $HomeController->VerUsuarioxId($_SESSION['id']);
+
+
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
  <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
@@ -256,7 +260,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                       <div class="col-md-6 px-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">E-mail</label>
-                        <input type="email" class="form-control" placeholder="E-mail">
+                        <input type="email" class="form-control" placeholder="E-mail"  value="<?php if($data != NULL) echo $data->__GET('Email') ?>  "  >
                       </div>
                     </div>
 
@@ -264,13 +268,13 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-6 px-3">
                       <div class="form-group">
                         <label>Nombre(s)</label>
-                        <input type="text" class="form-control"  placeholder="Nombre(s)" >
+                        <input type="text" class="form-control"  placeholder="Nombre(s)"  value="<?php if($data != NULL) echo $data->__GET('Nombres') ?>  "   >
                       </div>
                     </div>
                     <div class="col-md-6 px-1">
                       <div class="form-group">
                         <label>Apellido(s)</label>
-                        <input type="text" class="form-control" placeholder="Apellido(s)">
+                        <input type="text" class="form-control" placeholder="Apellido(s)"  value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  "  >
                       </div>
                     </div>
                  
@@ -279,7 +283,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-6 px-3">
                       <div class="form-group">
                         <label>Teléfono</label>
-                        <input type="text" class="form-control" placeholder="Teléfono" >
+                        <input type="text" class="form-control" placeholder="Teléfono"  value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>  "  >
                       </div>
                     </div>
                     <div class="col-md-6 px-1">
