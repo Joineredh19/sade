@@ -183,8 +183,6 @@ if (isset($_GET['IdUsuario'])) {
       <br>
       <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
       <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
-  <br>
   <input type="password"  class="form-control" id="contrasena"  name="status" placeholder="Status">
   <br>
   <input type="password"  class="form-control" id="contrasena"  name="numerosocial" placeholder="Número de seguro social">
