@@ -9,11 +9,10 @@ if (!session_id()) @session_start();
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 date_default_timezone_set('America/Mexico_City');
 
-if (isset($_GET['id'])) {
-  $id = $_GET['id'];
+if (isset($_GET['IdUsuario'])) {
+  $id = $_GET['IdUsuario'];
   $data = $HomeController->VerUsuarioxId($id);
 }else{
-
   $data = NULL;
 }
 
