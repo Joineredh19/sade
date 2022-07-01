@@ -38,14 +38,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
           <li>
-            <a href="./user.html" style="margin-left: 5px;">
+            <a href="./alumnos.php" style="margin-left: 5px;">
               <i class="bi bi-person"></i>
               <p>ALUMNO</p>
             </a>
           </li>
 
             <li>
-            <a href="./dashboard.html" style="margin-left: 5px; font-size: 11.5px;">
+            <a href="./coordinador.php" style="margin-left: 5px; font-size: 11.5px; margin-right: 1px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
@@ -57,13 +57,13 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
           <li>
-            <a href="./notifications.html" style="margin-left: 5px;">
+            <a href="./tutoracademico.php" style="margin-left: 5px;">
               <i class="bi bi-book"></i>
               <p>TUTOR ACADEMICO</p>
             </a>
           </li>
           <li>
-            <a href="./tables.html" style="margin-left: 5px;">
+            <a href="./padresfamilia.php" style="margin-left: 5px;">
               <i class="bi bi-people"></i>
               <p>PADRES DE FAMILIA</p>
             </a>

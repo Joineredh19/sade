@@ -45,8 +45,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
 
-            <li>
-            <a href="./coordinador.php" style="margin-left: 5px; font-size: 11.5px; margin-right: 1px;">
+            <li class="active">
+            <a href="./coordinador.php" style="margin-left: 5px; font-size: 11.5px; margin-right: 2px;">
               <i class="bi bi-clipboard-data"></i>
               <p>COORDINADOR DE TUTORES</p>
             </a>
@@ -76,7 +76,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
             </a>
           </li>
 
-          <li class="active">
+          <li>
             <a href="./Tablas.php" style="margin-left: 5px;">
               <i class="bi bi-person-lines-fill"></i>
               <p>USUARIOS</p>
@@ -97,7 +97,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">USUARIOS REGISTRADOS</a>
+            <a class="navbar-brand" href="javascript:;">COORDINADOR DE TUTORES</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
