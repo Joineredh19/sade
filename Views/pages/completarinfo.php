@@ -7,11 +7,11 @@ require '../../Lib/FlashMessages.php';
 if (!session_id()) @session_start();
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
-date_default_timezone_set('America/Bogota');
+date_default_timezone_set('America/Mexico_City');
 
 if (isset($_GET['id'])) {
-  $IdUsuario = $_GET['id'];
-  $data = $HomeController->VerUsuarioxId($IdUsuario);
+  $id = $_GET['id'];
+  $data = $HomeController->VerUsuarioxId($id);
 }else{
 
   $data = NULL;
@@ -165,11 +165,10 @@ if (isset($_GET['id'])) {
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
      <select name="Roles" id="Roles" class="form-control" value=""> </select>
       <br>
-      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
+      <input type="text" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required value="<?php if($data != NULL) echo $data->__GET('Nombres') ?>  "  >
       <br> 
-      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
+      <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  ">
       <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Código de alumno">
   <br>
   <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su turno</option>
@@ -179,11 +178,11 @@ if (isset($_GET['id'])) {
   
   </select>
   <br>
-      <input type="form" id="email" class="form-control" name="email" placeholder="Teléfono" required>
+      <input type="text" id="email" class="form-control" name="email" placeholder="Email" required value="<?php if($data != NULL) echo $data->__GET('Email') ?>  ">
       <br>
-      <select name="Roles" id="Rol" class="form-control" value=""> </select>
+      <select name="Roles" id="Rol" class="form-control" > </select>
       <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="E-Mail" required>
+      <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
       <br>
       <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
   <br>
@@ -223,10 +222,6 @@ if (isset($_GET['id'])) {
   <input type="text"  class="form-control" id="contrasena"  name="calleynumero" placeholder="Calle y número">
   <br>
   
-  
-  
- 
-    </form>
 
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
@@ -235,44 +230,6 @@ if (isset($_GET['id'])) {
 
 
 
-<!-- Modal2 -->
-<div class="modal fade" id="registrar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">REGISTRO</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
-     <select name="Roles" id="Rol" class="form-control" value=""> </select>
-      <br>
-      <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>
-      <br> 
-      <input type="form" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required>
-      <br>
-      <select name="generos" id="Generos" class="form-control " aria-label="Default select example"></select>
-      <br>
-      <input type="form" id="email" class="form-control" name="email" placeholder="E-Mail" required>
-      <br>
-      <input type="number" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required>
-      <br>
-      <input type="password"  class="form-control" id="contrasena"  name="contrasena" placeholder="Contraseña">
-  <br>
-  
-
-  <div class="d-grid gap-1 d-md-block">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Modificar</button>>
-  </div>
- 
-    </form>
-
-   
-    </div>
-  </div>
-</div>
-      </div>
-</form>
 
 
 

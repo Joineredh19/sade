@@ -3,8 +3,8 @@ function Conexion(){
 
    // $serverName = "127.0.0.1";
   //  $connectionOptions = array("Database"=>"sade22","Uid"=>"root", "PWD"=>"", "CharacterSet"=>"UTF-8");
-    $conn = mysqli_connect("bzya6emoafjbqjkolhiy-mysql.services.clever-cloud.com",
-     "ud5ggwh0iuxsr8up", "SttfR9Di2pih75lEFuum", "bzya6emoafjbqjkolhiy");
+    $conn = mysqli_connect("cuc-udg22.mysql.database.azure.com",
+     "SADE22@cuc-udg22", "Sade_2022", "Sade22");
    //  mysqli_connect($serverName, $connectionOptions);
 
     return $conn;
