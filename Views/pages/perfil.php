@@ -122,8 +122,19 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   <p class="description">
                     E-mail
                   </p>
-                </div>
-            
+                    <form action="/action_page.php">
+                    <input type="file" id="file-uploader">
+              <div id="feedback">  
+              </div>
+              <div>
+                <br>
+              <label id="progress-label" for="progress"></label>
+              <progress id="progress" value="0" max="100"> </progress>
+              </div>
+              <input type="submit">
+                                </form>
+                            </div>
+                        
               </div>
             </div>
             <div class="card">
@@ -367,4 +378,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
       <?php include '../includes/footer.php';?>
+
+
 
