@@ -2,7 +2,7 @@
   $data = $HomeController->VerUsuarioxId($_SESSION['id']);
 ?>
 
-<?php if ( $data->__GET('TRoles_id') == '1'){ ?>
+<?php if (( $data->__GET('TRoles_id') == '1') or ( $data->__GET('TRoles_id') == '2') or ( $data->__GET('TRoles_id') == '3') ){ ?>
 <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
@@ -54,7 +54,7 @@
             </a>
           </li>
   <?php }else{ ?>
-    <?php if ( $data->__GET('TRoles_id') == '2'){ ?>
+    <?php if ( $data->__GET('TRoles_id') == '4'){ ?>
       <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
@@ -68,5 +68,54 @@
             </a>
           </li>
 
+          <?php }else {?>
+            <?php if ( $data->__GET('TRoles_id') == '5'){ ?>
+              <li class="active ">
+            <a href="./index.php" style="margin-left: 5px;">
+              <i class="bi bi-layout-text-window-reverse"></i>
+              <p>TABLERO</p>
+            </a>
+          </li>
+<li >
+            <a href="./alumnos.php" style="margin-left: 5px;">
+              <i class="bi bi-person"></i>
+              <p>ALUMNO</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="./tutoracademico.php" style="margin-left: 5px;">
+              <i class="bi bi-book"></i>
+              <p>TUTOR ACADEMICO</p>
+            </a>
+          </li>
+
+           
+            <?php }else {?>
+            <?php if ( $data->__GET('TRoles_id') == '6'){ ?>
+              <li class="active ">
+            <a href="./index.php" style="margin-left: 5px;">
+              <i class="bi bi-layout-text-window-reverse"></i>
+              <p>TABLERO</p>
+            </a>
+          </li>
+<li >
+            <a href="./alumnos.php" style="margin-left: 5px;">
+              <i class="bi bi-person"></i>
+              <p>ALUMNO</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="./padresfamilia.php" style="margin-left: 5px;">
+              <i class="bi bi-people"></i>
+              <p>PADRES DE FAMILIA</p>
+            </a>
+          </li>
+
+
           <?php } ?>
-          <?php } ?>
+            <?php } ?>
+            <?php } ?>
+            <?php } ?>
+            
