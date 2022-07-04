@@ -59,6 +59,21 @@ $( '#seleciudades').on('change',function(){
 })
 })
 
+$( '#selepostales').on('change',function(){
+    var Id = $('#selepostales').val()
+    $.ajax({
+    type: 'POST',
+    url: '../../Actions/Direccion/colonia.php',
+    data: {'Id': Id}    
+})
+.done(function(listar_pais){
+    $('#selecolonia').html(listar_pais)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
 
 
 })
