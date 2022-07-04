@@ -143,45 +143,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     </thead>
                     <tbody>
                     <tbody>
-                      
-                            <?php #$HomeController->VerUsuarioxId($_SESSION['id']) -> $key?>
                                 <tr>
                                     <td align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('id') ?></td>
                                     <td align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Nombres') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Apellidos') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Email') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Telefono') ?></td>
-                                    <td  align="center"><?php switch($HomeController->VerUsuarioxId($_SESSION['id'])->__GET('tgeneros_id')){
-                                      case 1:
-                                        echo 'Hombre';
-                                      break;
-                                      case 2:
-                                        echo 'Mujer';
-                                      break;
-                                      case 3:
-                                        echo 'Otro';
-                                      break;
-                                    }?></td>
-                                    <td  align="center"><?php switch($HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')){
-                                      case 1:
-                                        echo 'Administrador';
-                                      break;
-                                      case 2:
-                                        echo 'Orientador Educativo';
-                                      break;
-                                      case 3:
-                                        echo 'Coordinador de Tutores';
-                                      break;
-                                      case 4:
-                                        echo 'Estudiante';
-                                      break;
-                                      case 5:
-                                        echo 'Tutor Academico';
-                                      break;
-                                      case 6:
-                                        echo 'Tutor Padre';
-                                      break;
-                                    } ?></td>
+                                    <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('tgeneros_id')?></td>
+                                    <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')?></td>
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Alumnos" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
                                   
                                   </tr>
