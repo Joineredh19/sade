@@ -1,3 +1,8 @@
+<?php 
+  $data = $HomeController->VerUsuarioxId($_SESSION['id']);
+?>
+
+<?php if ( $data->__GET('TRoles_id') == '1'){ ?>
 <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
@@ -48,3 +53,14 @@
               <p>USUARIOS</p>
             </a>
           </li>
+  <?php }else{ ?>
+    <?php if ( $data->__GET('TRoles_id') == '2'){ ?>
+<li class="active ">
+            <a href="./alumnos.php" style="margin-left: 5px;">
+              <i class="bi bi-person"></i>
+              <p>ALUMNO</p>
+            </a>
+          </li>
+
+          <?php } ?>
+          <?php } ?>
