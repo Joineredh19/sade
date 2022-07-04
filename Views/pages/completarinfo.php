@@ -167,6 +167,8 @@ if (isset($_GET['IdUsuario'])) {
   <select name="selepostal" id="selepostal" class="form-control " aria-label="Seleccione su código postal">
   <br>
   <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia">
+
+  </select>
   <br>
   <input type="text"  class="form-control" id="contrasena"  name="calleynumero" placeholder="Calle y número">
   <br>
