@@ -18,166 +18,386 @@
 
 			require_once("../../Config/Conexion.config.php");
 
+/*=================================================================================================================================================*/
+
 			/*------------Validar datos de alumno------------*/
 			$query_alumno = mysqli_query($conn, "SELECT Codigo FROM `tdatosalumnos` WHERE Codigo = '$Codigo'");
 				$result_alumno = mysqli_num_rows($query_alumno);
 				$data_alumno = mysqli_fetch_assoc($query_alumno);
 			/*-----------------------------------------------*/
 
-			if($result_alumno < 1){
+			/*------------Validar datos de trabajador------------*/
+			$query_trabajador = mysqli_query($conn, "SELECT Codigo FROM `tdatostrabajadores` WHERE Codigo = '$Codigo'");
+				$result_trabajador = mysqli_num_rows($query_trabajador);
+				$data_trabajador = mysqli_fetch_assoc($query_trabajador);
+			/*-----------------------------------------------*/
+
+			/*------------Validar datos de visitante------------*/
+			$query_visitante = mysqli_query($conn, "SELECT Codigo FROM `tvisitantes` WHERE Codigo = '$Codigo'");
+				$result_visitante = mysqli_num_rows($query_visitante);
+				$data_visitante = mysqli_fetch_assoc($query_visitante);
+			/*-----------------------------------------------*/
+
+/*=================================================================================================================================================*/
+
+			if($result_alumno < 1 && $result_trabajador < 1 && $result_visitante < 1){
 				$msg->error('No se encuentra registrado en la base de datos!');
 				$msg->display();
-
-			}else{
-				$fecha_hoy = date('Y-m-d');
-
-				/*------------Validar datos de entrada------------*/
-				$query_entrada = mysqli_query($conn, "SELECT FHoraEntrada, Codigo FROM tbitacorasalumnos 
-																	WHERE Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-						$result_entrada = mysqli_num_rows($query_entrada);
-						$data_entrada = mysqli_fetch_assoc($query_entrada);
-						if (isset($data_entrada['FHoraEntrada'])) {
-							$F_registro_entrada = date('Y-m-d', strtotime($data_entrada['FHoraEntrada']));
-						}else{
-							$F_registro_entrada = date('1970-01-01');
-						}
-
-				$query_entrada2 = mysqli_query($conn, "SELECT FHoraEntrada, Codigo FROM tbitacorasalumnos 
-																	WHERE FHoraEntrada IS NOT NULL AND Codigo = '$Codigo'");
-						$result_entrada2 = mysqli_num_rows($query_entrada2);
-				$query_entrada3 = mysqli_query($conn, "SELECT FHoraEntrada, Codigo FROM tbitacorasalumnos 
-																	WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo'");
-						$result_entrada3 = mysqli_num_rows($query_entrada3);
-				/*-----------------------------------------------*/
-
-				/*------------Validar datos de salida------------*/
-				$query_salida = mysqli_query($conn, "SELECT FHoraSalida, Codigo FROM tbitacorasalumnos 
-																	WHERE Codigo = '$Codigo' ORDER BY FHoraSalida DESC LIMIT 1");
-						$result_salida = mysqli_num_rows($query_salida);
-						$data_salida = mysqli_fetch_assoc($query_salida);
-						if (isset($data_salida['FHoraSalida'])) {
-							$F_registro_salida = date('Y-m-d', strtotime($data_salida['FHoraSalida']));
-						}else{
-							$F_registro_salida = date('1970-01-01');
-						}
-						
-				$query_salida2 = mysqli_query($conn, "SELECT FHoraSalida, Codigo FROM tbitacorasalumnos 
-																	WHERE FHoraSalida IS NOT NULL AND Codigo = '$Codigo'");
-						$result_salida2 = mysqli_num_rows($query_salida2);
-				$query_salida3 = mysqli_query($conn, "SELECT FHoraSalida, Codigo FROM tbitacorasalumnos 
-																	WHERE DATE(FHoraSalida) = DATE(NOW()) AND Codigo = '$Codigo'");
-						$result_salida3 = mysqli_num_rows($query_salida3);
-				/*-----------------------------------------------*/
 				
+			}else{
+				require_once 'FechaDatos.php';				
 
-				if (empty($data_entrada['FHoraEntrada'])) {
+				if (isset($data_alumno['Codigo'])) {
+
+					if (empty($data_entrada['FHoraEntrada'])) {
 					
-					$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-							( NULL,
-							 '$Codigo',
-							 DEFAULT,
-							 '$ObservacionEntrada'
-							)";
-							$query=mysqli_query($conn, $insertar);
-
-							$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
-																		INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																		INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-																		WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-							$dato_registro = mysqli_fetch_assoc($query);
-
-							$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].')');
-							$msg->display();
-
-				}else if ($fecha_hoy == $F_registro_entrada && $fecha_hoy == $F_registro_salida OR $fecha_hoy == $F_registro_entrada) {
-						
-						if ($result_entrada3 == $result_salida3) {
+						$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								( NULL,
+								 '$Codigo',
+								 DEFAULT,
+								 '$ObservacionEntrada'
+								)";
+								$query=mysqli_query($conn, $insertar);
 	
-							$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-							( NULL,
-							 '$Codigo',
-							 DEFAULT,
-							 '$ObservacionEntrada'
-							)";
-							$query=mysqli_query($conn, $insertar);
-
-							$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
-																		INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																		INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-																		WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-							$dato_registro = mysqli_fetch_assoc($query);
-							
-							$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].')');
-							$msg->display();
-	
-						}else{
-		
-							if($result_entrada3 > $result_salida3){
-
-								$query_entrada4 = mysqli_query($conn, "SELECT id, FHoraEntrada, ObservacionSalida, Codigo FROM tbitacorasalumnos 
-																	WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-								$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
-
-								$actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnos` SET
-									`Codigo`='$Codigo',
-									`ObservacionSalida`='$ObservacionSalida',
-									`FHoraSalida`= CURRENT_TIMESTAMP
-								WHERE
-									id = '$data_entrada4[id]';
-									");
-								
 								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
-																		INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																		INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-																		WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 								$dato_registro = mysqli_fetch_assoc($query);
-								
-								$msg->success('Registrado con exito la asistencia de salida ('. $dato_registro["Nombres"].')');
+								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+								$msg->display();
+	
+					}else if ($fecha_hoy == $F_registro_entrada && $fecha_hoy == $F_registro_salida OR $fecha_hoy == $F_registro_entrada) {
+							
+						if ($result_entrada3 == $result_salida3) {
+		
+								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								( NULL,
+								 '$Codigo',
+								 DEFAULT,
+								 '$ObservacionEntrada'
+								)";
+								$query=mysqli_query($conn, $insertar);
+	
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+								$dato_registro = mysqli_fetch_assoc($query);
+								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 								$msg->display();
 		
-							}
-		
+						}else{
+			
+								if($result_entrada3 > $result_salida3){
+	
+									$query_entrada4 = mysqli_query($conn, "SELECT id, FHoraEntrada, ObservacionSalida, Codigo FROM tbitacorasalumnos 
+																		WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+	
+									$actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnos` SET
+										`Codigo`='$Codigo',
+										`ObservacionSalida`='$ObservacionSalida',
+										`FHoraSalida`= CURRENT_TIMESTAMP
+									WHERE
+										id = '$data_entrada4[id]';
+										");
+									
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraSalida FROM tbitacorasalumnos 
+																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									$H_registro_salida = date('H:i:s', strtotime($dato_registro['FHoraSalida']));
+	
+									$msg->success('Registrado con exito la asistencia de salida ('. $dato_registro["Nombres"].') ('. $H_registro_salida.')');
+									$msg->display();
+			
+								}
+			
 						}
 					}else if($fecha_hoy > $F_registro_entrada && $fecha_hoy > $F_registro_salida OR $fecha_hoy > $F_registro_entrada){
-
-						if ($result_entrada2 == $result_salida2) {
 	
-							$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-							( NULL,
-							 '$Codigo',
-							 DEFAULT,
-							 '$ObservacionEntrada'
-							)";
-							$query=mysqli_query($conn, $insertar);
-
-							$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
-																		INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																		INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-																		WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-							$dato_registro = mysqli_fetch_assoc($query);
-
-							$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].')');
-							$msg->display();
+							if ($result_entrada2 == $result_salida2) {
 		
-						}else if ($result_entrada2 > $result_salida2) {
+								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								( NULL,
+								 '$Codigo',
+								 DEFAULT,
+								 '$ObservacionEntrada'
+								)";
+								$query=mysqli_query($conn, $insertar);
 	
-							$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-							( NULL,
-							 '$Codigo',
-							 DEFAULT,
-							 '$ObservacionEntrada'
-							)";
-							$query=mysqli_query($conn, $insertar);
-
-							$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
-																		INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																		INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-																		WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-							$dato_registro = mysqli_fetch_assoc($query);
-							
-							$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].')');
-							$msg->display();
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+								$dato_registro = mysqli_fetch_assoc($query);
+								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+								$msg->display();
+			
+							}else if ($result_entrada2 > $result_salida2) {
 		
+								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								( NULL,
+								 '$Codigo',
+								 DEFAULT,
+								 '$ObservacionEntrada'
+								)";
+								$query=mysqli_query($conn, $insertar);
+	
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+								$dato_registro = mysqli_fetch_assoc($query);
+								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+								$msg->display();
+			
+							}
+					}else{
+						$msg->error('No se realizó la asistencia!');
+						$msg->display();
+					}
+				
+				}else if(isset($data_trabajador['Codigo'])) {
+				
+						if (empty($data_entrada_trabajador['FHoraEntrada'])) {
+						
+							$insertar="INSERT INTO `tbitacorastrabajadores`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
+																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->display();
+		
+						}else if ($fecha_hoy == $F_registro_entrada2 && $fecha_hoy == $F_registro_salida2 OR $fecha_hoy == $F_registro_entrada2) {
+								
+							if ($result_entrada_trabajador3 == $result_salida_trabajador3) {
+			
+									$insertar="INSERT INTO `tbitacorastrabajadores`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
+																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->display();
+			
+							}else{
+				
+								if($result_entrada_trabajador3 > $result_salida_trabajador3){
+		
+										$query_entrada4 = mysqli_query($conn, "SELECT id, FHoraEntrada, ObservacionSalida, Codigo FROM tbitacorastrabajadores 
+																			WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+										$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+		
+										$actualizar = mysqli_query($conn, "UPDATE `tbitacorastrabajadores` SET
+											`Codigo`='$Codigo',
+											`ObservacionSalida`='$ObservacionSalida',
+											`FHoraSalida`= CURRENT_TIMESTAMP
+										WHERE
+											id = '$data_entrada4[id]';
+											");
+										
+										$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraSalida FROM tbitacorastrabajadores 
+																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
+																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+										$dato_registro = mysqli_fetch_assoc($query);
+										$H_registro_salida = date('H:i:s', strtotime($dato_registro['FHoraSalida']));
+	
+										$msg->success('Registrado con exito la asistencia de salida ('. $dato_registro["Nombres"].') ('. $H_registro_salida.')');
+										$msg->display();
+				
+								}
+				
+							}
+						}else if($fecha_hoy > $F_registro_entrada2 && $fecha_hoy > $F_registro_salida2 OR $fecha_hoy > $F_registro_entrada2){
+		
+							if ($result_entrada_trabajador2 == $result_salida_trabajador2) {
+			
+									$insertar="INSERT INTO `tbitacorastrabajadores`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
+																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->display();
+				
+							}else if ($result_entrada_trabajador2 > $result_salida_trabajador2) {
+			
+									$insertar="INSERT INTO `tbitacorastrabajadores`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
+																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+	
+									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->display();
+				
+							}
+						}else{
+							$msg->error('No se realizó la asistencia!');
+							$msg->display();
+						}
+
+				}else if(isset($data_visitante['Codigo'])) {
+
+						if (empty($data_entrada_visitante['FHoraEntrada'])) {
+						
+							$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+		
+									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+									$msg->display();
+		
+						}else if ($fecha_hoy == $F_registro_entrada3 && $fecha_hoy == $F_registro_salida3 OR $fecha_hoy == $F_registro_entrada3) {
+								
+							if ($result_entrada_visitante3 == $result_salida_visitante3) {
+			
+									$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									
+									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+									$msg->display();
+			
+							}else{
+				
+								if($result_entrada_visitante3 > $result_salida_visitante3){
+		
+										$query_entrada4 = mysqli_query($conn, "SELECT id, FHoraEntrada, ObservacionSalida, Codigo FROM tbitacorasvisitantes 
+																			WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+										$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+		
+										$actualizar = mysqli_query($conn, "UPDATE `tbitacorasvisitantes` SET
+											`Codigo`='$Codigo',
+											`ObservacionSalida`='$ObservacionSalida',
+											`FHoraSalida`= CURRENT_TIMESTAMP
+										WHERE
+											id = '$data_entrada4[id]';
+											");
+										
+										$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+										$dato_registro = mysqli_fetch_assoc($query);
+										
+										$msg->success('Gracias por su visita ('. $dato_registro["Nombres"].'), su salida se registró con exito');
+									$msg->display();
+				
+								}
+				
+							}
+						}else if($fecha_hoy > $F_registro_entrada3 && $fecha_hoy > $F_registro_salida3 OR $fecha_hoy > $F_registro_entrada3){
+		
+							if ($result_entrada_visitante2 == $result_salida_visitante2) {
+			
+									$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+		
+									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+									$msg->display();
+				
+							}else if ($result_entrada_visitante2 > $result_salida_visitante2) {
+			
+									$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+									( NULL,
+									 '$Codigo',
+									 DEFAULT,
+									 '$ObservacionEntrada'
+									)";
+									$query=mysqli_query($conn, $insertar);
+		
+									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+									$dato_registro = mysqli_fetch_assoc($query);
+									
+									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+									$msg->display();
+				
+							}
+						}else{
+							$msg->error('No se realizó el registro!');
+							$msg->display();
 						}
 
 				}else{
@@ -186,5 +406,5 @@
 				}
 			
 			}
-	}
+		}
 ?>
