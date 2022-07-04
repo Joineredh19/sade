@@ -111,7 +111,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="../Resource/img/LogoUni.png" alt="...">
+                <img src="../Resource/img/LogoUni2.png" alt="...">
               </div>
               <div class="card-body">
                 <div class="author">
@@ -122,8 +122,19 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   <p class="description">
                     E-mail
                   </p>
-                </div>
-            
+                    <form action="/action_page.php">
+                    <input type="file" id="file-uploader">
+              <div id="feedback">  
+              </div>
+              <div>
+                <br>
+              <label id="progress-label" for="progress"></label>
+              <progress id="progress" value="0" max="100"> </progress>
+              </div>
+              <input type="submit">
+                                </form>
+                            </div>
+                        
               </div>
             </div>
             <div class="card">
@@ -136,7 +147,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="row">
                       <div class="col-md-2 col-2">
                         <div class="avatar">
-                          <img src="../Resource/img/LogoUni.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                          <img src="../Resource/img/icon.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                         </div>
                       </div>
                       <div class="col-md-7 col-7">
@@ -153,7 +164,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="row">
                       <div class="col-md-2 col-2">
                         <div class="avatar">
-                          <img src="../Resource/img/UDG - Vector Blanco.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                          <img src="../Resource/img/icon.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                         </div>
                       </div>
                       <div class="col-md-7 col-7">
@@ -170,7 +181,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="row">
                       <div class="col-md-2 col-2">
                         <div class="avatar">
-                          <img src="../Resource/img/LogoUni3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                          <img src="../Resource/img/icon.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                         </div>
                       </div>
                       <div class="col-ms-7 col-7">

@@ -135,13 +135,13 @@ if (isset($_GET['IdUsuario'])) {
       <br>
       <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
       <br>
-  <input type="password"  class="form-control" id="contrasena"  name="status" placeholder="Status">
+  <input type="text"  class="form-control" id="contrasena"  name="status" placeholder="Status">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="numerosocial" placeholder="Número de seguro social">
+  <input type="text"  class="form-control" id="contrasena"  name="numerosocial" placeholder="Número de seguro social">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="rfc" placeholder="RFC">
+  <input type="text"  class="form-control" id="contrasena"  name="rfc" placeholder="RFC">
   <br>
-  <input type="password"  class="form-control" id="contrasena"  name="curp" placeholder="CURP">
+  <input type="text"  class="form-control" id="contrasena"  name="curp" placeholder="CURP">
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>

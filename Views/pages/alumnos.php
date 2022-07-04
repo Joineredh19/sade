@@ -143,16 +143,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     </thead>
                     <tbody>
                     <tbody>
-                      
-                            <?php #$HomeController->VerUsuarioxId($_SESSION['id']) -> $key?>
                                 <tr>
                                     <td align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('id') ?></td>
                                     <td align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Nombres') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Apellidos') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Email') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Telefono') ?></td>
-                                    <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('genero') ?></td>
-                                    <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('rol') ?></td>
+                                    <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('tgeneros_id')?></td>
+                                    <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')?></td>
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Alumnos" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
                                   
                                   </tr>
