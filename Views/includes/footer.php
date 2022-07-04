@@ -122,7 +122,6 @@ $.ajax({
 
 </script>
 
-<!--
 <script>
 $(document).ready(function(){
 
@@ -131,31 +130,29 @@ $.ajax({
     url: '../../Actions/Direccion/Pais.php',
     data: {'peticion': 'Pais'}    
 })
-.done(function(Pais){
-    $('#pais').html(Pais)
+.done(function(listar_dpto){
+    $('#selepais').html(listar_pais)
 })
 .fail(function(){
     alert('Error')
 })
-})
 
-</script>
-
-<script>
-$(document).ready(function(){
-
-$.ajax({
+$( '#selepais').on('change',function(){
+    var Id = $('#selepais').val()
+    $.ajax({
     type: 'POST',
-    url: '../../Actions/Direccion/Estados.php',
-    data: {'peticion': 'Estados'}    
+    url: '../../Actions/Direccion/estado.php',
+    data: {'Id': Id}    
 })
-.done(function(Estados){
-    $('#Estados').html(Estados)
+.done(function(listar_pais){
+    $('#seleestado').html(listar_pais)
 })
 .fail(function(){
     alert('Error')
 })
 })
 
+
+})
+
 </script>
--->
