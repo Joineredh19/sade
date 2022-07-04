@@ -13,13 +13,13 @@ function getEstado(){
     $conn = Conexion();
 
     $Id = $_POST['Id'];
-    $query = "SELECT * FROM testados WHERE TPaises_id = $Id";
+    $query = "SELECT * FROM tciudades WHERE TEstados_id = $Id";
 
     $result = mysqli_query($conn,$query);
-    $listas = '<option value="0"> Seleccione Estado</option>';
+    $listas = '<option value="0"> Seleccione Ciudad</option>';
 
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-        $listas .= "<option value= '$row[id]'> $row[Estado]</option>";
+        $listas .= "<option value= '$row[id]'> $row[Ciudad]</option>";
     }
     return $listas;
 }

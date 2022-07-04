@@ -40,7 +40,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../Resource/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../Resource/css/demo/demo.js"></script>
- 
+  <script src="../Resource/js/paises.js"></script>
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
@@ -51,6 +51,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </body>
 
 </html>
+
 <script>
 $(document).ready(function(){
 
@@ -118,41 +119,6 @@ $.ajax({
 .fail(function(){
     alert('Error')
 })
-})
-
-</script>
-
-<script>
-$(document).ready(function(){
-
-$.ajax({
-    type: 'POST',
-    url: '../../Actions/Direccion/Pais.php',
-    data: {'peticion': 'Pais'}    
-})
-.done(function(listar_dpto){
-    $('#selepais').html(listar_pais)
-})
-.fail(function(){
-    alert('Error')
-})
-
-$( '#selepais').on('change',function(){
-    var Id = $('#selepais').val()
-    $.ajax({
-    type: 'POST',
-    url: '../../Actions/Direccion/estado.php',
-    data: {'Id': Id}    
-})
-.done(function(listar_pais){
-    $('#seleestado').html(listar_pais)
-})
-.fail(function(){
-    alert('Error')
-})
-})
-
-
 })
 
 </script>

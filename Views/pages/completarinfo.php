@@ -158,31 +158,21 @@ if (isset($_GET['IdUsuario'])) {
   <input type="text"  class="form-control" id="contrasena"  name="alergia" placeholder="Alergias">
   <br>
  
-  <select name="selepais" id="selepais" class="form-control " aria-label="Seleccione su país">
+  <select name="selepais" id="selepaises" class="form-control "> </select>
   <br>
-  <select name="seleestado" id="seleestado" class="form-control " aria-label="Seleccione su estado">
+  <select name="seleciudad" id="seleestados" class="form-control "> </select>
   <br>
-  <select name="seleciudad" id="seleciudad" class="form-control " aria-label="Seleccione su ciudad">
+  <select name="seleciudad" id="seleciudades" class="form-control " aria-label="Seleccione su ciudad"> </select>
   <br>
-  <select name="selepostal" id="selepostal" class="form-control " aria-label="Seleccione su código postal">
+  <select name="selepostal" id="selepostales" class="form-control " aria-label="Seleccione su código postal"> </select>
   <br>
-  <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia">
+  <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia"> </select>
 
-  </select>
-  <br>
-  <input type="text"  class="form-control" id="contrasena"  name="calleynumero" placeholder="Calle y número">
-  <br>
   
 
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
         </div>
-        <!-- Button trigger modal -->
-
-
-
-
-
-
+     
       <?php include '../includes/footer.php';?>
 

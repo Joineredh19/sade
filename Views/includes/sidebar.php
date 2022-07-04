@@ -55,7 +55,13 @@
           </li>
   <?php }else{ ?>
     <?php if ( $data->__GET('TRoles_id') == '2'){ ?>
-<li class="active ">
+      <li class="active ">
+            <a href="./index.php" style="margin-left: 5px;">
+              <i class="bi bi-layout-text-window-reverse"></i>
+              <p>TABLERO</p>
+            </a>
+          </li>
+<li >
             <a href="./alumnos.php" style="margin-left: 5px;">
               <i class="bi bi-person"></i>
               <p>ALUMNO</p>
