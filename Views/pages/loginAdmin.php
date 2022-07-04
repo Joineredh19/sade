@@ -31,7 +31,13 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../Resource/img/LogoUni2.png"  alt="User Icon" />
+      <img src="../Resource/img/LogoUni4.png"  alt="User Icon" style="width: 400px;"/>
+      <div style="text-align:center"><!-- <h4><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3530597">
+      <span style="color:gray;"></span>
+     </a></h4> -->
+      <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FMexico_City" width="100%" height="90" frameborder="0" seamless>
+     </iframe> 
+      </div>
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
       <br>
