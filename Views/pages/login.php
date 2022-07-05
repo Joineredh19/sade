@@ -11,7 +11,7 @@
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="../Resource/css/demo/relojcss.css">
+    <link rel="stylesheet" href="../Resource/css/demo/relojestilo.css">
   </head>
 
 <body>
