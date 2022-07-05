@@ -105,13 +105,13 @@ if (isset($_GET['IdUsuario'])) {
       <br>
       <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
       <br>
-  <input type="text"  class="form-control" id="contrasena"  name="status" placeholder="Status">
+  <input type="text"  class="form-control" id="status"  name="status" placeholder="Status">
   <br>
-  <input type="text"  class="form-control" id="contrasena"  name="numerosocial" placeholder="Número de seguro social">
+  <input type="text"  class="form-control" id="numerosocial"  name="numerosocial" placeholder="Número de seguro social">
   <br>
-  <input type="text"  class="form-control" id="contrasena"  name="rfc" placeholder="RFC">
+  <input type="text"  class="form-control" id="rfc"  name="rfc" placeholder="RFC">
   <br>
-  <input type="text"  class="form-control" id="contrasena"  name="curp" placeholder="CURP">
+  <input type="text"  class="form-control" id="curp"  name="curp" placeholder="CURP">
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
@@ -125,7 +125,7 @@ if (isset($_GET['IdUsuario'])) {
   <option value="sangreab">AB-</option>
   </select>
 <br>
-  <input type="text"  class="form-control" id="contrasena"  name="alergia" placeholder="Alergias">
+  <input type="text"  class="form-control" id="alergia"  name="alergia" placeholder="Alergias">
   <br>
  
   <select name="selepais" id="selepaises" class="form-control "> </select>
@@ -137,7 +137,12 @@ if (isset($_GET['IdUsuario'])) {
   <select name="selepostal" id="selepostales" class="form-control " aria-label="Seleccione su código postal"> </select>
   <br>
   <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia"> </select>
-
+  <br>
+  <select name="seletutoraca" id="seletutoraca" class="form-control " aria-label="Seleccione tutor académico"> </select>
+  <br>
+  <select name="selepadre" id="selepadre" class="form-control " aria-label="Seleccione tutor padre"> </select>
+  <br>
+  <select name="seleturno" id="seleturno" class="form-control " aria-label="Seleleccione su turno"> </select>
   
 
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
