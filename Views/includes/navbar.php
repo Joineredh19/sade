@@ -1,5 +1,5 @@
 <?php 
-  $data = $HomeController->VerUsuarioxId($_SESSION['id']);
+  $datos = $HomeController->VerUsuarioxId($_SESSION['id']);
 ?>
 
             <ul class="navbar-nav">
@@ -13,14 +13,14 @@
               </li>
               <li class="nav-item btn-rotate dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="bi bi-person-square"><?= $data->__GET('Nombres').' '.$data->__GET('Apellidos')?></i>
+                  <i class="bi bi-person-square"><?= $datos->__GET('Nombres').' '.$datos->__GET('Apellidos')?></i>
                   <p>
                     <span class="d-lg-none d-md-block">Más Acciones</span>
                   </p>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <?php if (( $data->__GET('TRoles_id') == '1') or ( $data->__GET('TRoles_id') == '2') or ( $data->__GET('TRoles_id') == '3') ){ ?>
+                <?php if (( $datos->__GET('TRoles_id') == '1') or ( $datos->__GET('TRoles_id') == '2') or ( $datos->__GET('TRoles_id') == '3') ){ ?>
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
                   <?php } ?>
                   <a class="dropdown-item" href="./perfil.php">Ver perfil</a>

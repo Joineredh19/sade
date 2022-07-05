@@ -136,9 +136,8 @@ if (isset($_GET['IdUsuario'])) {
   <br>
   <select name="selepadre" id="selepadre" class="form-control " aria-label="Seleccione tutor padre"> </select>
   <br>
-  <select name="seleturno" id="seleturno" class="form-control " aria-label="Seleleccione su turno"> </select>
-  
-
+  <select name="selepadre" id="selepadre" class="form-control " aria-label="Seleccione tutor padre"> </select>
+  <br>
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
         </div>

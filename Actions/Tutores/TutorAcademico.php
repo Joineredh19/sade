@@ -14,18 +14,18 @@ function Conexion(){
     
 function getTutorAcademico(){
     $conn = Conexion();
-    $query = '';
+    $query = 'SELECT * FROM tusuarios WHERE TRoles_id = 5';
 
     $result = mysqli_query($conn,$query);
     $listas = '<option value="0"> Seleccione Tutor Academico</option>';
 
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-        $listas .= "<option value= '$row[id]'> $row[Rol]</option>";
+        $listas .= "<option value= '$row[id]'> $row[Nombres]  $row[Apellidos]</option>";
     }
     return $listas;
 }
 
-echo getRoles();
+echo getTutorAcademico();
 
 
 
