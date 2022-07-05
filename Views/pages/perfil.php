@@ -81,12 +81,12 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="../Resource/img/LogoUni2.png" alt="...">
+              <img src="../Resource/img/LogoUni4.png" alt="alt=User Icon" style="width: 310px;margin-left: 10px; margin-top: 8px;">
               </div>
               <div class="card-body">
                 <div class="author">
                   <a href="#">
-                    <img class="avatar border-gray" src="../Resource/img/icon.png" alt="...">
+                  <img class="avatar border-gray" src="../Resource/img/icon.png" alt="..." style="border-top-width: 0px;margin-bottom: 25px;top: 30px;">
                     <h5 class="title">USUARIO</h5>
                   </a>
                   <p class="description">

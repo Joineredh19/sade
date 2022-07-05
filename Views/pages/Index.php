@@ -184,8 +184,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header ">
-                <h5 class="card-title">Users Behavior</h5>
-                <p class="card-category">24 Hours performance</p>
+                <h5 class="card-title">Faltas por Semana</h5>
+                <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body ">
                 <canvas id=chartHours width="400" height="100"></canvas>
@@ -193,7 +193,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-history"></i> Updated 3 minutes ago
+                  <i class="fa fa-history"></i> Centro Unversitario de la Costa
                 </div>
               </div>
             </div>
@@ -226,20 +226,20 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-8">
             <div class="card card-chart">
               <div class="card-header">
-                <h5 class="card-title">NASDAQ: AAPL</h5>
-                <p class="card-category">Line Chart with Points</p>
+                <h5 class="card-title">Faltas por Mes</h5>
+                <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body">
                 <canvas id="speedChart" width="400" height="100"></canvas>
               </div>
               <div class="card-footer">
                 <div class="chart-legend">
-                  <i class="fa fa-circle text-info"></i> Tesla Model S
-                  <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                  <i class="fa fa-circle text-info"></i> Faltas Atendidas
+                  <i class="fa fa-circle text-warning"></i> Faltas No Atendidas
                 </div>
                 <hr />
                 <div class="card-stats">
-                  <i class="fa fa-check"></i> Data information certified
+                  <i class="fa fa-check"></i> Centro Universitario de Tonalá
                 </div>
               </div>
             </div>
