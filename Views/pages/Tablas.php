@@ -83,6 +83,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-body">
               <?php  $msg->display(); ?>
                 <div class="table-responsive">
+                <input class="form-control mb-4" id="tableSearch" type="text"
+    placeholder="Buscar">
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
@@ -110,8 +112,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                         Acción
                       </th>
                     </thead>
-                    <tbody>
-                    <tbody>
+                    <tbody id="myTable">
+                    
                       
                             <?php foreach ($HomeController->ListarUsuario() as $key){ ?>
                                 <tr>
