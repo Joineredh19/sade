@@ -1,10 +1,7 @@
-function desabilitar()
-{
-    var rangoSinPrecio = document.getElementById('Roles').checked;
-    var Estudiante = document.getElementById('Estudiante');
-    if (rangoSinPrecio === true) {
-        precio.disabled = true;
-    } else if (rangoSinPrecio === false) {
-        precio.disabled = false;
-    }
-}
+// Accedemos al botón
+var emailInput = document.getElementById('Roles');
+
+document.getElementById('Estudiante').addEventListener('click', function(e) {
+  console.log('Vamos a habilitar el input text');
+  emailInput.disabled = true;
+});
