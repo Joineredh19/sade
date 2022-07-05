@@ -1,7 +1,11 @@
-// Accedemos al botón
-var emailInput = document.getElementById('Roles');
+var input = document.getElementById('nombreUsuario');
 
-document.getElementById('Estudiante').addEventListener('click', function(e) {
-  console.log('Vamos a habilitar el input text');
-  emailInput.disabled = true;
-});
+function carg(elemento) {
+  d = elemento.value;
+  
+  if(d == "4"){
+    input.disabled = true;
+  }else{
+    input.disabled = false;
+  }
+}
