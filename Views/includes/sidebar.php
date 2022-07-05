@@ -3,7 +3,7 @@
 ?>
 
 <?php if (( $datos->__GET('TRoles_id') == '1') or ( $datos->__GET('TRoles_id') == '2') or ( $datos->__GET('TRoles_id') == '3') ){ ?>
-<li class="active ">
+<li class="">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
               <p>TABLERO</p>
