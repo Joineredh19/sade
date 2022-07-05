@@ -91,11 +91,8 @@ if (isset($_GET['IdUsuario'])) {
       <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  ">
       <br>
   
-  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">
-  <option selected>Seleccione su turno</option>
-  <option value="sangreaa">Matutino</option>
-  <option value="sangrea">Vespertino</option>
-  <option value="sangrea">Mixto</option>
+  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">  <option selected>Seleccione su turno</option>
+ 
   
   </select>
   <br>
