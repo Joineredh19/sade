@@ -14,11 +14,10 @@ function Conexion(){
     
 function getTutorAcademico(){
     $conn = Conexion();
-    $query = 'SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol
-    FROM  tusuarios  INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id 	ORDER BY tusuarios.id  ASC ';
+    $query = '';
 
     $result = mysqli_query($conn,$query);
-    $listas = '<option value="0"> Seleccione rol</option>';
+    $listas = '<option value="0"> Seleccione Tutor Padre</option>';
 
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         $listas .= "<option value= '$row[id]'> $row[Rol]</option>";

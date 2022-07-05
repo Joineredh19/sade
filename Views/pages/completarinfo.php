@@ -91,17 +91,12 @@ if (isset($_GET['IdUsuario'])) {
       <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  ">
       <br>
   
-  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">  <option selected>Seleccione su turno</option>
- 
-  
-  </select>
+  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">  <option selected>Seleccione su turno</option></select>
   <br>
-      <input type="text" id="email" class="form-control" name="email" placeholder="Email" required value="<?php if($data != NULL) echo $data->__GET('Email') ?>  ">
-      <br>
-      <select name="Roles" id="Rol" class="form-control" > </select>
-      <br>
-      <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
-      <br>
+  <input type="text" id="email" class="form-control" name="email" placeholder="Email" required value="<?php if($data != NULL) echo $data->__GET('Email') ?>  ">
+  <br>
+  <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
+  <br>
   <input type="text"  class="form-control" id="status"  name="status" placeholder="Status">
   <br>
   <input type="text"  class="form-control" id="numerosocial"  name="numerosocial" placeholder="Número de seguro social">
@@ -112,14 +107,14 @@ if (isset($_GET['IdUsuario'])) {
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
-  <option value="sangreaa">A+</option>
-  <option value="sangrea">A-</option>
-  <option value="sangrebb">B+</option>
-  <option value="sangreb">B-</option>
-  <option value="sangreoo">O+</option>
-  <option value="sangreo">O-</option>
-  <option value="sangreaabb">AB+</option>
-  <option value="sangreab">AB-</option>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
   </select>
 <br>
   <input type="text"  class="form-control" id="alergia"  name="alergia" placeholder="Alergias">
@@ -134,6 +129,8 @@ if (isset($_GET['IdUsuario'])) {
   <select name="selepostal" id="selepostales" class="form-control " aria-label="Seleccione su código postal"> </select>
   <br>
   <select name="selecolonia" id="selecolonia" class="form-control " aria-label="Seleccione su colonia"> </select>
+  <br>
+  <input type="text"  class="form-control" id="calleynum"  name="calleynum" placeholder="Calle y Número">
   <br>
   <select name="seletutoraca" id="seletutoraca" class="form-control " aria-label="Seleccione tutor académico"> </select>
   <br>
