@@ -11,7 +11,8 @@
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-</head>
+    <link rel="stylesheet" href="../Resource/css/demo/relojcss.css">
+  </head>
 
 <body>
 
@@ -22,14 +23,18 @@
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="../Resource/img/LogoUni4.png"  alt="User Icon" style="width: 400px;"/>
-      <div style="text-align:center"><!-- <h4><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3530597">
-      <span style="color:gray;"></span>
-     </a></h4> -->
-      <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FMexico_City" width="100%" height="90" frameborder="0" seamless>
-     </iframe> 
-      </div>
+
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
+
+      <!-- INICIO RELOJ -->
+    <div class="container-clock" style="height: 72px;margin-bottom: 10px;">
+      <h1 id="time">00:00:00</h1>
+      <p id="date">date</p>
+    </div>
+    <script src="../Resource/js/plugins/clock.js"></script>
+      <!-- FIN RELOJ -->
+
     </div>
 
     <!-- Login Form -->
