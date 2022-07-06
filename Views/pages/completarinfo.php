@@ -84,7 +84,7 @@ if (isset($_GET['IdUsuario'])) {
         <div class="row">
        <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
-     <input type="text" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>  " disabled  >
+     <input type="hidden" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>  " disabled  >
      <br>
   <input type="text"  class="form-control" id="codigo1"  name="codigo" placeholder="Código"> 
      <br> 
@@ -148,7 +148,7 @@ if (isset($_GET['IdUsuario'])) {
 
     var contenido = document.getElementById("Roles").value;
     
-    if (contenido == 5 && contenido == 6){
+    if (contenido == 5 || contenido == 6){
       $( "#Usuario" ).prop( "disabled", true );
       $( "#apellidoUsuario1" ).prop( "disabled", true );
       $( "#seleturno1" ).prop( "disabled", true );
