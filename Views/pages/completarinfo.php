@@ -117,7 +117,7 @@ if (isset($_GET['IdUsuario'])) {
   <option value="AB-">AB-</option>
   </select>
 <br>
-  <input type="text"  class="form-control" id="alergia"  name="alergia" placeholder="Alergias">
+  <input type="text"  class="form-control" id="alergia1"  name="alergia" placeholder="Alergias">
   <br>
  
   <select name="selepais" id="selepaises" class="form-control "> </select>
@@ -162,7 +162,8 @@ if (isset($_GET['IdUsuario'])) {
       $( "#alergia1" ).prop( "disabled", true );
       $( "#seletutoraca" ).prop( "disabled", true );
       $( "#selepadre" ).prop( "disabled", true );
-      $( "#codigo" ).prop( "disabled", true );
+      $( "#seleturno" ).prop( "disabled", true );
+      $( "#codigo1" ).prop( "disabled", true );
      
 
     } else if  (contenido == 4) {
