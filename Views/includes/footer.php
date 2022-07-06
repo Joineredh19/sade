@@ -43,6 +43,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   <script src="../Resource/js/paises.js"></script>
   <script src="../Resource/js/tutores.js"></script>
   <script src="../Resource/js/validaciones.js"></script>
+  <script src="../Resource/js/turnos.js"></script>
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
