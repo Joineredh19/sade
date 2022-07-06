@@ -142,5 +142,6 @@ if (isset($_GET['IdUsuario'])) {
     </form>
         </div>
      
+
       <?php include '../includes/footer.php';?>
 

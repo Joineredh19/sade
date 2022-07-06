@@ -20,7 +20,7 @@ function getRoles(){
     $listas = '<option value="0"> Seleccione rol</option>';
 
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-        $listas .= "<option value= '$row[id]'> $row[Rol]</option>";
+        $listas .= "<option id='$row[id]' value= '$row[id]'> $row[Rol]</option>";
     }
     return $listas;
 }
