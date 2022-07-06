@@ -34,6 +34,11 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->VerUsuarioxId($id);
 			return $var;
 		}
+		public function  VerUsuarioxRol($id){
+			$model = new UsuarioModel();
+			$var = $model->VerUsuarioxRol($id);
+			return $var;
+		}
 
 		public function  ListarUsuario(){
 			$model = new UsuarioModel();

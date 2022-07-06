@@ -100,6 +100,34 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 
+		public function VerUsuarioxRol($id)
+		{
+			try{
+				$stm = $this->pdo->prepare("SELECT * FROM tusuarios WHERE id = ?");
+				$stm->execute(array($id));
+				$r = $stm->fetch(PDO::FETCH_OBJ);
+
+				if ($r) {
+					$entity = new Usuarios();
+					$entity->__SET('id',$r->id);
+					$entity->__SET('Nombres',$r->Nombres);
+					$entity->__SET('Apellidos',$r->Apellidos);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Telefono',$r->Telefono);
+					$entity->__SET('TRoles_id',$r->TRoles_id);
+					$entity->__SET('tgeneros_id',$r->tgeneros_id);
+					$entity->__SET('contrasenia',$r->contrasenia);
+					
+
+					return $entity;
+
+				}
+				return NULL;
+			}catch(Exception $e){
+				die($e->getMessage()." ->UsuarioModel->Ver()");
+			}
+		}
+
 
 		public function ListarUsuario()
 		{

@@ -1,8 +1,8 @@
 <?php 
-  $datos = $HomeController->VerUsuarioxId($_SESSION['id']);
+  $dato = $HomeController->VerUsuarioxRol($_SESSION['id']);
 ?>
 
-<?php if (( $datos->__GET('TRoles_id') == '1') or ( $datos->__GET('TRoles_id') == '2') or ( $datos->__GET('TRoles_id') == '3') ){ ?>
+<?php if (( $dato->__GET('TRoles_id') == '1') or ( $dato->__GET('TRoles_id') == '2') or ( $dato->__GET('TRoles_id') == '3') ){ ?>
 <li class="">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
@@ -54,7 +54,7 @@
             </a>
           </li>
   <?php }else{ ?>
-    <?php if ( $datos->__GET('TRoles_id') == '4'){ ?>
+    <?php if ( $dato->__GET('TRoles_id') == '4'){ ?>
       <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
@@ -69,7 +69,7 @@
           </li>
 
           <?php }else {?>
-            <?php if ( $datos->__GET('TRoles_id') == '5'){ ?>
+            <?php if ( $dato->__GET('TRoles_id') == '5'){ ?>
               <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>
@@ -92,7 +92,7 @@
 
            
             <?php }else {?>
-            <?php if ( $datos->__GET('TRoles_id') == '6'){ ?>
+            <?php if ( $dato->__GET('TRoles_id') == '6'){ ?>
               <li class="active ">
             <a href="./index.php" style="margin-left: 5px;">
               <i class="bi bi-layout-text-window-reverse"></i>

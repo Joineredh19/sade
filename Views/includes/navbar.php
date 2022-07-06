@@ -1,5 +1,5 @@
 <?php 
-  $datos = $HomeController->VerUsuarioxId($_SESSION['id']);
+  $datos = $HomeController->VerUsuarioxRol($_SESSION['id']);
 ?>
 
             <ul class="navbar-nav">
