@@ -105,7 +105,7 @@ if (isset($_GET['IdUsuario'])) {
   <br>
   <input type="text"  class="form-control" id="curp1"  name="curp1" placeholder="CURP">
   <br>
-  <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
+  <select name="TipoSangre" id="tipoSangre1" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
   <option value="A+">A+</option>
   <option value="A-">A-</option>
@@ -165,8 +165,11 @@ if (isset($_GET['IdUsuario'])) {
       $( "#codigo" ).prop( "disabled", true );
      
 
-    } else if  (contenido == 1) {
-
+    } else if  (contenido == 4) {
+      $( "#Usuario" ).prop( "disabled", true );
+      $( "#apellidosUsuario1" ).prop( "disabled", true );
+      $( "#email1" ).prop( "disabled", true );
+      $( "#telefono1" ).prop( "disabled", true );
     }
   
 	
