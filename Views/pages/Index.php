@@ -184,11 +184,51 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header ">
-                <h5 class="card-title">Faltas por Semana</h5>
+                <h5 class="card-title">FALTAS DIARIAS</h5>
                 <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body ">
-                <canvas id=chartHours width="400" height="100"></canvas>
+
+<!-- INICIO TABLA SEMANAL -->
+<div>
+                  <canvas id="yChart" width="200" height="80"></canvas>
+                </div>
+                <script>
+                  const ctx = document.getElementById('yChart').getContext('2d');
+                  const yChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                              labels: ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO','DOMINGO'],
+                              datasets: [{
+                                          label: 'FALTAS TOTALES',
+                                          data: [30, 44, 27, 24, 23,3,4],
+                                          backgroundColor: ['rgba(141, 153, 174)',],
+                                          borderColor:'rgb(43,45,66)',
+                                        },
+                                        {
+                                          label: 'FALTAS ATENDIDAS',
+                                          data: [20, 26, 12, 16, 10,2,3],
+                                          backgroundColor: ['rgba(27, 157, 51)',],
+                                          borderColor:'rgb(27, 157, 51)',
+                                        },
+                                        {
+                                          label: 'FALTAS SIN ATENDER',
+                                          data: [10, 18, 15, 8, 13,1,1],
+                                          backgroundColor: ['rgba(207,4,41)',],
+                                          borderColor:'rgb(207,4,41)',
+                                        }]
+                             },
+                    options:{
+                              scales: {
+                                          y:{
+                                            beginAtZero: true
+                                        }
+                        }
+                      }
+                    });
+                </script>
+<!--FIN TABLA SEMANAL-->
+
               </div>
               <div class="card-footer ">
                 <hr>
@@ -226,20 +266,56 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-8">
             <div class="card card-chart">
               <div class="card-header">
-                <h5 class="card-title">Faltas por Mes</h5>
+                <h5 class="card-title">FALTAS SEMESTRALES</h5>
                 <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body">
-                <canvas id="speedChart" width="400" height="100"></canvas>
+
+<!--INICIO TABLA SEMESTRAL -->
+<div>
+                  <canvas id="myChart" width="400" height="200"></canvas>
+                </div>
+                <script>
+                  const linechart = document.getElementById('myChart').getContext('2d');
+                  const myChart = new Chart(linechart, {
+                        type: 'line',
+                        data: {
+                              labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                              datasets: [{
+                                          label: 'FALTAS ATENDIDAS',
+                                          data: [20, 26, 12, 16, 10, 24],
+                                          backgroundColor: ['rgba(27, 157, 51)',],
+                                          borderColor:'rgb(27, 157, 51)',
+                                        },
+                                        {
+                                          label: 'FALTAS SIN ATENDER',
+                                          data: [10, 18, 15, 8, 13, 14],
+                                          backgroundColor: ['rgba(207, 4, 41)',],
+                                          borderColor:'rgb(204,4,41)',
+                                        }]
+                                },
+                        options: {
+                                scales: {
+                                        y: {
+                                           beginAtZero: true
+                        }
+                      }
+                    }
+                  });
+                </script>
+<!--FIN TABLA SEMESTRAL -->
+
               </div>
               <div class="card-footer">
+                <!--************ APARTADO POR SI SE OCUPA**************
                 <div class="chart-legend">
                   <i class="fa fa-circle text-info"></i> Faltas Atendidas
                   <i class="fa fa-circle text-warning"></i> Faltas No Atendidas
                 </div>
+                -->
                 <hr />
                 <div class="card-stats">
-                  <i class="fa fa-check"></i> Centro Universitario de Tonalá
+                  <i class="fa fa-check"></i> Centro Unversitario de la Costa
                 </div>
               </div>
             </div>
