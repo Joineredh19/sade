@@ -113,7 +113,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <tbody>
                     <tbody>
                               <?php switch($HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')){
-                                case 1:?>
+                                case 1 :?>
                                 <?php foreach ($HomeController->ListarUsuario() as $key){ ?>
                                   <?php if ($key->__GET('rol')=="Estudiante"){?>
                                     <tr>

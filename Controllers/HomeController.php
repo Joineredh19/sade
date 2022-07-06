@@ -45,4 +45,6 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->ListarUsuario();
 			return $var;
 		}
+
+		
 	}
