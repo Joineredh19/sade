@@ -136,7 +136,7 @@ if (isset($_GET['IdUsuario'])) {
   <br>
   <select name="selepadre" id="selepadre" class="form-control " aria-label="Seleccione tutor padre"> </select>
   <br>
-  <select name="seleturno1" id="seleturno" class="form-control " aria-label="Seleccione el turno"> </select>
+  <select name="seleturno" id="seleturno" class="form-control " aria-label="Seleccione el turno"> </select>
   <br>
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
@@ -160,9 +160,9 @@ if (isset($_GET['IdUsuario'])) {
       $( "#curp1" ).prop( "disabled", true );
       $( "#tipoSangre1" ).prop( "disabled", true );
       $( "#alergia1" ).prop( "disabled", true );
-      $( "#seletutoraca1" ).prop( "disabled", true );
-      $( "#selepadre1" ).prop( "disabled", true );
-      $( "#codigo1" ).prop( "disabled", true );
+      $( "#seletutoraca" ).prop( "disabled", true );
+      $( "#selepadre" ).prop( "disabled", true );
+      $( "#codigo" ).prop( "disabled", true );
      
 
     } else if  (contenido == 1) {
