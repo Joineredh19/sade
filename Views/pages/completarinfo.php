@@ -84,9 +84,9 @@ if (isset($_GET['IdUsuario'])) {
         <div class="row">
        <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
-     <select name="Roles" id="Roles" class="form-control" value="" > </select>
-      <br>
-      <input type="text" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required value="<?php if($data != NULL) echo $data->__GET('Nombres') ?>  "  >
+     <input type="text" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>  " disabled  >
+      <br> 
+      <input type="text" id="Usuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required value="<?php if($data != NULL) echo $data->__GET('Nombres') ?>  "  >
       <br> 
       <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  ">
       <br>
@@ -141,7 +141,17 @@ if (isset($_GET['IdUsuario'])) {
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
         </div>
-     
+   
 
       <?php include '../includes/footer.php';?>
+      <script>
 
+    var contenido = document.getElementById("Roles").value;
+    
+    if (contenido == 1){
+      $( "#Usuario" ).prop( "disabled", true );
+    }
+	
+
+
+        </script>
