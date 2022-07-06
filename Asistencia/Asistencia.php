@@ -59,14 +59,15 @@
 								)";
 								$query=mysqli_query($conn, $insertar);
 	
-								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id
+																			INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 								$dato_registro = mysqli_fetch_assoc($query);
 								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
 
-								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+								$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -84,14 +85,15 @@
 								)";
 								$query=mysqli_query($conn, $insertar);
 	
-								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id
+																			INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 								$dato_registro = mysqli_fetch_assoc($query);
 								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
-	
-								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+
+								$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -112,15 +114,16 @@
 										id = '$data_entrada4[id]';
 										");
 									
-									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraSalida FROM tbitacorasalumnos 
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id
+																			INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-									$dato_registro = mysqli_fetch_assoc($query);
-									$H_registro_salida = date('H:i:s', strtotime($dato_registro['FHoraSalida']));
-	
-									$msg->success('Registrado con exito la asistencia de salida ('. $dato_registro["Nombres"].') ('. $H_registro_salida.')');
-									$msg->display();	
+								$dato_registro = mysqli_fetch_assoc($query);
+								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
+
+								$msg->success('Registrado con exito la asistencia de salida ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+								$msg->display();	
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
 								<?php
@@ -139,14 +142,15 @@
 								)";
 								$query=mysqli_query($conn, $insertar);
 	
-								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id
+																			INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 								$dato_registro = mysqli_fetch_assoc($query);
 								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
-	
-								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+
+								$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -162,14 +166,15 @@
 								)";
 								$query=mysqli_query($conn, $insertar);
 	
-								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
+								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
-																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+																			INNER JOIN tusuarios ON tusuarios.id = tdatosalumnos.TUsuarios_id
+																			INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																			WHERE tbitacorasalumnos.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 								$dato_registro = mysqli_fetch_assoc($query);
 								$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
-	
-								$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+
+								$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -193,14 +198,15 @@
 									)";
 									$query=mysqli_query($conn, $insertar);
 		
-									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
 																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
 																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 									$dato_registro = mysqli_fetch_assoc($query);
 									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
 	
-									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -218,14 +224,15 @@
 									)";
 									$query=mysqli_query($conn, $insertar);
 		
-									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
 																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
 																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 									$dato_registro = mysqli_fetch_assoc($query);
 									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
 	
-									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -247,14 +254,15 @@
 											id = '$data_entrada4[id]';
 											");
 										
-										$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraSalida FROM tbitacorastrabajadores 
+										$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraSalida FROM tbitacorastrabajadores 
 																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
 																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 										$dato_registro = mysqli_fetch_assoc($query);
 										$H_registro_salida = date('H:i:s', strtotime($dato_registro['FHoraSalida']));
 	
-										$msg->success('Registrado con exito la asistencia de salida ('. $dato_registro["Nombres"].') ('. $H_registro_salida.')');
+										$msg->success('Registrado con exito la asistencia de salida ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_salida.')');
 										$msg->display();
 									?>
 										<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -275,14 +283,15 @@
 									)";
 									$query=mysqli_query($conn, $insertar);
 		
-									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
 																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
 																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 									$dato_registro = mysqli_fetch_assoc($query);
 									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
 	
-									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
@@ -298,14 +307,15 @@
 									)";
 									$query=mysqli_query($conn, $insertar);
 		
-									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
+									$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatostrabajadores.Codigo, tbitacorastrabajadores.FHoraEntrada FROM tbitacorastrabajadores 
 																				INNER JOIN tdatostrabajadores ON tdatostrabajadores.Codigo = tbitacorastrabajadores.Codigo 
 																				INNER JOIN tusuarios ON tusuarios.id = tdatostrabajadores.TUsuarios_id 
+																				INNER JOIN troles ON troles.id = tusuarios.TRoles_id 
 																				WHERE tbitacorastrabajadores.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 									$dato_registro = mysqli_fetch_assoc($query);
 									$H_registro_entrada = date('H:i:s', strtotime($dato_registro['FHoraEntrada']));
 	
-									$msg->success('Registrado con exito la asistencia de entrada ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
+									$msg->success('Registrado con exito la asistencia de entrada ('.$dato_registro["Rol"].') ('. $dato_registro["Nombres"].') ('. $H_registro_entrada.')');
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
