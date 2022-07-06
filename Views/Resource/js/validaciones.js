@@ -1,7 +1,7 @@
 var input = document.getElementById('nombreUsuario');
 
-function carg(elemento) {
-  d = elemento.value;
+function carg(Roles) {
+  d = Roles.value;
   
   if(d == "4"){
     input.disabled = true;

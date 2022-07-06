@@ -40,12 +40,18 @@
     <!-- Login Form -->
     <?php require_once '../../Asistencia/Asistencia.php'?>
     <form action="#" method="POST">
-      <input type="text" id="IngreseINE" class="fadeIn second" name="IngreseINE" required placeholder="Ingrese su INE">
-      <input type="text" id="IngreseNombre" class="fadeIn second" name="IngreseNombre" placeholder="Nombres">
-      <input type="text" id="IngreseApellidos" class="fadeIn second" name="IngreseApellidos" placeholder="Apellidos">
-      <input type="text" id="IngreseEmail" class="fadeIn second" name="IngreseEmail" placeholder="E-mail">
-      <input type="number" id="IngreseTele" class="fadeIn second" name="IngreseTele" placeholder="Teléfono">
-      <select name="ATrabajo" id="ATrabajo" class="form-control " aria-label="Área de trabajo a la que va">
+      <input type="Ine" id="IngreseINE" class="form-control" name="IngreseINE" required placeholder="Ingrese su INE">
+      <br>
+      <input type="Nombre" id="IngreseNombre" class="form-control" name="IngreseNombre" placeholder="Nombres">
+      <br>
+      <input type="Apellidos" id="IngreseApellidos" class="form-control" name="IngreseApellidos" placeholder="Apellidos">
+      <br>
+      <input type="email" id="IngreseEmail" class="form-control" name="IngreseEmail" placeholder="E-mail">
+      <br>
+      <input type="number" id="IngreseTele" class="form-control" name="IngreseTele" placeholder="Teléfono">
+      <br>
+      <select name="ATrabajo" id="ATrabajo" class="form-control " aria-label="Área de trabajo a la que va"></select>
+      <br>
       <input type="submit" class="fadeIn fourth" value="Ingresar" name="enviar">
       
     </form>
