@@ -190,7 +190,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-body ">
 
 <!-- INICIO TABLA SEMANAL -->
-<div>
+                <div>
                   <canvas id="yChart" width="200" height="80"></canvas>
                 </div>
                 <script>
@@ -272,7 +272,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-body">
 
 <!--INICIO TABLA SEMESTRAL -->
-<div>
+                <div>
                   <canvas id="myChart" width="400" height="200"></canvas>
                 </div>
                 <script>
@@ -315,7 +315,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 -->
                 <hr />
                 <div class="card-stats">
-                  <i class="fa fa-bar-chart"></i> Centro Unversitario de la Costa
+                  <i class="fa fa-area-chart" aria-hidden="true"></i> Centro Unversitario de la Costa
                 </div>
               </div>
             </div>

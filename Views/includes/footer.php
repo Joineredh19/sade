@@ -44,6 +44,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   <script src="../Resource/js/tutores.js"></script>
   <script src="../Resource/js/validaciones.js"></script>
   <script src="../Resource/js/turnos.js"></script>
+  <script src="../Resource/js/Visitantes.js"></script>
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
@@ -163,5 +164,22 @@ $(document).ready(function(){
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Visitantes/Visitantes.php',
+    data: {'peticion': 'Visitantes'}    
+})
+.done(function(listar_visitantes){
+    $('#ATrabajo').html(listar_visitantes)
+})
+.fail(function(){
+    alert('Error')
+})
 });
 </script>
