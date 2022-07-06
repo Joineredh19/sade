@@ -150,7 +150,7 @@ if (isset($_GET['IdUsuario'])) {
     
     if (contenido == 5 || contenido == 6){
       $( "#Usuario" ).prop( "disabled", true );
-      $( "#apellidoUsuario1" ).prop( "disabled", true );
+      $( "#apellidosUsuario1" ).prop( "disabled", true );
       $( "#seleturno1" ).prop( "disabled", true );
       $( "#email1" ).prop( "disabled", true );
       $( "#telefono1" ).prop( "disabled", true );
