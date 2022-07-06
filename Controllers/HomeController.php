@@ -46,5 +46,9 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
-		
+		public function vistaalumnos(){
+			$model = new UsuarioModel;
+			$var = $model->vistaalumnos();
+			return $var;
+		}
 	}
