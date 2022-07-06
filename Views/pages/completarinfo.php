@@ -85,25 +85,25 @@ if (isset($_GET['IdUsuario'])) {
        <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
      <input type="text" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>  " disabled  >
-      <br> 
+     <br>
+  <input type="text"  class="form-control" id="codigo1"  name="codigo" placeholder="Código"> 
+     <br> 
       <input type="text" id="Usuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required value="<?php if($data != NULL) echo $data->__GET('Nombres') ?>  "  >
       <br> 
-      <input type="text" id="apellidosUsuario" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  ">
+      <input type="text" id="apellidosUsuario1" class="form-control" name="apellidosUsuario" placeholder="Apellidos" required value="<?php if($data != NULL) echo $data->__GET('Apellidos') ?>  ">
       <br>
   
-  <select name="TipoDeTurno" id="TipoDeTurno" class="form-control " aria-label="Default select example">  <option selected>Seleccione su turno</option></select>
+  <input type="text" id="email1" class="form-control" name="email" placeholder="Email" required value="<?php if($data != NULL) echo $data->__GET('Email') ?>  ">
   <br>
-  <input type="text" id="email" class="form-control" name="email" placeholder="Email" required value="<?php if($data != NULL) echo $data->__GET('Email') ?>  ">
+  <input type="text" id="telefono1" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
   <br>
-  <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Telefono" required value="<?php if($data != NULL) echo $data->__GET('Telefono') ?>">
+  <input type="text"  class="form-control" id="status1"  name="status" placeholder="Status">
   <br>
-  <input type="text"  class="form-control" id="status"  name="status" placeholder="Status">
+  <input type="text"  class="form-control" id="numerosocial1"  name="numerosocial" placeholder="Número de seguro social">
   <br>
-  <input type="text"  class="form-control" id="numerosocial"  name="numerosocial" placeholder="Número de seguro social">
+  <input type="text"  class="form-control" id="rfc1"  name="rfc1" placeholder="RFC">
   <br>
-  <input type="text"  class="form-control" id="rfc"  name="rfc" placeholder="RFC">
-  <br>
-  <input type="text"  class="form-control" id="curp"  name="curp" placeholder="CURP">
+  <input type="text"  class="form-control" id="curp1"  name="curp1" placeholder="CURP">
   <br>
   <select name="TipoSangre" id="tipoSangre" class="form-control " aria-label="Default select example">
   <option selected>Seleccione su tipo de sangre</option>
@@ -136,7 +136,7 @@ if (isset($_GET['IdUsuario'])) {
   <br>
   <select name="selepadre" id="selepadre" class="form-control " aria-label="Seleccione tutor padre"> </select>
   <br>
-  <select name="seleturno" id="seleturno" class="form-control " aria-label="Seleccione el turno"> </select>
+  <select name="seleturno1" id="seleturno" class="form-control " aria-label="Seleccione el turno"> </select>
   <br>
     <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
@@ -148,9 +148,27 @@ if (isset($_GET['IdUsuario'])) {
 
     var contenido = document.getElementById("Roles").value;
     
-    if (contenido == 1){
+    if (contenido == 5 && contenido == 6){
       $( "#Usuario" ).prop( "disabled", true );
+      $( "#apellidoUsuario1" ).prop( "disabled", true );
+      $( "#seleturno1" ).prop( "disabled", true );
+      $( "#email1" ).prop( "disabled", true );
+      $( "#telefono1" ).prop( "disabled", true );
+      $( "#status1" ).prop( "disabled", true );
+      $( "#numerosocial1" ).prop( "disabled", true );
+      $( "#rfc1" ).prop( "disabled", true );
+      $( "#curp1" ).prop( "disabled", true );
+      $( "#tipoSangre1" ).prop( "disabled", true );
+      $( "#alergia1" ).prop( "disabled", true );
+      $( "#seletutoraca1" ).prop( "disabled", true );
+      $( "#selepadre1" ).prop( "disabled", true );
+      $( "#codigo1" ).prop( "disabled", true );
+     
+
+    } else if  (contenido == 1) {
+
     }
+  
 	
 
 
