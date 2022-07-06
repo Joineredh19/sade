@@ -233,7 +233,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-history"></i> Centro Unversitario de la Costa
+                  <i class="fa fa-bar-chart"></i> Centro Unversitario de la Costa
                 </div>
               </div>
             </div>
@@ -315,7 +315,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 -->
                 <hr />
                 <div class="card-stats">
-                  <i class="fa fa-check"></i> Centro Unversitario de la Costa
+                  <i class="fa fa-bar-chart"></i> Centro Unversitario de la Costa
                 </div>
               </div>
             </div>
