@@ -1,12 +1,10 @@
 <?php 
-class TrabajadoresModel
+class TutorPadreModel
 {
     private $id;
-    private $FhoraEntrada;
-    private $FhoraSalida;
-    private $ObservacionEntrada;
-    private $ObservacionSalida;
-    private $Codigo;
+    private $CalleyNum;
+    private $TUsuarios_id;
+    private $TColonias_id;
 
     public function __GET($k)
     {
