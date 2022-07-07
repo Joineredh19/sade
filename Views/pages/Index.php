@@ -243,22 +243,39 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           <div class="col-md-4">
             <div class="card ">
               <div class="card-header ">
-                <h5 class="card-title">Email Statistics</h5>
-                <p class="card-category">Last Campaign Performance</p>
+                <h5 class="card-title">FALTAS SEMESTRALES</h5>
+                <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body ">
-                <canvas id="chartEmail"></canvas>
+
+                <!-- INICIO GRAFICA DONA -->
+                <div>
+                  <canvas id="cChart" width="200" height="80"></canvas>
+                </div>
+                <script>
+                const piechart = document.getElementById('cChart').getContext('2d');
+                const cChart = new Chart(piechart, {
+                      type: 'doughnut',
+                      data: {
+                              labels: ['TOTAL DE FALTAS ATENDIDAS', 'TOTAL DE FALTAS SIN ATENDER'],
+                              datasets: [{
+                                          label: 'TOTAL DE FALTAS',
+                                          data: [108,78],
+                                          backgroundColor: ['rgba(27, 157, 51)', 'rgba(207,4,41)'],
+                                          borderColor:['rgb(21, 122, 39)', 'rgba(180, 4, 33)']
+                                        }],hoverOffset: 4
+                            },
+                    }
+                  );
+                </script>
+<!-- FIN GRAFICA DONA -->
+
               </div>
               <div class="card-footer ">
-                <div class="legend">
-                  <i class="fa fa-circle text-primary"></i> Opened
-                  <i class="fa fa-circle text-warning"></i> Read
-                  <i class="fa fa-circle text-danger"></i> Deleted
-                  <i class="fa fa-circle text-gray"></i> Unopened
-                </div>
+
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-calendar"></i> Number of emails sent
+                  <i class="fa fa-pie-chart" aria-hidden="true"></i> Centro Unversitario de la Costa
                 </div>
               </div>
             </div>
@@ -273,7 +290,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 <!--INICIO TABLA SEMESTRAL -->
                 <div>
-                  <canvas id="myChart" width="400" height="200"></canvas>
+                  <canvas id="myChart" width="400" height="187"></canvas>
                 </div>
                 <script>
                   const linechart = document.getElementById('myChart').getContext('2d');
