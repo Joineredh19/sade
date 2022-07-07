@@ -114,7 +114,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <tbody>
                               <?php switch($HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')){
                                 case 1 : 
-                                $HomeController->vistaalumnos();
+                                 $HomeController->vistaalumnos();
                                 break;
                                 case 2 : 
                                   $HomeController->vistaalumnos();
