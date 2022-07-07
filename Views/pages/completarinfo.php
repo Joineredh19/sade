@@ -84,7 +84,7 @@ if (isset($_GET['IdUsuario'])) {
         <div class="row">
        <!-- Login Form -->
      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
-     <input type="hidden" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('id') ?>  " disabled  >
+     <input type="hidden" id="IdUsuario" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('id') ?>  " disabled  >
      <br>
      <input type="hidden" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>  " disabled  >
      <br>
