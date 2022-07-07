@@ -18,7 +18,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		}
 		
 
-        public function CompletarTutorAca($Calleynum,$Id,$Selecolonia)
+        public function CompletarInfo($Calleynum,$Id,$Selecolonia)
 		{
 			try {
 				$sql = ("INSERT INTO ttutoresacademicos (CalleyNum,TUsuarios_id, TColonias_id) VALUES (?,?,?)");
