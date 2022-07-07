@@ -2,11 +2,12 @@
 class VisitantesModel
 {
     private $id;
-    private $FhoraEntrada;
-    private $FhoraSalida;
-    private $ObservacionEntrada;
-    private $ObservacionSalida;
     private $Codigo;
+    private $Nombres;
+    private $Apellidos
+    private $Email;
+    private $Telefono;
+    private $TAreasTrabajo_id;
 
     public function __GET($k)
     {
