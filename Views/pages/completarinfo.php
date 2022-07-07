@@ -151,7 +151,7 @@ if (isset($_GET['IdUsuario'])) {
       <?php include '../includes/footer.php';?>
       <script>
 
-    var contenido = document.getElementById("Roles").value;
+    var contenido = document.getElementById("Role").value;
     
     if (contenido == 5 || contenido == 6){
       $( "#Usuario" ).prop( "disabled", true );
