@@ -18,18 +18,18 @@ require_once('../../Models/Conexion/Conexion.php');
 		}
 		
 
-        public function CompletarInfo($Id, $Codigo,$NSeguroSocial,$Rfc,$Curp,$TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno)
+        public function CompletarInfo($CalleyNum,$TUsuarios_id,$TColonias_id)
 		{
 			try {
-				$sql = ("INSERT INTO tdatosalumnos (Codigo, CalleyNum, NSeguroSocial, RFC, Curp,TipoSangre, Alergia,TTutoresAcademicos_id, TTutoresPadres_id,TColonias_id,TTurnos_id,TCalendariosIngresos_id,TUsuarios_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
-				$stm = $this->pdo->prepare($sql)->execute(array($Codigo,$Calleynum,$NSeguroSocial,$Rfc,$Curp,$TipoSangre,$Alergia,$Seletutoraca,$Selepadre,$Selecolonia,$Seleturno,1,$Id));
+				$sql = ("INSERT INTO ttutoresacademicos (CalleyNum,TUsuarios_id, TColonias_id) VALUES (?,?,?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($CalleyNum,$TUsuarios_id,$TColonias_id));
 				if($stm){
 					return true;
 				} else {
 					return false;
 				}
 			} catch (Exception $e) {
-				die($e->getMessage()." ->AlumnoModel->CompletarInfo()");
+				die($e->getMessage()." ->TrabajadorModel->CompletarInfo()");
 			}
 		}
 
