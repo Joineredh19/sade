@@ -19,32 +19,52 @@ if(!isset($_SESSION["Email"])){
 	date_default_timezone_set('America/Mexico_City');
     
     
-    $id = $_POST['id'];
-    $codigo = $_POST['codigo'];
-    $Nombres = $_POST['nombreUsuario'];
-    $Apellidos = $_POST['apellidosUsuario'];
-    //$FechaAlta = $_POST['FechaAlta'];
-    $Email = $_POST['email'];
-    $Telefono = $_POST['telefono'];
-    $Status = 1;
-	$Contrasenia = password_hash( $_POST['contrasena'], PASSWORD_DEFAULT);
-	$generoId =  $_POST['generos'];
-	$Fnto =  $_POST['fechanacimiento'];
+    $Id = $_POST['IdUsuario'];
+    $Codigo = $_POST['codigo'];
+    $Roles = $_POST['Roles'];
+    $NSeguroSocial = $_POST['numerosocial'];
+    $Rfc = $_POST['rfc1'];
+	$Curp = $_POST['curp'];
+    $TipoSangre = $_POST['TipoSangre'];
+    $Alergia = $_POST['alergia'];
+    $Selecolonia = $_POST['selecolonia'];
+    $Calleynum = $_POST['calleynum'];
+    $Seletutoraca = $_POST['seletutoraca'];
+    $Selepadre = $_POST['Selepadre'];
+    $Seleturno = $_POST['seleturno'];
+	
     
-	if ($Usuario = $HomeController->VerUsuario($Email)) {
-		$msg->error('ERROR, Un usuario con este correo existe');
-		echo("<script language='javascript'>location.href='../../Views/pages/index.php';</script>");
-		}else{
-			
-			if($HomeController->AgregarUsuario($RolesId,$Nombres,$Apellidos,$Email,$Telefono,$Status,$Contrasenia,$generoId,$Fnto) == true){
+	if ($Roles == 4) {
+        if($HomeController->CompletarAlumnos($Id, $Codigo,$NSeguroSocial,$Rfc,$Curp,$TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno) == true){
 
-				$msg->success('!Agregado con exito¡');
-				
+            $msg->success('¡Informacion Alumnos Completada con Exito!');
+            header("location: ../../Views/pages/tablas.php");
+        }else{
+            $msg->error('¡ERROR, no se Agregó!..');
+        }
+		}else if($Roles == 5){
+			
+			if($HomeController->CompletarTutorAca($Id,$Selecolonia,$Calleynum) == true){
+
+                $msg->success('¡Informacion Tutor Academico Completada con Exito!');
 				header("location: ../../Views/pages/tablas.php");
 			}else{
-				$msg->error('¡ERROR, no se Agrego!..');
+				$msg->error('¡ERROR, no se Agregó!..');
 			}
-		}
+		}else if($Roles == 6){
+        
+            if($HomeController->CompletarTutorPadre($Id,$Selecolonia,$Calleynum) == true){
+
+                $msg->success('¡Informacion Tutor Padre Completada con Exito!');
+				header("location: ../../Views/pages/tablas.php");
+			}else{
+				$msg->error('¡ERROR, no se Agregó!..');
+			}
+        }else{
+            $msg->error('!ERROR, Rol No admite completar Información¡');
+				
+				header("location: ../../Views/pages/tablas.php");
+        }
 	
 
 
