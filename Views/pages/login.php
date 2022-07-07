@@ -37,7 +37,7 @@
 
     </div>
 
-    <!-- Login Form -->
+    <!-- Login For -->
     <?php require_once '../../Asistencia/Asistencia.php'?>
     <form action="#" method="POST">
       <input type="text" id="email_tel" class="fadeIn second" name="email_tel" required placeholder="Codigo Institucional">
