@@ -5,10 +5,10 @@
 
 <?php 
 
-/*session_start();
-if(!isset($_SESSION["Email"])){
+session_start();
+if(!isset($_SESSION["id"])){
 	header("location: ../../Views/pages/login.php");
-}else{*/
+}else{
 	require_once('../../Controllers/HomeController.php');
 	$HomeController = new HomeController();
 
@@ -21,20 +21,22 @@ if(!isset($_SESSION["Email"])){
     
     $Id = $_POST['IdUsuario'];
     $Codigo = $_POST['codigo'];
-    $Roles = $_POST['Roles'];
+    $Nombre = $_POST['nombreUsuario'];
+    $Apellido = $_POST['apellidosUsuario'];
+    $Roles = $_POST['Rol'];
     $NSeguroSocial = $_POST['numerosocial'];
     $Rfc = $_POST['rfc1'];
-	$Curp = $_POST['curp'];
+	$Curp = $_POST['curp1'];
     $TipoSangre = $_POST['TipoSangre'];
     $Alergia = $_POST['alergia'];
     $Selecolonia = $_POST['selecolonia'];
     $Calleynum = $_POST['calleynum'];
     $Seletutoraca = $_POST['seletutoraca'];
-    $Selepadre = $_POST['Selepadre'];
+    $Selepadre = $_POST['selepadre'];
     $Seleturno = $_POST['seleturno'];
 	
     
-	if ($Roles == 4) {
+	if ($Roles == "4") {
         if($HomeController->CompletarAlumnos($Id, $Codigo,$NSeguroSocial,$Rfc,$Curp,$TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno) == true){
 
             $msg->success('¡Informacion Alumnos Completada con Exito!');
@@ -61,13 +63,14 @@ if(!isset($_SESSION["Email"])){
 				$msg->error('¡ERROR, no se Agregó!..');
 			}
         }else{
-            $msg->error('!ERROR, Rol No admite completar Información¡');
+          /*  $msg->error('!ERROR, Rol No admite completar Información¡');
 				
-				header("location: ../../Views/pages/tablas.php");
+				header("location: ../../Views/pages/tablas.php");*/
+                var_dump($Roles);
         }
 	
 
 
 	
-//}
+}
 ?>

@@ -83,12 +83,12 @@ if (isset($_GET['IdUsuario'])) {
       <div class="content">
         <div class="row">
        <!-- Login Form -->
-     <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/actualizar.php">
-     <input type="hidden" id="IdUsuario" class="form-control" name="IdUsuario" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('id') ?>  " disabled  >
+     <form method="post"  action="<?php echo '../../Actions/Register/actualizar.php';?>"  enctype="multipart/form-data">
+     <input type="hidden" id="IdUsuario" class="form-control" name="IdUsuario" placeholder=""  value="<?php echo  $id?>" disabled>
      <br>
-     <input type="hidden" id="Roles" class="form-control" name="Roles" placeholder="" required value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>  " disabled  >
+     <input type="text" id="Roles" class="form-control" name="Rol" placeholder=""  value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>" disabled  >
      <br>
-  <input type="text"  class="form-control" id="codigo1"  name="codigo" placeholder="Código"> 
+  <input type="text"  class="form-control" id="codigo1"  name="codigo" placeholder="Código">
      <br> 
       <input type="text" id="Usuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required value="<?php if($data != NULL) echo $data->__GET('Nombres') ?>  "  >
       <br> 
@@ -140,7 +140,7 @@ if (isset($_GET['IdUsuario'])) {
   <br>
   <select name="seleturno" id="seleturno" class="form-control " aria-label="Seleccione el turno"> </select>
   <br>
-    <button type="button" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
+    <button type="submit" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
     </form>
         </div>
    

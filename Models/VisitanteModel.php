@@ -4,7 +4,7 @@ class VisitantesModel
     private $id;
     private $Codigo;
     private $Nombres;
-    private $Apellidos
+    private $Apellidos;
     private $Email;
     private $Telefono;
     private $TAreasTrabajo_id;
