@@ -101,6 +101,7 @@ fileUploader.addEventListener('change', (event) => {
 });
 
 </script>
+
 <script>
 $(document).ready(function(){
 
@@ -118,6 +119,7 @@ $.ajax({
 })
 
 </script>
+
 
 <script>
 $(document).ready(function(){
@@ -154,6 +156,7 @@ $.ajax({
 })
 
 </script>
+
 
 <script>
   

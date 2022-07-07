@@ -98,10 +98,10 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               </div>
               <div>
                 <br>
-              <label id="progress-label" for="progress"></label>
+              <label id="progress-label" class="progress-bar progress-bar-striped bg-info" ></label>
               <progress id="progress" value="0" max="100"> </progress>
               </div>
-              <input type="submit">
+              <input type="submit" class="btn btn-info">
                                 </form>
                             </div>
                         
@@ -348,4 +348,3 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
       <?php include '../includes/footer.php';?>
-
