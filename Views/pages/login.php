@@ -24,8 +24,8 @@
     <div class="fadeIn first">
       <img src="../Resource/img/LogoUni4.png"  alt="User Icon" style="width: 400px;"/>
 
-      <h3>SADE</h3>
-      <h3>Sistema Acceso De Estudiantes</h3>
+      <h3></h3>
+      <h3>Sistema Acceso</h3>
 
       <!-- INICIO RELOJ -->
     <div class="container-clock" style="height: 72px;margin-bottom: 10px;">
@@ -39,13 +39,20 @@
 
     <!-- Login For -->
     <?php require_once '../../Asistencia/Asistencia.php'?>
+    <select name="TRoles" id="TRoles" required class="form-control " aria-label="Default select example">
+				<option value="#" selected>Elige el tipo de asistencia</option>
+        <option value="1">Interna</option>
+        <option value="2">Externa</option>
+		</select>
+    
+    <div id="FormuAsis"></div>
+<!--
     <form action="#" method="POST">
       <input type="text" id="email_tel" class="fadeIn second" name="email_tel" required placeholder="Codigo Institucional">
       <input type="text" id="observaciones" class="fadeIn second" name="observaciones" placeholder="Observaciones">
       <input type="submit" class="fadeIn fourth" value="Ingresar" name="enviar">
-      
     </form>
-
+-->
     <!-- Remind Passowrd -->
     <label> ¿Eres administrador? </label>
     <div id="formFooter">
@@ -59,4 +66,16 @@
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">			
+  $(document).ready(function(){
+    $("#TRoles").on('change', function () {
+        $("#TRoles option:selected").each(function () {
+            rolelegido=$(this).val();
+            $.post("../../Asistencia/AsistenciaRol.php", { rolelegido: rolelegido }, function(data){
+                $("#FormuAsis").html(data);
+            });         
+        });
+   });
+  });
+</script>
 </html>

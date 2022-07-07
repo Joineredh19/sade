@@ -10,15 +10,15 @@
             <form action="#" method="POST">
                 <input type="Ine" id="IngreseINE" class="form-control" name="IngreseINE" required placeholder="Ingrese su INE">
                 <br>
-                <input type="Nombre" id="IngreseNombre" class="form-control" name="IngreseNombre" placeholder="Nombres">
+                <input type="Nombre" id="IngreseNombre" class="form-control" name="IngreseNombre" required placeholder="Nombres">
                 <br>
-                <input type="Apellidos" id="IngreseApellidos" class="form-control" name="IngreseApellidos" placeholder="Apellidos">
+                <input type="Apellidos" id="IngreseApellidos" class="form-control" name="IngreseApellidos" required placeholder="Apellidos">
                 <br>
-                <input type="email" id="IngreseEmail" class="form-control" name="IngreseEmail" placeholder="E-mail">
+                <input type="email" id="IngreseEmail" class="form-control" name="IngreseEmail" required placeholder="E-mail">
                 <br>
-                <input type="number" id="IngreseTele" class="form-control" name="IngreseTele" placeholder="Teléfono">
+                <input type="number" id="IngreseTele" class="form-control" name="IngreseTele" required placeholder="Teléfono">
                 <br>
-                <select name="ATrabajo" id="ATrabajo" class="form-control " aria-label="Área de trabajo a la que va"></select>
+                <select name="ATrabajo" id="ATrabajo" class="form-control " required aria-label="Área de trabajo a la que va"></select>
                 <br>
                 <input type="submit" class="fadeIn fourth" value="Ingresar" name="registrar">
             </form>
