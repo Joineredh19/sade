@@ -51,4 +51,23 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->vistaalumnos();
 			return $var;
 		}
+
+		public function AgregarDatosAlumno()
+		{
+			$model = new UsuarioModel();
+			$var = $model->Agregar();
+			return $var;
+		}
+		public function AgregarDatosTrabajador()
+		{
+			$model = new UsuarioModel();
+			$var = $model->Agregar();
+			return $var;
+		}
+		public function AgregarDatos()
+		{
+			$model = new UsuarioModel();
+			$var = $model->Agregar();
+			return $var;
+		}
 	}
