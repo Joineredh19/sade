@@ -3,9 +3,11 @@
           <div class="row">
             <nav class="footer-nav">
             
-            </nav>
+            </nav>         
             <div class="credits ml-auto">
-              <span class="copyright">
+              <img ALIGN=right src="../Resource/img/SLALogo.png" width="50px" height="50px">
+              <img ALIGN=right src="../Resource/img/CUCyUDGLogo.png" width="" height="50px" style="margin-right:15px">
+              <span class="copyright" style="margin-top:10px">
                 © <script>
                   document.write(new Date().getFullYear())
                 </script>, CUC <i class=""></i> Universidad de Guadalajara
