@@ -32,17 +32,19 @@
 				$data_trabajador = mysqli_fetch_assoc($query_trabajador);
 			/*-----------------------------------------------*/
 
-			/*------------Validar datos de visitante------------*/
-			$query_visitante = mysqli_query($conn, "SELECT Codigo FROM `tvisitantes` WHERE Codigo = '$Codigo'");
-				$result_visitante = mysqli_num_rows($query_visitante);
-				$data_visitante = mysqli_fetch_assoc($query_visitante);
-			/*-----------------------------------------------*/
-
 /*=================================================================================================================================================*/
 
-			if($result_alumno < 1 && $result_trabajador < 1 && $result_visitante < 1){
+			if($result_alumno < 1 && $result_trabajador < 1){
 				$msg->error('No se encuentra registrado en la base de datos!');
 				$msg->display();
+			?>
+				<script language="JavaScript">
+    				function redireccionar() {
+        				window.location = "../../Views/pages/login.php";
+    				}
+    				setTimeout("redireccionar()", 3000);
+				</script>
+			<?php
 				
 			}else{
 				require_once 'FechaDatos.php';				
@@ -71,6 +73,13 @@
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+
+								<script language="JavaScript">
+    								function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+								</script>
 							<?php
 	
 					}else if ($fecha_hoy == $F_registro_entrada && $fecha_hoy == $F_registro_salida OR $fecha_hoy == $F_registro_entrada) {
@@ -97,6 +106,13 @@
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+							
+								<script language="JavaScript">
+    								function redireccionar() {
+        								window.location = "../../Views/pages/login.php";
+    								}
+    									setTimeout("redireccionar()", 3000);
+								</script>
 							<?php
 						}else{
 			
@@ -126,6 +142,13 @@
 								$msg->display();	
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+								
+									<script language="JavaScript">
+    									function redireccionar() {
+        									window.location = "../../Views/pages/login.php";
+    									}
+    										setTimeout("redireccionar()", 3000);
+									</script>
 								<?php
 								}
 			
@@ -154,6 +177,13 @@
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+							
+								<script language="JavaScript">
+    								function redireccionar() {
+        								window.location = "../../Views/pages/login.php";
+    								}
+    									setTimeout("redireccionar()", 3000);
+								</script>
 							<?php
 			
 							}else if ($result_entrada2 > $result_salida2) {
@@ -178,12 +208,28 @@
 								$msg->display();
 							?>
 								<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+							
+								<script language="JavaScript">
+    								function redireccionar() {
+        								window.location = "../../Views/pages/login.php";
+    								}
+    									setTimeout("redireccionar()", 3000);
+								</script>
 							<?php
 			
 							}
 					}else{
 						$msg->error('No se realizó la asistencia!');
 						$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
 					}
 				
 				}else if(isset($data_trabajador['Codigo'])) {
@@ -210,6 +256,13 @@
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+								
+									<script language="JavaScript">
+    									function redireccionar() {
+        									window.location = "../../Views/pages/login.php";
+    									}
+    										setTimeout("redireccionar()", 3000);
+									</script>
 								<?php
 		
 						}else if ($fecha_hoy == $F_registro_entrada2 && $fecha_hoy == $F_registro_salida2 OR $fecha_hoy == $F_registro_entrada2) {
@@ -236,6 +289,13 @@
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+								
+									<script language="JavaScript">
+    									function redireccionar() {
+        									window.location = "../../Views/pages/login.php";
+    									}
+    										setTimeout("redireccionar()", 3000);
+									</script>
 								<?php
 			
 							}else{
@@ -266,6 +326,13 @@
 										$msg->display();
 									?>
 										<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+									
+										<script language="JavaScript">
+    										function redireccionar() {
+        										window.location = "../../Views/pages/login.php";
+    										}
+    											setTimeout("redireccionar()", 3000);
+										</script>
 									<?php
 
 								}
@@ -295,6 +362,13 @@
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+								
+									<script language="JavaScript">
+    									function redireccionar() {
+        									window.location = "../../Views/pages/login.php";
+    									}
+    										setTimeout("redireccionar()", 3000);
+									</script>
 								<?php
 				
 							}else if ($result_entrada_trabajador2 > $result_salida_trabajador2) {
@@ -319,123 +393,28 @@
 									$msg->display();
 								?>
 									<img src="data:img/jpg;base64,<?php echo base64_encode($dato_registro['Imagen'])?>" style="width:20%; height:auto;">
+								
+									<script language="JavaScript">
+    									function redireccionar() {
+        									window.location = "../../Views/pages/login.php";
+    									}
+    										setTimeout("redireccionar()", 3000);
+									</script>
 								<?php
 				
 							}
 						}else{
 							$msg->error('No se realizó la asistencia!');
 							$msg->display();
-						}
-
-				}else if(isset($data_visitante['Codigo'])) {
-
-						if (empty($data_entrada_visitante['FHoraEntrada'])) {
 						
-							$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-									( NULL,
-									 '$Codigo',
-									 DEFAULT,
-									 '$ObservacionEntrada'
-									)";
-									$query=mysqli_query($conn, $insertar);
-		
-									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
-																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
-																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-									$dato_registro = mysqli_fetch_assoc($query);
-		
-									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
-									$msg->display();
-		
-						}else if ($fecha_hoy == $F_registro_entrada3 && $fecha_hoy == $F_registro_salida3 OR $fecha_hoy == $F_registro_entrada3) {
-								
-							if ($result_entrada_visitante3 == $result_salida_visitante3) {
-			
-									$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-									( NULL,
-									 '$Codigo',
-									 DEFAULT,
-									 '$ObservacionEntrada'
-									)";
-									$query=mysqli_query($conn, $insertar);
-		
-									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
-																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
-																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-									$dato_registro = mysqli_fetch_assoc($query);
-									
-									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
-									$msg->display();
-			
-							}else{
-				
-								if($result_entrada_visitante3 > $result_salida_visitante3){
-		
-										$query_entrada4 = mysqli_query($conn, "SELECT id, FHoraEntrada, ObservacionSalida, Codigo FROM tbitacorasvisitantes 
-																			WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-										$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
-		
-										$actualizar = mysqli_query($conn, "UPDATE `tbitacorasvisitantes` SET
-											`Codigo`='$Codigo',
-											`ObservacionSalida`='$ObservacionSalida',
-											`FHoraSalida`= CURRENT_TIMESTAMP
-										WHERE
-											id = '$data_entrada4[id]';
-											");
-										
-										$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
-																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
-																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-										$dato_registro = mysqli_fetch_assoc($query);
-										
-										$msg->success('Gracias por su visita ('. $dato_registro["Nombres"].'), su salida se registró con exito');
-									$msg->display();
-				
-								}
-				
-							}
-						}else if($fecha_hoy > $F_registro_entrada3 && $fecha_hoy > $F_registro_salida3 OR $fecha_hoy > $F_registro_entrada3){
-		
-							if ($result_entrada_visitante2 == $result_salida_visitante2) {
-			
-									$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-									( NULL,
-									 '$Codigo',
-									 DEFAULT,
-									 '$ObservacionEntrada'
-									)";
-									$query=mysqli_query($conn, $insertar);
-		
-									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
-																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
-																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-									$dato_registro = mysqli_fetch_assoc($query);
-		
-									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
-									$msg->display();
-				
-							}else if ($result_entrada_visitante2 > $result_salida_visitante2) {
-			
-									$insertar="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
-									( NULL,
-									 '$Codigo',
-									 DEFAULT,
-									 '$ObservacionEntrada'
-									)";
-									$query=mysqli_query($conn, $insertar);
-		
-									$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
-																				INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
-																				WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
-									$dato_registro = mysqli_fetch_assoc($query);
-									
-									$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
-									$msg->display();
-				
-							}
-						}else{
-							$msg->error('No se realizó el registro!');
-							$msg->display();
+							?>
+								<script language="JavaScript">
+    								function redireccionar() {
+        								window.location = "../../Views/pages/login.php";
+    								}
+    									setTimeout("redireccionar()", 3000);
+								</script>
+							<?php
 						}
 
 				}else{
@@ -443,6 +422,269 @@
 					$msg->display();
 				}
 			
+			}
+		}
+
+
+/*=================================================================================================================================================*/
+
+		else if(isset($_POST["registrar"])){
+			$Codigo=$_POST["IngreseINE"];
+
+			if(isset($_POST["IngreseNombre"])){
+				$Nombre=$_POST["IngreseNombre"];
+				$Apellidos=$_POST["IngreseApellidos"];
+				$Email=$_POST["IngreseEmail"];
+				$Telefono=$_POST["IngreseTele"];
+				$TAreasTRabajo_id=$_POST["ATrabajo"];
+			}
+
+			if(isset($_POST["observaciones"])){
+				$ObservacionSalida=$_POST["observaciones"];
+			}
+
+			require_once("../../Config/Conexion.config.php");
+
+/*=================================================================================================================================================*/
+
+			/*------------Validar datos de visitante------------*/
+			$query_visitante = mysqli_query($conn, "SELECT Codigo FROM `tvisitantes` WHERE Codigo = '$Codigo'");
+				$result_visitante = mysqli_num_rows($query_visitante);
+				$data_visitante = mysqli_fetch_assoc($query_visitante);
+			/*-----------------------------------------------*/
+
+/*=================================================================================================================================================*/
+			if($result_visitante < 1 && isset($_POST["IngreseNombre"])){
+				$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
+				(NULL,
+				'$Codigo',
+				'$Nombre',
+				'$Apellidos',
+				'$Email',
+				'$Telefono',
+				'$TAreasTRabajo_id'
+				)";
+				$query=mysqli_query($conn, $insertar);
+				
+				$insertar2="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+				( NULL,
+				'$Codigo',
+				DEFAULT,
+				NULL
+				)";
+				$query=mysqli_query($conn, $insertar2);
+	
+				$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+												INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+												WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+				$dato_registro = mysqli_fetch_assoc($query);
+	
+				$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+				$msg->display();
+
+				?>
+					<script language="JavaScript">
+    					function redireccionar() {
+        					window.location = "../../Views/pages/login.php";
+    					}
+    						setTimeout("redireccionar()", 3000);
+					</script>
+				<?php
+	
+			}else{
+				require_once 'FechaDatos.php';
+
+				if ($fecha_hoy == $F_registro_entrada3 && $fecha_hoy == $F_registro_salida3 OR $fecha_hoy == $F_registro_entrada3) {
+							
+					if ($result_entrada_visitante3 == $result_salida_visitante3 && isset($_POST["IngreseNombre"])) {
+		
+						$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
+						(NULL,
+						'$Codigo',
+						'$Nombre',
+						'$Apellidos',
+						'$Email',
+						'$Telefono',
+						'$TAreasTRabajo_id'
+						)";
+						$query=mysqli_query($conn, $insertar);
+							
+						$insertar2="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+						( NULL,
+						'$Codigo',
+						DEFAULT,
+						NULL
+						)";
+						$query=mysqli_query($conn, $insertar2);
+	
+						$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+														INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+														WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+						$dato_registro = mysqli_fetch_assoc($query);
+								
+						$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+						$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
+		
+					}else{
+			
+						if($result_entrada_visitante3 > $result_salida_visitante3){
+	
+							$query_entrada4 = mysqli_query($conn, "SELECT id, FHoraEntrada, ObservacionSalida, Codigo FROM tbitacorasvisitantes 
+																		WHERE DATE(FHoraEntrada) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+								$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+	
+								$actualizar = mysqli_query($conn, "UPDATE `tbitacorasvisitantes` SET
+									`Codigo`='$Codigo',
+									`ObservacionSalida`='$ObservacionSalida',
+									`FHoraSalida`= CURRENT_TIMESTAMP
+								WHERE
+									id = '$data_entrada4[id]';
+									");
+									
+							$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+															INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+															WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+							$dato_registro = mysqli_fetch_assoc($query);
+									
+							$msg->success('Gracias por su visita ('. $dato_registro["Nombres"].'), su salida se registró con exito');
+							$msg->display();
+
+							?>
+								<script language="JavaScript">
+    								function redireccionar() {
+        								window.location = "../../Views/pages/login.php";
+    								}
+    									setTimeout("redireccionar()", 3000);
+								</script>
+							<?php
+			
+						}else{
+							$msg->error('No cuenta con un registro de entrada!');
+							$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
+						}
+					}
+				}else if($fecha_hoy > $F_registro_entrada3 && $fecha_hoy > $F_registro_salida3 OR $fecha_hoy > $F_registro_entrada3){
+	
+					if ($result_entrada_visitante2 == $result_salida_visitante2 && isset($_POST["IngreseNombre"])) {
+		
+						$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
+						(NULL,
+						'$Codigo',
+						'$Nombre',
+						'$Apellidos',
+						'$Email',
+						'$Telefono',
+						'$TAreasTRabajo_id'
+						)";
+						$query=mysqli_query($conn, $insertar);
+							
+						$insertar2="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+						( NULL,
+						'$Codigo',
+						DEFAULT,
+						NULL
+						)";
+						$query=mysqli_query($conn, $insertar2);
+	
+						$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+														INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+														WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+						$dato_registro = mysqli_fetch_assoc($query);
+	
+						$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+						$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
+			
+					}else if ($result_entrada_visitante2 > $result_salida_visitante2 && isset($_POST["IngreseNombre"])) {
+		
+						$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
+						(NULL,
+						'$Codigo',
+						'$Nombre',
+						'$Apellidos',
+						'$Email',
+						'$Telefono',
+						'$TAreasTRabajo_id'
+						)";
+						$query=mysqli_query($conn, $insertar);
+							
+						$insertar2="INSERT INTO `tbitacorasvisitantes`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+						( NULL,
+						'$Codigo',
+						DEFAULT,
+						NULL
+						)";
+						$query=mysqli_query($conn, $insertar2);
+						
+						$query=mysqli_query($conn, "SELECT tvisitantes.Nombres, tvisitantes.Codigo, tbitacorasvisitantes.FHoraEntrada FROM tbitacorasvisitantes 
+														INNER JOIN tvisitantes ON tvisitantes.Codigo = tbitacorasvisitantes.Codigo 
+														WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
+						$dato_registro = mysqli_fetch_assoc($query);
+						
+						$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+						$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
+			
+					}else{
+						$msg->error('No cuenta con un registro de entrada!');
+						$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
+					}
+				}else{
+						$msg->error('No se realizó el registro!');
+						$msg->display();
+
+						?>
+							<script language="JavaScript">
+    							function redireccionar() {
+        							window.location = "../../Views/pages/login.php";
+    							}
+    								setTimeout("redireccionar()", 3000);
+							</script>
+						<?php
+				}
 			}
 		}
 ?>
