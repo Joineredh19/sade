@@ -19,11 +19,11 @@ if(!isset($_SESSION["id"])){
 	date_default_timezone_set('America/Mexico_City');
     
     
-    $Id = $_POST['IdUsuario'];
+    $Id = $_POST['idUsuario'];
     $Codigo = $_POST['codigo'];
     $Nombre = $_POST['nombreUsuario'];
     $Apellido = $_POST['apellidosUsuario'];
-    $Roles = $_POST['Rol'];
+    $Roles = $_POST['rol'];
     $NSeguroSocial = $_POST['numerosocial'];
     $Rfc = $_POST['rfc1'];
 	$Curp = $_POST['curp1'];
@@ -35,7 +35,7 @@ if(!isset($_SESSION["id"])){
     $Selepadre = $_POST['selepadre'];
     $Seleturno = $_POST['seleturno'];
 	
-    
+   
 	if ($Roles == "4") {
         if($HomeController->CompletarAlumnos($Id, $Codigo,$NSeguroSocial,$Rfc,$Curp,$TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno) == true){
 
@@ -66,7 +66,8 @@ if(!isset($_SESSION["id"])){
           /*  $msg->error('!ERROR, Rol No admite completar Información¡');
 				
 				header("location: ../../Views/pages/tablas.php");*/
-                var_dump($Roles);
+                var_dump($Id,$Codigo,$Nombre,$Apellido,$Roles, $NSeguroSocial,$Rfc, $Curp,
+                $TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno);
         }
 	
 

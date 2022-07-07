@@ -1,5 +1,7 @@
 <?php include '../includes/header.php';
+?>
 
+<?php
 require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
 
@@ -15,6 +17,7 @@ if (isset($_GET['IdUsuario'])) {
 }else{
   $data = NULL;
 }
+
 
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
@@ -84,9 +87,9 @@ if (isset($_GET['IdUsuario'])) {
         <div class="row">
        <!-- Login Form -->
      <form method="post"  action="<?php echo '../../Actions/Register/actualizar.php';?>"  enctype="multipart/form-data">
-     <input type="hidden" id="IdUsuario" class="form-control" name="IdUsuario" placeholder=""  value="<?php echo  $id?>" disabled>
+     <input type="hidden" id="" class="form-control" name="idUsuario" placeholder=""  value="<?php if($data != NULL) echo $data->__GET('id') ?>" >
      <br>
-     <input type="text" id="Roles" class="form-control" name="Rol" placeholder=""  value="<?php if($data != NULL) echo $data->__GET('TRoles_id') ?>" disabled  >
+     <input type="hidden" id="Role" class="form-control" name="rol" placeholder="Rol..."  value="<?php if($data != NULL &&  $data->__GET('TRoles_id') != NULL) echo $data->__GET('TRoles_id') ?>"   >
      <br>
   <input type="text"  class="form-control" id="codigo1"  name="codigo" placeholder="Código">
      <br> 
