@@ -28,7 +28,8 @@
     $html = "";
     if ($_POST["asiselegido"]==2) {
         $html = '';
-		?>
+		?>  
+            <h3></h3>
             <h3>Sistema Acceso Visitantes</h3>
 
             <form action="#" method="POST">
