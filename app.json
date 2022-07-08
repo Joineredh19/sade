@@ -1,0 +1,6 @@
+{
+  "name": "Start on Heroku: PHP",
+  "description": "Sade es un programa de ingreso y salida de estudiantes",
+  "repository": "https://github.com/Joiner2003/SADE",
+  "addons": []
+}
