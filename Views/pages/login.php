@@ -46,13 +46,8 @@
 		</select>
     
     <div id="FormuAsis"></div>
-<!--
-    <form action="#" method="POST">
-      <input type="text" id="email_tel" class="fadeIn second" name="email_tel" required placeholder="Codigo Institucional">
-      <input type="text" id="observaciones" class="fadeIn second" name="observaciones" placeholder="Observaciones">
-      <input type="submit" class="fadeIn fourth" value="Ingresar" name="enviar">
-    </form>
--->
+
+
     <!-- Remind Passowrd -->
     <label> ¿Eres administrador? </label>
     <div id="formFooter">
