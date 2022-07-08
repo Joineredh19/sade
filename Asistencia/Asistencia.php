@@ -431,7 +431,7 @@
 		else if(isset($_POST["registrar"])){
 			$Codigo=$_POST["IngreseINE"];
 
-			if(isset($_POST["IngreseNombre"])){
+			if(isset($_POST["IngreseNombre"]) && isset($_POST["IngreseApellidos"]) && isset($_POST["ATrabajo"])){
 				$Nombre=$_POST["IngreseNombre"];
 				$Apellidos=$_POST["IngreseApellidos"];
 				$Email=$_POST["IngreseEmail"];
@@ -454,7 +454,7 @@
 			/*-----------------------------------------------*/
 
 /*=================================================================================================================================================*/
-			if($result_visitante < 1 && isset($_POST["IngreseNombre"])){
+			if($result_visitante < 1 && isset($_POST["IngreseNombre"]) && isset($_POST["IngreseApellidos"]) && isset($_POST["ATrabajo"])){
 				$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
 				(NULL,
 				'$Codigo',
@@ -496,7 +496,7 @@
 
 				if ($fecha_hoy == $F_registro_entrada3 && $fecha_hoy == $F_registro_salida3 OR $fecha_hoy == $F_registro_entrada3) {
 							
-					if ($result_entrada_visitante3 == $result_salida_visitante3 && isset($_POST["IngreseNombre"])) {
+					if ($result_entrada_visitante3 == $result_salida_visitante3 && isset($_POST["IngreseNombre"]) && isset($_POST["IngreseApellidos"]) && isset($_POST["ATrabajo"])) {
 		
 						$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
 						(NULL,
@@ -583,7 +583,7 @@
 					}
 				}else if($fecha_hoy > $F_registro_entrada3 && $fecha_hoy > $F_registro_salida3 OR $fecha_hoy > $F_registro_entrada3){
 	
-					if ($result_entrada_visitante2 == $result_salida_visitante2 && isset($_POST["IngreseNombre"])) {
+					if ($result_entrada_visitante2 == $result_salida_visitante2 && isset($_POST["IngreseNombre"]) && isset($_POST["IngreseApellidos"]) && isset($_POST["ATrabajo"])) {
 		
 						$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
 						(NULL,
@@ -621,7 +621,7 @@
 							</script>
 						<?php
 			
-					}else if ($result_entrada_visitante2 > $result_salida_visitante2 && isset($_POST["IngreseNombre"])) {
+					}else if ($result_entrada_visitante2 > $result_salida_visitante2 && isset($_POST["IngreseNombre"]) && isset($_POST["IngreseApellidos"]) && isset($_POST["ATrabajo"])) {
 		
 						$insertar="INSERT INTO `tvisitantes`(`id`, `Codigo`, `Nombres`, `Apellidos`, `Email`, `Telefono`, `TAreasTRabajo_id`) VALUES 
 						(NULL,
