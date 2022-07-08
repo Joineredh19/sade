@@ -96,7 +96,7 @@ date_default_timezone_set('America/Mexico_City');
                 <div class="stats">
          
                    <i class="fa fa-calendar-o"></i>
-                  Faltas diarias.
+                  Faltas diarias
                 </div>
               </div>
             </div>
