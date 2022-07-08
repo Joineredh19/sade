@@ -1,6 +1,6 @@
 {
   "name": "Start on Heroku: PHP",
-  "description": "Sade es un programa de ingreso y salida de estudiantes",
-  "repository": "https://github.com/Joiner2003/SADE",
+  "description": "A barebones PHP app that makes use of the Silex web framework",
+  "repository": "https://github.com/heroku/php-getting-started",
   "addons": []
 }
