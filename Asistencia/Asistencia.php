@@ -479,7 +479,7 @@
 												WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 				$dato_registro = mysqli_fetch_assoc($query);
 	
-				$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+				$msg->success('Bienvenido(a) ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
 				$msg->display();
 
 				?>
@@ -522,7 +522,7 @@
 														WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 						$dato_registro = mysqli_fetch_assoc($query);
 								
-						$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+						$msg->success('Bienvenido(a) ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
 						$msg->display();
 
 						?>
@@ -609,7 +609,7 @@
 														WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 						$dato_registro = mysqli_fetch_assoc($query);
 	
-						$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+						$msg->success('Bienvenido(a) ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
 						$msg->display();
 
 						?>
@@ -647,7 +647,7 @@
 														WHERE tvisitantes.Codigo = '$Codigo' ORDER BY FHoraEntrada DESC LIMIT 1");
 						$dato_registro = mysqli_fetch_assoc($query);
 						
-						$msg->success('Bienvenido ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
+						$msg->success('Bienvenido(a) ('. $dato_registro["Nombres"].'), su entrada se registró con exito');
 						$msg->display();
 
 						?>
