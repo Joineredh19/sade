@@ -14,9 +14,9 @@
                 <br>
                 <input type="Apellidos" id="IngreseApellidos" class="form-control" name="IngreseApellidos" required placeholder="Apellidos">
                 <br>
-                <input type="email" id="IngreseEmail" class="form-control" name="IngreseEmail" required placeholder="E-mail">
+                <input type="email" id="IngreseEmail" class="form-control" name="IngreseEmail" placeholder="E-mail">
                 <br>
-                <input type="number" id="IngreseTele" class="form-control" name="IngreseTele" required placeholder="Teléfono">
+                <input type="number" id="IngreseTele" class="form-control" name="IngreseTele" placeholder="Teléfono">
                 <br>
                 <select name="ATrabajo" id="ATrabajo" class="form-control " required aria-label="Área de trabajo a la que va"></select>
                 <br>
