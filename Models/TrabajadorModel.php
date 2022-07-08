@@ -18,11 +18,11 @@ require_once('../../Models/Conexion/Conexion.php');
 		}
 		
 
-        public function CompletarInfo($CalleyNum,$TUsuarios_id,$TColonias_id)
+        public function CompletarInfo($Calleynum,$Id,$Selecolonia)
 		{
 			try {
 				$sql = ("INSERT INTO ttutoresacademicos (CalleyNum,TUsuarios_id, TColonias_id) VALUES (?,?,?)");
-				$stm = $this->pdo->prepare($sql)->execute(array($CalleyNum,$TUsuarios_id,$TColonias_id));
+				$stm = $this->pdo->prepare($sql)->execute(array($Calleynum,$Id,$Selecolonia));
 				if($stm){
 					return true;
 				} else {

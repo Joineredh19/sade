@@ -14,7 +14,8 @@ function Conexion(){
     
 function getTutorAcademico(){
     $conn = Conexion();
-    $query = 'SELECT * FROM tusuarios WHERE TRoles_id = 5';
+    $query = 'SELECT ttutoresacademicos.id, tusuarios.Nombres, tusuarios.Apellidos
+    FROM  tusuarios  INNER JOIN ttutoresacademicos ON tusuarios.id = ttutoresacademicos.TUsuarios_id';
 
     $result = mysqli_query($conn,$query);
     $listas = '<option value="0"> Seleccione Tutor Academico</option>';

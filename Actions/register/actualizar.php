@@ -46,7 +46,7 @@ if(!isset($_SESSION["id"])){
         }
 		}else if($Roles == 5){
 			
-			if($HomeController->CompletarTutorAca($Id,$Selecolonia,$Calleynum) == true){
+			if($HomeController->CompletarTutorAca($Calleynum,$Id,$Selecolonia) == true){
 
                 $msg->success('¡Informacion Tutor Academico Completada con Exito!');
 				header("location: ../../Views/pages/tablas.php");
@@ -55,7 +55,7 @@ if(!isset($_SESSION["id"])){
 			}
 		}else if($Roles == 6){
         
-            if($HomeController->CompletarTutorPadre($Id,$Selecolonia,$Calleynum) == true){
+            if($HomeController->CompletarTutorPadre($Calleynum,$Id,$Selecolonia) == true){
 
                 $msg->success('¡Informacion Tutor Padre Completada con Exito!');
 				header("location: ../../Views/pages/tablas.php");
@@ -63,12 +63,12 @@ if(!isset($_SESSION["id"])){
 				$msg->error('¡ERROR, no se Agregó!..');
 			}
         }else{
-          /*  $msg->error('!ERROR, Rol No admite completar Información¡');
+            $msg->error('!ERROR, Rol No admite completar Información¡');
 				
-				header("location: ../../Views/pages/tablas.php");*/
-                var_dump($Id,$Codigo,$Nombre,$Apellido,$Roles, $NSeguroSocial,$Rfc, $Curp,
+				header("location: ../../Views/pages/tablas.php");
+              /*  var_dump($Id,$Codigo,$Nombre,$Apellido,$Roles, $NSeguroSocial,$Rfc, $Curp,
                 $TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno);
-        }
+        */}
 	
 
 

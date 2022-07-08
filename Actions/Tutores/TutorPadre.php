@@ -14,7 +14,8 @@ function Conexion(){
     
 function getTutorPadre(){
     $conn = Conexion();
-    $query = 'SELECT * FROM tusuarios WHERE TRoles_id = 6';
+    $query = 'SELECT ttutorespadres.id, tusuarios.Nombres, tusuarios.Apellidos
+    FROM  tusuarios  INNER JOIN ttutorespadres ON tusuarios.id = ttutorespadres.TUsuarios_id';
 
     $result = mysqli_query($conn,$query);
     $listas = '<option value="0"> Seleccione Tutor Padre</option>';
