@@ -188,48 +188,10 @@ date_default_timezone_set('America/Mexico_City');
                 <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body ">
-
-<!-- INICIO TABLA SEMANAL -->
-                <div>
-                  <canvas id="yChart" width="200" height="80"></canvas>
-                </div>
-                <script>
-                  const ctx = document.getElementById('yChart').getContext('2d');
-                  const yChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                              labels: ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO','DOMINGO'],
-                              datasets: [{
-                                          label: 'FALTAS TOTALES',
-                                          data: [30, 44, 27, 24, 23,3,4],
-                                          backgroundColor: ['rgba(141, 153, 174)',],
-                                          borderColor:'rgb(43,45,66)',
-                                        },
-                                        {
-                                          label: 'FALTAS ATENDIDAS',
-                                          data: [20, 26, 12, 16, 10,2,3],
-                                          backgroundColor: ['rgba(27, 157, 51)',],
-                                          borderColor:'rgb(27, 157, 51)',
-                                        },
-                                        {
-                                          label: 'FALTAS SIN ATENDER',
-                                          data: [10, 18, 15, 8, 13,1,1],
-                                          backgroundColor: ['rgba(207,4,41)',],
-                                          borderColor:'rgb(207,4,41)',
-                                        }]
-                             },
-                    options:{
-                              scales: {
-                                          y:{
-                                            beginAtZero: true
-                                        }
-                        }
-                      }
-                    });
-                </script>
-<!--FIN TABLA SEMANAL-->
-
-              </div>
+                <?php 
+                  include '../Resource/charts/chartbar.php';
+                ?>
+            </div>
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
@@ -247,30 +209,10 @@ date_default_timezone_set('America/Mexico_City');
                 <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body ">
-
-                <!-- INICIO GRAFICA DONA -->
-                <div>
-                  <canvas id="cChart" width="200" height="80"></canvas>
-                </div>
-                <script>
-                const piechart = document.getElementById('cChart').getContext('2d');
-                const cChart = new Chart(piechart, {
-                      type: 'doughnut',
-                      data: {
-                              labels: ['TOTAL DE FALTAS ATENDIDAS', 'TOTAL DE FALTAS SIN ATENDER'],
-                              datasets: [{
-                                          label: 'TOTAL DE FALTAS',
-                                          data: [108,78],
-                                          backgroundColor: ['rgba(27, 157, 51)', 'rgba(207,4,41)'],
-                                          borderColor:['rgb(21, 122, 39)', 'rgba(180, 4, 33)']
-                                        }],hoverOffset: 4
-                            },
-                    }
-                  );
-                </script>
-<!-- FIN GRAFICA DONA -->
-
-              </div>
+                <?php 
+                  include '../Resource/charts/chartdoughnut.php';
+                ?>
+            </div>
               <div class="card-footer ">
 
                 <hr>
@@ -287,49 +229,11 @@ date_default_timezone_set('America/Mexico_City');
                 <p class="card-category">Universidad de Guadalajara</p>
               </div>
               <div class="card-body">
-
-<!--INICIO TABLA SEMESTRAL -->
-                <div>
-                  <canvas id="myChart" width="400" height="187"></canvas>
-                </div>
-                <script>
-                  const linechart = document.getElementById('myChart').getContext('2d');
-                  const myChart = new Chart(linechart, {
-                        type: 'line',
-                        data: {
-                              labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                              datasets: [{
-                                          label: 'FALTAS ATENDIDAS',
-                                          data: [20, 26, 12, 16, 10, 24],
-                                          backgroundColor: ['rgba(27, 157, 51)',],
-                                          borderColor:'rgb(27, 157, 51)',
-                                        },
-                                        {
-                                          label: 'FALTAS SIN ATENDER',
-                                          data: [10, 18, 15, 8, 13, 14],
-                                          backgroundColor: ['rgba(207, 4, 41)',],
-                                          borderColor:'rgb(204,4,41)',
-                                        }]
-                                },
-                        options: {
-                                scales: {
-                                        y: {
-                                           beginAtZero: true
-                        }
-                      }
-                    }
-                  });
-                </script>
-<!--FIN TABLA SEMESTRAL -->
-
+                <?php 
+                  include '../Resource/charts/chartline.php';
+                ?>
               </div>
               <div class="card-footer">
-                <!--************ APARTADO POR SI SE OCUPA**************
-                <div class="chart-legend">
-                  <i class="fa fa-circle text-info"></i> Faltas Atendidas
-                  <i class="fa fa-circle text-warning"></i> Faltas No Atendidas
-                </div>
-                -->
                 <hr />
                 <div class="card-stats">
                   <i class="fa fa-area-chart" aria-hidden="true"></i> Centro Unversitario de la Costa
