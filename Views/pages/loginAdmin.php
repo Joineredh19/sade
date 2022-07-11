@@ -32,10 +32,11 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../Resource/img/LogoUni4.png"  alt="User Icon" style="width: 400px;"/>
+
 
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
+      <img src="../Resource/img/SLALogo.png"  alt="User Icon" style="width: 100px; padding-bottom: 10px;"/>
             <!-- INICIO RELOJ -->
     <div class="container-clock" style="height: 72px;margin-bottom: 10px;">
       <h1 id="time">00:00:00</h1>
