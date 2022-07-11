@@ -3,8 +3,8 @@
 <html lang="es">
 
 <head>
-<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
- <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
+ <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
     <meta charset="utf-8">
 
     <title>Sistema Acceso De Estudiantes</title>
