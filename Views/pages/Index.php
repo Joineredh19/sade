@@ -10,14 +10,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 date_default_timezone_set('America/Mexico_City');
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
- <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
         <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../Resource/img/UDG - Vector Blanco.png">
+            <img src="../Resource/img/SLALogo.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
