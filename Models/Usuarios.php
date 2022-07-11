@@ -14,6 +14,8 @@ class Usuarios
     private $FechaNacimiento;
     private $genero;
     private $rol;
+    private $TTutoresPadres_id;
+    private $TTutoresAcademicos_id;
     
 
     public function __GET($k)

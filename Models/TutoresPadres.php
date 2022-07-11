@@ -5,6 +5,7 @@ class TutoresPadres
     private $CalleyNum;
     private $Usuarios_id;
     private $Colonias_id;
+    private $TTutoresPadres_id;
 
     public function __GET($k)
     {
