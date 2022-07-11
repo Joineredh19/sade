@@ -282,7 +282,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		function vistaalumnos_tutor(){
 			$HomeController = new HomeController();?>
 			<?php foreach ($HomeController->ListarUsuario_tutor() as $key){ ?>
-			  <?php if ($key->_GET('TTutoresAcademicos_id')==$_SESSION['id_tutor']||$key->_GET('TTutoresPadres_id')==$_SESSION['id_tutor']){?>
+			  <?php if ($key->__GET('TTutoresAcademicos_id')==$_SESSION['id_tutor']||$key->__GET('TTutoresPadres_id')==$_SESSION['id_tutor']){?>
 				<tr>
 				  <td align="center"><?= $key->__GET('id') ?></td>
 				  <td align="center"><?= $key->__GET('Nombres') ?></td>
