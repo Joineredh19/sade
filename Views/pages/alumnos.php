@@ -134,7 +134,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Alumnos" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
                                   
                                   </tr>
-                            <?php break;?>
+                            <?php break;
+                                  case 5:  
+                                    $HomeController->obtener_id_tutor($_SESSION['id']);
+                                    $_SESSION['id_tutor'] ='2'  ;
+                                    $HomeController->ListarUsuario_tutor();
+                                    $HomeController->vistaalumnos_tutor();
+                                  break;
+                            ?>
                             <?php } ?>
                     </tbody>
                     </tbody>
