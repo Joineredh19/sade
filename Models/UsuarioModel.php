@@ -236,8 +236,67 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->UsuarioModel->Agregar()");
 			}
 		}
-		
+		function obtener_id_tutor($id){
+			try{
+				$Array = array();
+				$HomeController = new HomeController();
+				$stm = $this->pdo->prepare("select id from ttutoresacademicos where TUsuarios_id = ?");
+				$stm->execute(array($id));
+				$r = $stm->fetch(PDO::FETCH_OBJ);
+				$entity = new TutoresAcademicos;
+				$entity->__SET('id',$r->id);
+				return $entity;
+			}catch(Exception $e){
+				die($e->getMessage()." ->UsuarioModel->Ver()");
+			}
+		}
+		public function ListarUsuario_tutor()
+		{
+			try{
+				$Array = array();
+				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id,tdatosalumnos.TTutoresAcademicos_id,tdatosalumnos.TTutoresPadres_id
+				FROM  tusuarios INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id join tdatosalumnos on tusuarios.id = tdatosalumnos.TUsuarios_id ");
+				$stm->execute(array());
 
+				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
+					
+					$entity = new Usuarios();
+					$entity->__SET('id',$r->id);
+					$entity->__SET('Nombres',$r->Nombres);
+					$entity->__SET('Apellidos',$r->Apellidos);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Telefono',$r->Telefono);
+					$entity->__SET('rol',$r->rol);
+					$entity->__SET('genero',$r->genero);
+					$entity->__SET('TTutoresAcademicos_id',$r->TTutoresAcademicos_id);
+					$entity->__SET('TTutoresPadres_id',$r->TTutoresPadres_id);
+									
+					$Array[] = $entity;
+
+				}
+				return $Array;
+			}catch(Exception $e){
+				die($e->getMessage()." ->UsuarioModel->Ver()");
+			}
+		}
+		function vistaalumnos_tutor(){
+			$HomeController = new HomeController();?>
+			<?php foreach ($HomeController->ListarUsuario_tutor() as $key){ ?>
+			  <?php if ($key->__GET('TTutoresAcademicos_id')==$_SESSION['id_tutor']||$key->__GET('TTutoresPadres_id')==$_SESSION['id_tutor']){?>
+				<tr>
+				  <td align="center"><?= $key->__GET('id') ?></td>
+				  <td align="center"><?= $key->__GET('Nombres') ?></td>
+				  <td  align="center"><?= $key->__GET('Apellidos') ?></td>
+				  <td  align="center"><?= $key->__GET('Email') ?></td>
+				  <td  align="center"><?= $key->__GET('Telefono') ?></td>
+				  <td  align="center"><?= $key->__GET('genero') ?></td>
+				  <td  align="center"><?= $key->__GET('rol') ?></td>
+				  <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+				<tr>
+			  <?php };?>
+			  <?php };?>
+		  <?php	}
+		 
 		function vistaalumnos(){
 			$HomeController = new HomeController();?>
 			<?php foreach ($HomeController->ListarUsuario() as $key){ ?>
