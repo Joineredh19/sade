@@ -1,22 +1,25 @@
 <?php
 session_start();
+header("Content-Type: text/html; charset=utf-8");
+
 if(!isset($_SESSION["id"])){
-    header("location: ../../Views/pages/loginadmin.php");
+    header("location: ../../Views/pages/loginAdmin.php");
 }
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 10*60)) {
   session_unset();     
   session_destroy();   
-  header("location: ../../Views/pages/loginadmin.php");
+  header("location: ../../Views/pages/loginAdmin.php");
 }
 $_SESSION['LAST_ACTIVITY'] = time();
 ?>
+
 
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />

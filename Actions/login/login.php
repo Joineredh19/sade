@@ -1,11 +1,8 @@
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-    <?php header("Content-Type: text/html; charset=utf-8");?>
-</head>
-
+<?php 	session_start(); 
+?>
 <?php 
 
-	session_start();
+
 	require_once('../../Controllers/HomeController.php');
 	$HomeController = new HomeController();
 
