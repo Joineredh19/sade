@@ -185,7 +185,7 @@ date_default_timezone_set('America/Mexico_City');
             <div class="card ">
               <div class="card-header ">
                 <h5 class="card-title">FALTAS DIARIAS</h5>
-                <p class="card-category">Universidad de Guadalajara</p>
+                <p class="card-category">Institución</p>
               </div>
               <div class="card-body ">
                 <?php 
@@ -195,7 +195,7 @@ date_default_timezone_set('America/Mexico_City');
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-bar-chart"></i> Centro Unversitario de la Costa
+                  <i class="fa fa-bar-chart"></i> SLA, 2022
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@ date_default_timezone_set('America/Mexico_City');
             <div class="card ">
               <div class="card-header ">
                 <h5 class="card-title">FALTAS SEMESTRALES</h5>
-                <p class="card-category">Universidad de Guadalajara</p>
+                <p class="card-category">Institución</p>
               </div>
               <div class="card-body ">
                 <?php 
@@ -217,7 +217,7 @@ date_default_timezone_set('America/Mexico_City');
 
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-pie-chart" aria-hidden="true"></i> Centro Unversitario de la Costa
+                  <i class="fa fa-pie-chart" aria-hidden="true"></i> SLA, 2022
                 </div>
               </div>
             </div>
@@ -226,7 +226,7 @@ date_default_timezone_set('America/Mexico_City');
             <div class="card card-chart">
               <div class="card-header">
                 <h5 class="card-title">FALTAS SEMESTRALES</h5>
-                <p class="card-category">Universidad de Guadalajara</p>
+                <p class="card-category">Institución</p>
               </div>
               <div class="card-body">
                 <?php 
@@ -236,7 +236,7 @@ date_default_timezone_set('America/Mexico_City');
               <div class="card-footer">
                 <hr />
                 <div class="card-stats">
-                  <i class="fa fa-area-chart" aria-hidden="true"></i> Centro Unversitario de la Costa
+                  <i class="fa fa-area-chart" aria-hidden="true"></i> SLA, 2022
                 </div>
               </div>
             </div>
