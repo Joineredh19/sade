@@ -125,6 +125,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?= $key->__GET('genero') ?></td>
                                     <td  align="center"><?= $key->__GET('rol') ?></td>
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                    <td align="center" style="padding: 0;"> <a href="recucontra.php?IdUsuario=<?= $key->__GET('id') ?>" title="Cambiar contraseña" class="btn btn-success"><i class="fa fa-lock"></i></a></td>
                                     <script>
 
 </script>

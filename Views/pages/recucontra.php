@@ -74,7 +74,7 @@ if (isset($_GET['IdUsuario'])) {
                   <div class="input-group-text">
                     <i class="nc-icon nc-zoom-split"></i>
                   </div>
-                </div>
+                </div>   <!-- #036401 -->
               </div>
             </form>
       <?php 
@@ -86,12 +86,12 @@ if (isset($_GET['IdUsuario'])) {
       <div class="content">
         <div class="row">
        <!-- Login Form -->
-     <form method="post"  action="<?php echo '../../Actions/Register/actualizar.php';?>"  enctype="multipart/form-data">
+     <form method="post"  action="<?php echo '../../Actions/login/passactualizar.php';?>"  enctype="multipart/form-data">
      <input type="hidden" id="" class="form-control" name="idUsuario" placeholder=""  value="<?=  $id?>" >
      <br>
-     <input type="password" id="Role" class="form-control" name="rol" placeholder="Nueva contraseña">
+     <input type="password" id="Role" class="form-control" name="newpass" placeholder="Nueva contraseña">
      <br>
-     <input type="password" id="Role" class="form-control" name="rol" placeholder="Confirmar nueva contraseña" >
+     <input type="password" id="Role" class="form-control" name="confirpass" placeholder="Confirmar nueva contraseña" >
      <br>
      <button type="submit" class="btn btn-success " id="btnRegistrarse" value="">Guardar</button>
     
