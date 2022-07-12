@@ -1,4 +1,3 @@
-
 <?php include '../includes/header.php';
 
 require_once('../../Controllers/HomeController.php');
