@@ -52,7 +52,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/Register/registrar.php">
+      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/register/registrar.php">
      <select name="Roles" id="Rol" class="form-control" value=""> </select>
       <br>
       <input type="form" id="nombreUsuario" class="form-control" name="nombreUsuario" placeholder="Nombre" required>

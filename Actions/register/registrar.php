@@ -1,12 +1,7 @@
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-	<?php header("Content-Type: text/html; charset=utf-8");?>
-</head>
-
 <?php 
+session_start();
 
-/*session_start();
-if(!isset($_SESSION["Email"])){
+/*if(!isset($_SESSION["Email"])){
 	header("location: ../../Views/pages/login.php");
 }else{*/
 	require_once('../../Controllers/HomeController.php');
