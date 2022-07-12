@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
- <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
-
+    <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
     <title>Sistema Acceso De Estudiantes ADMINISTRADOR</title>
 
     <link href="../Resource/css/login.css"  rel="stylesheet" type="text/css">
@@ -37,6 +36,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       <h3>SADE</h3>
       <h3>Sistema Acceso De Estudiantes</h3>
       <img src="../Resource/img/SLALogo.png"  alt="User Icon" style="width: 100px; padding-bottom: 10px;"/>
+      <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
             <!-- INICIO RELOJ -->
     <div class="container-clock" style="height: 72px;margin-bottom: 10px;">
       <h1 id="time">00:00:00</h1>

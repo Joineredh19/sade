@@ -5,6 +5,7 @@
             
             </nav>         
             <div class="credits ml-auto">
+            <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
               <img ALIGN=right src="../Resource/img/SLALogo.png" width="50px" height="50px">
            <!--   <img ALIGN=right src="../Resource/img/CUCyUDGLogo.png" width="" height="50px" style="margin-right:15px"> -->
               <span class="copyright" style="margin-top:10px">
