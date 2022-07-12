@@ -23,7 +23,7 @@
             </a>
           </li>
           <li>
-            <a href="./icons.html" style="margin-left: 5px;">
+            <a href="./orientadoEducativo.php" style="margin-left: 5px;">
               <i class="bi bi-clipboard-check"></i>
               <p>ORIENTADOR EDUCATIVO</p>
             </a>
@@ -38,12 +38,6 @@
             <a href="./padresfamilia.php" style="margin-left: 5px;">
               <i class="bi bi-people"></i>
               <p>PADRES DE FAMILIA</p>
-            </a>
-          </li>
-          <li>
-            <a href="./map.html" style="margin-left: 5px;">
-              <i class="bi bi-gear"></i>
-              <p>ADMINISTRADOR</p>
             </a>
           </li>
 
