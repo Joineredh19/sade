@@ -47,6 +47,15 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
+		public function  ActualizarPass($id,$NewPass){
+			$model = new UsuarioModel();
+			$var = $model->ActualizarPass($id,$NewPass);
+			return $var;
+		}
+
+		
+
+
 		//Informacion De Rol de Alumno
 
 		public function vistaalumnos(){

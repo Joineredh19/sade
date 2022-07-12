@@ -21,17 +21,16 @@ if(!isset($_SESSION["id"])){
 	
    
 	if ($NewPass == $ConfPass) {
-        if($HomeController->CompletarAlumnos($Id, $Codigo,$NSeguroSocial,$Rfc,$Curp,$TipoSangre,$Alergia,$Selecolonia,$Calleynum,$Seletutoraca,$Selepadre,$Seleturno) == true){
+        $NewPass = password_hash($NewPass, PASSWORD_DEFAULT);
+        if($HomeController->ActualizarPass($Id,$NewPass) == true){
 
-            $msg->success('¡Informacion Alumnos Completada con Exito!');
+            $msg->success('¡Contraseña Modificada con Exito!');
             header("location: ../../Views/pages/tablas.php");
         }else{
-            $msg->error('¡ERROR, no se Agregó!..');
+            $msg->error('¡ERROR, Contraseñas no coinciden');
+            header("location: ../../Views/pages/recucontra.php");
         }
 		}
 }
-/*SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id
-FROM  tusuarios  INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id  
-WHERE troles_id = 4  ;*/
 ?>
 

@@ -18,34 +18,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		}
 		
 
-	/*	public function Ver($IdUsuario)
-		{
-			try{
-				$stm = $this->pdo->prepare("SELECT * FROM Usuario WHERE IdUsuario = ?");
-				$stm->execute(array($IdUsuario));
-				$r = $stm->fetch(PDO::FETCH_OBJ);
-
-				if ($r) {
-					$entity = new Ota_Usuario();
-
-					$entity->__SET('IdUsuario',$r->IdUsuario);
-					$entity->__SET('Us_Nom1',$r->Us_Nom1);
-					$entity->__SET('Us_Nom2',$r->Us_Nom2);
-					$entity->__SET('Us_Ape1',$r->Us_Ape1);
-					$entity->__SET('Us_Ape2',$r->Us_Ape2);
-					
-					$entity->__SET('Usuario',$r->Usuario);
-					$entity->__SET('Clave',$r->Clave);
-				
-					return $entity;
-
-				}
-				return NULL;
-			}catch(Exception $e){
-				die($e->getMessage()." ->Ota_UsuarioModel->Ver()");
-			}
-		}
-		*/
+	
 		public function VerUsuario($Email)
 		{
 			try{
@@ -69,6 +42,22 @@ require_once('../../Models/Conexion/Conexion.php');
 			}catch(Exception $e){
 				die($e->getMessage()." ->UsuarioModel->Ver()");
 			}
+		}
+
+		public function ActualizarPass($id,$NewPass){
+
+			try {
+				$sql = ("UPDATE tusuarios SET contrasenia = ? WHERE id = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($NewPass, $id ));
+				if($stm){
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				die($e->getMessage()." ->UsuarioModel->ModificarContrasenia()");
+			}
+
 		}
 
 		public function VerUsuarioxId($id)
@@ -134,7 +123,7 @@ require_once('../../Models/Conexion/Conexion.php');
 				$Array = array();
 				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id
 				FROM  tusuarios  INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id  
-				WHERE troles_id = 4 or troles_id = 5 or troles_id = 6 ORDER BY tusuarios.id  ASC ");
+				ORDER BY tusuarios.id  ASC ");
 				$stm->execute(array());
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
@@ -158,34 +147,6 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 /*
-		public function Listar()
-		{
-			try
-			{
-				$Array = array();
-				$stm = $this->pdo->prepare("SELECT * FROM Usuario");
-				$stm->execute(array());
-
-				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
-					$entity = new Ota_Usuario();
-
-					$entity->__SET('IdUsuario',$r->IdUsuario);
-					$entity->__SET('Us_Nom1',$r->Us_Nom1);
-					$entity->__SET('Us_Nom2',$r->Us_Nom2);
-					$entity->__SET('Us_Ape1',$r->Us_Ape1);
-					$entity->__SET('Us_Ape2',$r->Us_Ape2);
-					
-					$entity->__SET('Usuario',$r->Usuario);
-					$entity->__SET('Clave',$r->Clave);
-					
-					
-					$Array[] = $entity;
-				}
-				return $Array;
-			}catch(Exception $e){
-				die($e->getMessage()." ->Ota_UsuarioModel->Listar()");
-			}
-		}
 
 		public function Conteo()
 		{
