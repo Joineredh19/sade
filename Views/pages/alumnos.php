@@ -21,7 +21,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="../index.php" class="simple-text logo-mini">
+        <a href="../index.php" class="simple-text logo-normal">
         SADE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
