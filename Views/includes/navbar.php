@@ -22,7 +22,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                 <?php if (( $datos->__GET('TRoles_id') == '1') or ( $datos->__GET('TRoles_id') == '2') or ( $datos->__GET('TRoles_id') == '3') ){ ?>
                   <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registrar">Registrar</a>
-                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#generars">Generar script</a>
+                  <a  type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#generars">Pasar asistencias</a>
                   <?php } ?>
                   <a class="dropdown-item" href="./perfil.php">Ver perfil</a>
                   <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
