@@ -15,13 +15,13 @@ date_default_timezone_set('America/Mexico_City');
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
+        <a href="../index.php" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../Resource/img/SLALogo.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
+        <a href="../index.php" class="simple-text logo-normal">
         SADE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
