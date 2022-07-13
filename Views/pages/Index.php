@@ -28,13 +28,15 @@ date_default_timezone_set('America/Mexico_City');
           </div> -->
         </a>
       </div>
+      <!--============================================== SIDEBAR ===============================================-->
       <div class="sidebar-wrapper">
         <ul class="nav">
-      <?php 
-      include '../includes/sidebar.php';
-      ?>
+          <?php 
+            include '../includes/sidebar.php';
+          ?>
         </ul>
       </div>
+      <!--======================================================================================================-->
     </div>
     <div class="main-panel">
       <!-- Navbar -->
@@ -73,6 +75,7 @@ date_default_timezone_set('America/Mexico_City');
       </nav>
       <!-- End Navbar -->
       <div class="content">
+<!--=========================================== INICIO CARDS =============================================-->
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
@@ -180,7 +183,10 @@ date_default_timezone_set('America/Mexico_City');
             </div>
           </div>
         </div>
+<!--============================================= FIN CARDS ==============================================-->
+<!--========================================== INICIO GRAFICAS ===========================================-->
         <div class="row">
+          <!-------------------------- INICIO GRAFICA DE BARRAS SEMANAL ---------------------------->
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header ">
@@ -200,8 +206,10 @@ date_default_timezone_set('America/Mexico_City');
               </div>
             </div>
           </div>
+          <!--------------------------- FIN GRAFICA DE BARRAS SEMANAL ------------------------------>
         </div>
         <div class="row">
+          <!----------------------------- INICIO GRAFICA DE DONA ----------------------------------->
           <div class="col-md-4">
             <div class="card ">
               <div class="card-header ">
@@ -221,7 +229,9 @@ date_default_timezone_set('America/Mexico_City');
                 </div>
               </div>
             </div>
+          <!------------------------------- FIN GRAFICA DE DONA ------------------------------------>
           </div>
+          <!--------------------------- INICIO GRAFICA LINEAL SEMESTRAL ---------------------------->
           <div class="col-md-8">
             <div class="card card-chart">
               <div class="card-header">
@@ -242,6 +252,8 @@ date_default_timezone_set('America/Mexico_City');
             </div>
           </div>
         </div>
+        <!---------------------------- FIN GRAFICA LINEAL SEMESTRAL ------------------------------>
+<!--=========================================== FIN GRAFICAS =============================================-->
         <!-- Button trigger modal -->
 
 
