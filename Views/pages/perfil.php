@@ -12,8 +12,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
 ?>
- <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
- <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
+ <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
@@ -21,7 +21,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
         <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
           <div class="logo-image-small">
             <title>Mi perfil</title>
-            <img src="../Resource/img/UDG - Vector Blanco.png">
+            <img src="../Resource/img/SLALogo.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
@@ -235,7 +235,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Calle y Numero</label>
-                        <input type="text" class="form-control" placeholder="Calle y Numero" value="Calle y número">
+                        <input type="text" class="form-control" placeholder="Calle y Numero" value="">
                       </div>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label>CURP</label>
-                        <input type="number" class="form-control" placeholder="CURP">
+                        <input type="text" class="form-control" placeholder="CURP">
                       </div>
                     </div>
                   </div>
@@ -290,7 +290,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Observaciones</label>
-                        <textarea class="form-control textarea">Comentarios</textarea>
+                        <textarea class="form-control textarea"></textarea>
                       </div>
                     </div>
                   </div>
