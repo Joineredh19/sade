@@ -99,7 +99,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   </p>
                   <form action="#" method="POST" enctype="multipart/form-data" >
                     <input type="file" id="file-uploader" name="fotoperfil">
-                      <div id="feedback">  
+                      <div id="feedback">
                       </div>
                       <div>
                         <br>
