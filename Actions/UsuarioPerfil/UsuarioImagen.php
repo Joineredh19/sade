@@ -22,35 +22,33 @@ if (isset($_POST["FotoPerfil"])) {
             $actualizar = mysqli_query($conn, "UPDATE tusuarios SET
             Imagen = '$imageContent'
             WHERE id = $USER");
-?>
-        <script language="JavaScript">
-            function redireccionar() {
-                window.location = "../../Views/pages/perfil.php";
-            }
-            setTimeout("redireccionar()", 500);
-        </script>
-<?php
-        }else if($name != '' && $url_tmp == ''){
-            echo "Imagen sobrepasa los 2MB";
-?>
-        <script language="JavaScript">
-            function redireccionar() {
-                window.location = "../../Views/pages/perfil.php";
-            }
-            setTimeout("redireccionar()", 2000);
-        </script>
-<?php
-        }else{
-            echo "No seleccionó una imagen";
-?>
-        <script language="JavaScript">
-            function redireccionar() {
-                window.location = "../../Views/pages/perfil.php";
-            }
-            setTimeout("redireccionar()", 2000);
-        </script>
-<?php
+            ?>
+            <script language="JavaScript">
+                function redireccionar() {
+                    window.location = "../../Views/pages/perfil.php";
+                }
+                setTimeout("redireccionar()", 500);
+            </script>
+            <?php
         }
+
+        else{
+            if($name != '' && $url_tmp == ''){
+                echo "Imagen sobrepasa los 2MB";
+            }
+            else{
+                echo "No seleccionó una imagen";
+            }
+            
+            ?>
+            <script language="JavaScript">
+                function redireccionar() {
+                    window.location = "../../Views/pages/perfil.php";
+                }
+                setTimeout("redireccionar()", 2000);
+            </script>
+            <?php
+        }   
     }
 
     
