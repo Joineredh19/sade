@@ -103,7 +103,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
   
   <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Generar script">
+        <input type="submit" class="btn btn-success" id="btnRegistrarse" onclick="return confirm('¿Está seguro de realizar el pase de lista?')" value="Generar script">
        
       </div>
     </form>
