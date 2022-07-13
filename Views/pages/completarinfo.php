@@ -20,24 +20,15 @@ if (isset($_GET['IdUsuario'])) {
 
 
 ?>
- <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
- <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="../index.php" class="simple-text logo-mini">
-          <div class="logo-image-small">
-            <img src="../Resource/img/SLALogo.png">
-          </div>
-          <!-- <p>CT</p> -->
-        </a>
-        <a href="../index.php" class="simple-text logo-normal">
-        SADE
-          <!-- <div class="logo-image-big">
-            <img src="../assets/img/logo-big.png">
-          </div> -->
-        </a>
+        <?php 
+            include '../includes/logo.php';
+        ?>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
