@@ -9,19 +9,19 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 ?>
 
-<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
- <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
+ <link rel="icon" type="image/png" href=".../Resource/img/SLALogo.png>
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
+        <a href="../index.php" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../Resource/img/UDG - Vector Blanco.png">
+            <img src="../Resource/img/SLALogo.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
+        <a href="../index.php" class="simple-text logo-normal">
         SADE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
@@ -49,7 +49,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Tutor Academico</a>
+            <a class="navbar-brand" href="javascript:;">Orientador Academico</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
