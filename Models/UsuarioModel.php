@@ -239,8 +239,8 @@ require_once('../../Models/Conexion/Conexion.php');
 				INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  
 				INNER JOIN troles ON tusuarios.TRoles_id = troles.id 
 				join tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-				join ttutoresacademicos ON tdatosalumnos.TTutoresPadres_id = ttutorespadres.id
-				WHERE ttutoresacademicos.TUsuarios_id=?");
+				join ttutorespadres ON tdatosalumnos.TTutoresPadres_id = ttutorespadres.id
+				WHERE ttutorespadres.TUsuarios_id=?");
 				$stm->execute(array($id));
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
