@@ -14,7 +14,7 @@ $HomeController = new HomeController();
 date_default_timezone_set('America/Bogota');
 session_start();		
 
-$ips = $HomeController->VerIPS();
+/*$ips = $HomeController->VerIPS();
 if (isset($_GET['IdServicio'])) {
     $IdServicio = $_GET['IdServicio'];
     $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
@@ -34,7 +34,7 @@ if (isset($_GET['IdServicio'])) {
 
  
   $nombreImagen = "../Resource/img/logoota2.jpg";
-  $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
+  $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen)); */
 ?>
 
 
