@@ -97,14 +97,13 @@ $_SESSION['LAST_ACTIVITY'] = time();
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form method="post" id="formularioRegistro" name="formularioRegistro" action="../../Actions/register/registrar.php">
-     <select name="Roles" id="Rol" class="form-control" value=""> </select>
-
-  
+      
+      
+      <form method="post" id="formularioScript" name="formularioScript" action="../../Actions/CorteAsistencia/CortarAsistencia.php">
+     <select name="SelectTurno" id="SelectTurno" class="form-control" value=""> </select>
   <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
         <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Generar script">
-       
       </div>
     </form>
 
