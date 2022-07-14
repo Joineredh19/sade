@@ -20,8 +20,8 @@ if (isset($_GET['IdUsuario'])) {
 
 
 ?>
- <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
- <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
+ <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
