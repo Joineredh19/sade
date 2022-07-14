@@ -2,7 +2,6 @@
 
 require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
-$Tutoraca = $HomeController->obtener_id_tutor($_SESSION['id']);
 
 require '../../Lib/FlashMessages.php';
 // Instantiate the class

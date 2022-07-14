@@ -100,11 +100,7 @@ spl_autoload_register(function($nombreClase)
 			$var = $model -> vistaalumnos_tutor();
 			return $var;
 		}
-		public function obtener_id_tutor($id){
-			$model = new UsuarioModel ($id);
-			$var = $model -> obtener_id_tutor($id);
-			return $var;
-		}
+
 
 
 	}

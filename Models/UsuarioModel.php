@@ -197,20 +197,7 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->UsuarioModel->Agregar()");
 			}
 		}
-		function obtener_id_tutor($id){
-			try{
-				$Array = array();
-				$HomeController = new HomeController();
-				$stm = $this->pdo->prepare("select id from ttutoresacademicos where TUsuarios_id = ?");
-				$stm->execute(array($id));
-				$r = $stm->fetch(PDO::FETCH_OBJ);
-				$entity = new TutoresAcademicos;
-				$entity->__SET('id',$r->id);
-				return $entity;
-			}catch(Exception $e){
-				die($e->getMessage()." ->UsuarioModel->Ver()");
-			}
-		}
+
 		public function ListarUsuario_tutor($id)
 		{
 			try{
