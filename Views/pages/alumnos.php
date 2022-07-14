@@ -2,6 +2,7 @@
 
 require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
+$Tutoraca = $HomeController->obtener_id_tutor($_SESSION['id']);
 
 require '../../Lib/FlashMessages.php';
 // Instantiate the class
@@ -9,15 +10,24 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 ?>
 
-<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
- <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <?php 
-            include '../includes/logo.php';
-        ?>
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../Resource/img/UDG - Vector Blanco.png">
+          </div>
+          <!-- <p>CT</p> -->
+        </a>
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
+        SADE
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -125,11 +135,21 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                   
                                   </tr>
                             <?php break;
-                                  case 5:  
-                                    #$_SESSION['id_tutor'] ='2'  ;
-                                    #$HomeController->obtener_id_tutor($_SESSION['id']);
-                                    $HomeController->ListarUsuario_tutor();
-                                    $HomeController->vistaalumnos_tutor();
+                                  case 5:?>  
+                                    <?php foreach ($HomeController->ListarUsuario_tutor($_SESSION["id"]) as $key){?>
+                                    
+                                      <tr>
+                                        <td align="center"><?= $key->__GET('id') ?></td>
+                                        <td align="center"><?= $key->__GET('Nombres') ?></td>
+                                        <td  align="center"><?= $key->__GET('Apellidos') ?></td>
+                                        <td  align="center"><?= $key->__GET('Email') ?></td>
+                                        <td  align="center"><?= $key->__GET('Telefono') ?></td>
+                                        <td  align="center"><?= $key->__GET('genero') ?></td>
+                                        <td  align="center"><?= $key->__GET('rol') ?></td>
+                                        <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                      <tr>
+                                      
+                                      <?php }
                                   break;
                             ?>
                             <?php } ?>
@@ -144,5 +164,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       </div>
 
 
-
+<script >
+  alert(var_dump($Tutoraca->__GET('id')));
+</script>
 <?php include '../includes/footer.php';?>
+

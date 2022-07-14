@@ -211,7 +211,7 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->UsuarioModel->Ver()");
 			}
 		}
-		public function ListarUsuario_tutor()
+		public function ListarUsuario_tutor($id)
 		{
 			try{
 				$Array = array();
@@ -220,8 +220,8 @@ require_once('../../Models/Conexion/Conexion.php');
 				INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  
 				INNER JOIN troles ON tusuarios.TRoles_id = troles.id 
 				join tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id 
-				join ttutoresacademicos ON tdatosalumnos.TTutoresAcademicos_id = ttutoresacademicos.id WHERE ttutoresacademicos.TUsuarios_id=20");
-				$stm->execute(array());
+				join ttutoresacademicos ON tdatosalumnos.TTutoresAcademicos_id = ttutoresacademicos.id WHERE ttutoresacademicos.TUsuarios_id=?");
+				$stm->execute(array($id));
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
 					
@@ -243,23 +243,6 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->UsuarioModel->Ver()");
 			}
 		}
-		function vistaalumnos_tutor(){
-			$HomeController = new HomeController();?>
-			<?php foreach ($HomeController->ListarUsuario_tutor() as $key){ ?>
-			  <?php if ($key->__GET('TUsuarios_id')==$_SESSION['id']||$key->__GET('TUsuarios_id')==$_SESSION['id']){?>
-				<tr>
-				  <td align="center"><?= $key->__GET('id') ?></td>
-				  <td align="center"><?= $key->__GET('Nombres') ?></td>
-				  <td  align="center"><?= $key->__GET('Apellidos') ?></td>
-				  <td  align="center"><?= $key->__GET('Email') ?></td>
-				  <td  align="center"><?= $key->__GET('Telefono') ?></td>
-				  <td  align="center"><?= $key->__GET('genero') ?></td>
-				  <td  align="center"><?= $key->__GET('rol') ?></td>
-				  <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
-				<tr>
-			  <?php };?>
-			  <?php };?>
-		  <?php	}
 		 
 		function vistaalumnos(){
 			$HomeController = new HomeController();?>
