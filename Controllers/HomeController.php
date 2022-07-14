@@ -101,8 +101,15 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 		public function obtener_id_tutor($id){
-			$model = new UsuarioModel ($id);
+			$model = new UsuarioModel($id);
 			$var = $model -> obtener_id_tutor($id);
+			return $var;
+		}
+
+		public function mandarTurnoReporte($turno){
+			//echo ("el usuario es: ".$turno);
+			$model = new AlumnoModel($turno);
+			$var = $model -> mandarTurnoReporte($turno);
 			return $var;
 		}
 
