@@ -230,7 +230,40 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->UsuarioModel->Ver()");
 			}
 		}
-		 
+		public function ListarUsuario_Padre($id)
+		{
+			try{
+				$Array = array();
+				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,ttutorespadres.TUsuarios_id
+				FROM  tusuarios
+				INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  
+				INNER JOIN troles ON tusuarios.TRoles_id = troles.id 
+				join tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+				join ttutoresacademicos ON tdatosalumnos.TTutoresPadres_id = ttutorespadres.id
+				WHERE ttutoresacademicos.TUsuarios_id=?");
+				$stm->execute(array($id));
+
+				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
+					
+					$entity = new Usuarios();
+					$entity->__SET('id',$r->id);
+					$entity->__SET('Nombres',$r->Nombres);
+					$entity->__SET('Apellidos',$r->Apellidos);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Telefono',$r->Telefono);
+					$entity->__SET('rol',$r->rol);
+					$entity->__SET('genero',$r->genero);
+					$entity->__SET('TUsuarios_id',$r->TUsuarios_id);
+									
+					$Array[] = $entity;
+
+				}
+				return $Array;
+			}catch(Exception $e){
+				die($e->getMessage()." ->UsuarioModel->Ver()");
+			}
+		}
+		
 		function vistaalumnos(){
 			$HomeController = new HomeController();?>
 			<?php foreach ($HomeController->ListarUsuario() as $key){ ?>

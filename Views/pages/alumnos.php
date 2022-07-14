@@ -150,6 +150,22 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                       
                                       <?php }
                                   break;
+                                  case 6:
+                                    foreach ($HomeController->ListarUsuario_Padre($_SESSION["id"]) as $key){?>
+                                  
+                                      <tr>
+                                        <td align="center"><?= $key->__GET('id') ?></td>
+                                        <td align="center"><?= $key->__GET('Nombres') ?></td>
+                                        <td  align="center"><?= $key->__GET('Apellidos') ?></td>
+                                        <td  align="center"><?= $key->__GET('Email') ?></td>
+                                        <td  align="center"><?= $key->__GET('Telefono') ?></td>
+                                        <td  align="center"><?= $key->__GET('genero') ?></td>
+                                        <td  align="center"><?= $key->__GET('rol') ?></td>
+                                        <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                      <tr>
+                                    
+                                    <?php }
+                                break;
                             ?>
                             <?php } ?>
                     </tbody>
