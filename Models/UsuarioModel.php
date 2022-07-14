@@ -215,8 +215,12 @@ require_once('../../Models/Conexion/Conexion.php');
 		{
 			try{
 				$Array = array();
-				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id,tdatosalumnos.TTutoresAcademicos_id,tdatosalumnos.TTutoresPadres_id
-				FROM  tusuarios INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id join tdatosalumnos on tusuarios.id = tdatosalumnos.TUsuarios_id ");
+				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,ttutoresacademicos.TUsuarios_id
+				FROM  tusuarios
+				INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  
+				INNER JOIN troles ON tusuarios.TRoles_id = troles.id 
+				join tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+				join ttutoresacademicos ON tdatosalumnos.TTutoresAcademicos_id = ttutoresacademicos.id WHERE ttutoresacademicos.TUsuarios_id=20");
 				$stm->execute(array());
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
@@ -229,8 +233,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Telefono',$r->Telefono);
 					$entity->__SET('rol',$r->rol);
 					$entity->__SET('genero',$r->genero);
-					$entity->__SET('TTutoresAcademicos_id',$r->TTutoresAcademicos_id);
-					$entity->__SET('TTutoresPadres_id',$r->TTutoresPadres_id);
+					$entity->__SET('TUsuarios_id',$r->TUsuarios_id);
 									
 					$Array[] = $entity;
 
@@ -243,7 +246,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		function vistaalumnos_tutor(){
 			$HomeController = new HomeController();?>
 			<?php foreach ($HomeController->ListarUsuario_tutor() as $key){ ?>
-			  <?php if ($key->__GET('TTutoresAcademicos_id')==$_SESSION['id_tutor']||$key->__GET('TTutoresPadres_id')==$_SESSION['id_tutor']){?>
+			  <?php if ($key->__GET('TUsuarios_id')==$_SESSION['id']||$key->__GET('TUsuarios_id')==$_SESSION['id']){?>
 				<tr>
 				  <td align="center"><?= $key->__GET('id') ?></td>
 				  <td align="center"><?= $key->__GET('Nombres') ?></td>

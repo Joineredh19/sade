@@ -127,7 +127,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                             <?php break;
                                   case 5:  
                                     #$_SESSION['id_tutor'] ='2'  ;
-                                    $HomeController->obtener_id_tutor($_SESSION['id']);
+                                    #$HomeController->obtener_id_tutor($_SESSION['id']);
                                     $HomeController->ListarUsuario_tutor();
                                     $HomeController->vistaalumnos_tutor();
                                   break;
