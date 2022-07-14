@@ -163,8 +163,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
       </div>
 
 
-<script >
-  alert(var_dump($Tutoraca->__GET('id')));
-</script>
+
 <?php include '../includes/footer.php';?>
 
