@@ -22,30 +22,35 @@ function Conexion(){
 		FROM tusuarios INNER JOIN tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id INNER JOIN tturnos ON tdatosalumnos.TTurnos_id = tturnos.id 
 		WHERE tdatosalumnos.TTurnos_id = 1');
 		$listas= array();
-		while ($row = mysqli_fetch_array($result)) {
+		while ($row = mysqli_fetch_assoc($result)) {
 			//echo($row["codigo"]);
-		array_push($listas,$row["codigo"]);
+		$codigos = explode(',', $row['codigo']);
+		$listas[$row['codigo']] = $codigos;
 		}
-		//var_dump($listas);
-
+		echo json_encode($listas);
 	$result2 = mysqli_query($conn,'SELECT codigo FROM tbitacorasalumnos');
 		$listasBitacoras= array();
-		while ($row = mysqli_fetch_array($result2)) {
-			array_push($listasBitacoras,$row["codigo"]);
+		while ($row = mysqli_fetch_assoc($result2)) {
+			$codigos2 = explode(',', $row['codigo']);
+			$listasBitacoras["prueba"['codigo']] = $codigos2;
 		}
-		echo("aqui empieza la segunda consulta");
 
-		$resultado = array_diff($listas, $listasBitacoras);
+		$resultado = array_diff_uassoc($listas, $listasBitacoras);
+
 		if($resultado==0){
 			echo("no hay registros");
 		}else{
 			print_r($resultado);
 			$array_Insertar = json_encode($resultado);
-			foreach ($array_Insertar as $row){
-				$codigo = $row['codigo'];
-				//$codigoInsertar = $array_Insertar[$i];
-				echo($codigo);
+			foreach ($array_Insertar as $row) {
+				$codigo = $row['1'];
 				$sql = "INSERT INTO tinasistencias (codigo) VALUES ('$codigo')";
+        		$conn->query($sql);
+			}
+			for ($i = 0; $i< count($resultado); $i++ ){
+				$codigoInsertar = $array_Insertar[count($resultado)];
+				echo($array_Insertar);
+				$sql = "INSERT INTO tinasistencias (codigo) VALUES ('$codigoInsertar')";
         		$conn->query($sql);
 			}
 			if ($conn->query($sql) === TRUE) {
