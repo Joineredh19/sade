@@ -8,7 +8,7 @@ function Conexion(){
    $conn = mysqli_connect("cuc-udg22.mysql.database.azure.com",
    "SADE22@cuc-udg22", "Sade_2022", "bzya6emoafjbqjkolhiy");
  //  mysqli_connect($serverName, $connectionOptions);
-    // return $conn;
+     return $conn;
  
 
    
@@ -23,11 +23,25 @@ function Conexion(){
 		WHERE tdatosalumnos.TTurnos_id = 1');
 		$listas= array();
 		while ($row = mysqli_fetch_array($result)) {
-			echo($row["codigo"]);
-		//$listas .=  $row["codigo"];
-	
-			//echo($listas);
+			//echo($row["codigo"]);
+		array_push($listas,$row["codigo"]);
 		}
+		//var_dump($listas);
+
+	$result2 = mysqli_query($conn,'SELECT codigo FROM tbitacorasalumnos');
+		$listasBitacoras= array();
+		while ($row = mysqli_fetch_array($result2)) {
+			array_push($listasBitacoras,$row["codigo"]);
+		}
+		echo("aqui empieza la segunda consulta");
+
+		$resultado = array_diff($listas, $listasBitacoras);
+		if($resultado==0){
+			echo("no hay elementos a comparar");
+		}
+		print_r($resultado);
+		//var_dump($listasBitacoras);
+
 	}
 
 
