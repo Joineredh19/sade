@@ -1,6 +1,5 @@
-
-
 <?php
+session_start();		
  ob_start();
 ?>
 <?php
@@ -11,34 +10,25 @@ $dompdf=new Dompdf();
 
 require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
-date_default_timezone_set('America/Bogota');
-session_start();		
+date_default_timezone_set('America/Mexico_City');
 
-/*$ips = $HomeController->VerIPS();
-if (isset($_GET['IdServicio'])) {
-    $IdServicio = $_GET['IdServicio'];
-    $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
+
+//$ips = $HomeController->VerIPS();
+if (isset($_GET['IdUsuario'])) {
+    $IdUsuario = $_GET['IdUsuario'];
+    $data = $HomeController->VerUsuarioxId($IdUsuario);
   //  $Firma=$HomeController->VerOta_Usuario($SESSION['IdUsuario'])->_GET('FirmaU');
-   $Paramedico= $HomeController->VerOta_Usuario($data->__GET('Tp_Paramedico'));
-   $Medico= $HomeController->VerOta_Usuario($data->__GET('Tp_Medico'));
-   $Comandante= $HomeController->VerOta_Usuario($data->__GET('Tp_Comandante'));
 
   }else{
-    $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
-    $data = NULL;
-    $Paramedico= NULL;
-    $Medico= NULL;
-    $Comandante= NULL;
+ //   $IdUsuario = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
 
   }
 
- 
-  $nombreImagen = "../Resource/img/logoota2.jpg";
-  $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen)); */
+  $nombreImagen = "../Resource/img/SLALogo.png";
+  $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
+
+  $fotoP = "data:image/png;base64," .base64_encode($data->__GET("Imagen"))
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +43,7 @@ if (isset($_GET['IdServicio'])) {
 <table width="100%" border="1" style="font-size: 12px">
     <tr>
         <td rowspan="4" colspan="2" align="center">
-            <img src="" width="120" height="120">
+            <img src="<?php echo $fotoP?>" width="120" height="120">
         </td>
         <td rowspan="4" colspan="4" align="center" valign="middle" width="60%">
             <strong style="font-size: 16px">DATOS DEL ESTUDIANTE</strong><br>
@@ -85,8 +75,8 @@ if (isset($_GET['IdServicio'])) {
     <th colspan="4">Informacion General Del Estudiante</th>
   </tr>
   <tr>
-    <td colspan="2"><?php echo "Nombres: "?></td>
-    <td colspan="2"><?php echo "Apellidos: "?> </td>
+    <td colspan="2"><?php echo "Nombres: ".$data->__GET('Nombres')?></td>
+    <td colspan="2"><?php echo "Apellidos: ".$data->__GET('Apellidos')?> </td>
   </tr>
   <tr>
     <td> <?php echo "Identificación: "?></td>

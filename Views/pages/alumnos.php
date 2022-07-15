@@ -135,7 +135,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                   
                                   </tr>
                             <?php break;
-<<<<<<< HEAD
                                   case 5:?>  
                                     <?php foreach ($HomeController->ListarUsuario_tutor($_SESSION["id"]) as $key){?>
                                     
@@ -170,14 +169,6 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     
                                     <?php }
                                 break;
-=======
-                                  case 5:  
-                                    #$_SESSION['id_tutor'] ='2'  ;
-                                    $HomeController->obtener_id_tutor($_SESSION['id']);
-                                    $HomeController->ListarUsuario_tutor();
-                                    $HomeController->vistaalumnos_tutor();
-                                  break;
->>>>>>> 2ec8f3c22b428a075cd8916e291283d767333669
                             ?>
                             <?php } ?>
                     </tbody>
