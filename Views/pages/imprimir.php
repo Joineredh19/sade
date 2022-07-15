@@ -56,7 +56,7 @@ if (isset($_GET['IdServicio'])) {
             <img src="" width="120" height="120">
         </td>
         <td rowspan="4" colspan="4" align="center" valign="middle" width="60%">
-            <strong style="font-size: 16px">HOJA DE TRASLADOS</strong><br>
+            <strong style="font-size: 16px">DATOS DEL ESTUDIANTE</strong><br>
            <?php echo ""; ?><br>
            <?php echo "NIT "?><br>
            <?php echo""; ?><br>
@@ -82,7 +82,7 @@ if (isset($_GET['IdServicio'])) {
 
 <table style="width:100%">
   <tr>
-    <th colspan="4">Informacion General Del Paciente</th>
+    <th colspan="4">Informacion General Del Estudiante</th>
   </tr>
   <tr>
     <td colspan="2"><?php echo "Nombres: "?></td>
@@ -104,7 +104,7 @@ if (isset($_GET['IdServicio'])) {
   <td><?php echo "Direccion: " ?></td>
   </tr>
   <tr>
-    <th colspan="4">Informacion Del Acompañante</th>
+    <th colspan="4">Informacion Del Tutor</th>
   </tr>
    <tr>
     <td colspan="2"><?php echo 'Nombres: ' ?></td>
@@ -119,7 +119,7 @@ if (isset($_GET['IdServicio'])) {
   <br>
   <table style="width:100% ">
    <tr>
-    <th colspan="4">Características Del Servicio</th>
+    <th colspan="4">Información Adicional</th>
   </tr>
    <tr>
    </tr>

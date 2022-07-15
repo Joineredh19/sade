@@ -131,6 +131,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('tgeneros_id')?></td>
                                     <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')?></td>
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Alumnos" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
+                                    <td align="center" style="padding: 0;"> <a href="imprimir.php?IdUsuario=<?= $key->__GET('id') ?>" title="Imprimir datos" class="btn btn-success"><i class="fa fa-print"></i></a></td>
                                   
                                   </tr>
                             <?php break;
@@ -146,6 +147,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                         <td  align="center"><?= $key->__GET('genero') ?></td>
                                         <td  align="center"><?= $key->__GET('rol') ?></td>
                                         <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                        <td align="center" style="padding: 0;"> <a href="imprimir.php?IdUsuario=<?= $key->__GET('id') ?>" title="Imprimir datos" class="btn btn-success"><i class="fa fa-print"></i></a></td>
                                       <tr>
                                       
                                       <?php }
@@ -162,6 +164,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                         <td  align="center"><?= $key->__GET('genero') ?></td>
                                         <td  align="center"><?= $key->__GET('rol') ?></td>
                                         <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+                                        <td align="center" style="padding: 0;"> <a href="imprimir.php?IdUsuario=<?= $key->__GET('id') ?>" title="Imprimir datos" class="btn btn-success"><i class="fa fa-print"></i></a></td>
                                       <tr>
                                     
                                     <?php }
