@@ -37,12 +37,28 @@ function Conexion(){
 
 		$resultado = array_diff($listas, $listasBitacoras);
 		if($resultado==0){
-			echo("no hay elementos a comparar");
+			echo("no hay registros");
+		}else{
+			print_r($resultado);
+			$array_Insertar = json_encode($resultado);
+			foreach ($array_Insertar as $row){
+				$codigo = $row['codigo'];
+				//$codigoInsertar = $array_Insertar[$i];
+				echo($codigo);
+				$sql = "INSERT INTO tinasistencias (codigo) VALUES ('$codigo')";
+        		$conn->query($sql);
+			}
+			if ($conn->query($sql) === TRUE) {
+				echo "se ha guardado correctamente";
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			
+
 		}
-		print_r($resultado);
 		//var_dump($listasBitacoras);
 
 	}
+}
 
 
 
