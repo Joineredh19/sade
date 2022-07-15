@@ -4,14 +4,13 @@
     if ($_POST["rolelegido"]==1) {
         $html = '';
 		?>
-            <h3>SADE</h3>
-            <h3>Sistema Acceso De Estudiantes</h3>
-
-            <form action="#" method="POST">
-                <input type="text" id="email_tel" class="fadeIn second" name="email_tel" required placeholder="Codigo Institucional">
-                <input type="text" id="observaciones" class="fadeIn second" name="observaciones" placeholder="Observaciones (Opcional)">
-                <input type="submit" class="fadeIn fourth" value="Ingresar" name="enviar">
-            </form>
+            <select name="RegisInter" id="RegisInter" required class="form-control " aria-label="Default select example">
+				<option value="#" selected>Elige que acción realizar</option>
+                <option value="1">Mostrar Registro de Asistencia</option>
+                <option value="2">Mostrar Codigo QR</option>
+		    </select>
+            
+            <div id="FormuAccion"></div>
         <?php
 			
     }
@@ -31,7 +30,20 @@
     echo $html; 
     
 ?>
-<script type="text/javascript">			
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("#RegisInter").on('change', function () {
+        $("#RegisInter option:selected").each(function () {
+            asisinterno=$(this).val();
+            $.post("../../Asistencia/AsisInterno.php", { asisinterno: asisinterno }, function(data){
+                $("#FormuAccion").html(data);
+            });         
+        });
+   });
+  });
+</script>
+
+<script type="text/javascript">
   $(document).ready(function(){
     $("#RegisVisit").on('change', function () {
         $("#RegisVisit option:selected").each(function () {
