@@ -114,6 +114,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <tbody>
                       
                             <?php foreach ($HomeController->ListarUsuario() as $key){ ?>
+                              <?php if ($key->__GET('rol')=="Tutor Padre"){?>
                                 <tr>
                                     <td align="center"><?= $key->__GET('id') ?></td>
                                     <td align="center"><?= $key->__GET('Nombres') ?></td>
@@ -125,7 +126,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
                                   
                                   </tr>
-                          <?php } ?>
+                          <?php }
+                        } ?>
                     </tbody>
                     </tbody>
                   </table>
