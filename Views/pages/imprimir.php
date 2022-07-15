@@ -19,16 +19,9 @@ if (isset($_GET['IdServicio'])) {
     $IdServicio = $_GET['IdServicio'];
     $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
   //  $Firma=$HomeController->VerOta_Usuario($SESSION['IdUsuario'])->_GET('FirmaU');
-   $Paramedico= $HomeController->VerOta_Usuario($data->__GET('Tp_Paramedico'));
-   $Medico= $HomeController->VerOta_Usuario($data->__GET('Tp_Medico'));
-   $Comandante= $HomeController->VerOta_Usuario($data->__GET('Tp_Comandante'));
 
   }else{
     $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
-    $data = NULL;
-    $Paramedico= NULL;
-    $Medico= NULL;
-    $Comandante= NULL;
 
   }
 
