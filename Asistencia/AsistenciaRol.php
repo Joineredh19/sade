@@ -6,7 +6,7 @@
 		?>
             <select name="RegisInter" id="RegisInter" required class="form-control " aria-label="Default select example">
 				<option value="#" selected>Elige que acción realizar</option>
-                <option value="1">Mostrar Formulario</option>
+                <option value="1">Mostrar Registro de Asistencia</option>
                 <option value="2">Mostrar Codigo QR</option>
 		    </select>
             
