@@ -90,9 +90,9 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->CompletarInfo($Id,$Selecolonia,$Calleynum);
 			return $var;
 		}
-		public function ListarUsuario_tutor($id){
+		public function ListarUsuario_tutor(){
 			$model = new UsuarioModel ();
-			$var = $model -> ListarUsuario_tutor($id);
+			$var = $model -> ListarUsuario_tutor();
 			return $var;
 		}
 		public function vistaalumnos_tutor(){
@@ -100,9 +100,16 @@ spl_autoload_register(function($nombreClase)
 			$var = $model -> vistaalumnos_tutor();
 			return $var;
 		}
-		public function ListarUsuario_Padre($id){
-			$model = new UsuarioModel ();
-			$var = $model -> ListarUsuario_Padre($id);
+		public function obtener_id_tutor($id){
+			$model = new UsuarioModel($id);
+			$var = $model -> obtener_id_tutor($id);
+			return $var;
+		}
+
+		public function mandarTurnoReporte($turno){
+			//echo ("el usuario es: ".$turno);
+			$model = new AlumnoModel($turno);
+			$var = $model -> mandarTurnoReporte($turno);
 			return $var;
 		}
 

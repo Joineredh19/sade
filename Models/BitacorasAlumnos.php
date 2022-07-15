@@ -2,6 +2,7 @@
 class BitacorasAlumnos
 {
     private $id;
+    private $Codigo;
     private $HoraEntrada;
     private $HoraSalida;
     private $Observacion;

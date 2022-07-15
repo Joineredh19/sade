@@ -189,3 +189,22 @@ $.ajax({
 })
 });
 </script>
+
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    type: 'POST',
+    url: '../../Actions/Turnos/Turnos.php',
+    data: {'peticion': 'Turno'}    
+})
+.done(function(Turnos){
+    $('#SelectTurno').html(Turnos)
+})
+.fail(function(){
+    alert('Error')
+})
+})
+
+</script>

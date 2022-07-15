@@ -14,7 +14,6 @@ class Usuarios
     private $FechaNacimiento;
     private $genero;
     private $rol;
-    private $TUsuarios_id;
     private $TTutoresPadres_id;
     private $TTutoresAcademicos_id;
     

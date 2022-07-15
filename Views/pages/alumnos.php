@@ -15,13 +15,13 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="../includes/logo.php" class="simple-text logo-mini">
+      <a href="../index.php" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../Resource/img/SLALogo.png">
+          <img src="../Resource/img/SLALogo.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="../includes/logo.php" class="simple-text logo-normal">
+        <a href="../index.php" class="simple-text logo-normal">
         SADE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
@@ -135,6 +135,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                   
                                   </tr>
                             <?php break;
+<<<<<<< HEAD
                                   case 5:?>  
                                     <?php foreach ($HomeController->ListarUsuario_tutor($_SESSION["id"]) as $key){?>
                                     
@@ -169,6 +170,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     
                                     <?php }
                                 break;
+=======
+                                  case 5:  
+                                    #$_SESSION['id_tutor'] ='2'  ;
+                                    $HomeController->obtener_id_tutor($_SESSION['id']);
+                                    $HomeController->ListarUsuario_tutor();
+                                    $HomeController->vistaalumnos_tutor();
+                                  break;
+>>>>>>> 2ec8f3c22b428a075cd8916e291283d767333669
                             ?>
                             <?php } ?>
                     </tbody>
@@ -184,4 +193,3 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
 <?php include '../includes/footer.php';?>
-

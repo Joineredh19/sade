@@ -15,19 +15,26 @@ date_default_timezone_set('America/Mexico_City');
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <?php 
-            include '../includes/logo.php';
-        ?>
+        <a href="../index.php" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../Resource/img/SLALogo.png">
+          </div>
+          <!-- <p>CT</p> -->
+        </a>
+        <a href="../index.php" class="simple-text logo-normal">
+        SADE
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
       </div>
-      <!--============================================== SIDEBAR ===============================================-->
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <?php 
-            include '../includes/sidebar.php';
-          ?>
+      <?php 
+      include '../includes/sidebar.php';
+      ?>
         </ul>
       </div>
-      <!--======================================================================================================-->
     </div>
     <div class="main-panel">
       <!-- Navbar -->
@@ -66,7 +73,6 @@ date_default_timezone_set('America/Mexico_City');
       </nav>
       <!-- End Navbar -->
       <div class="content">
-<!--=========================================== INICIO CARDS =============================================-->
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
@@ -174,10 +180,7 @@ date_default_timezone_set('America/Mexico_City');
             </div>
           </div>
         </div>
-<!--============================================= FIN CARDS ==============================================-->
-<!--========================================== INICIO GRAFICAS ===========================================-->
         <div class="row">
-          <!-------------------------- INICIO GRAFICA DE BARRAS SEMANAL ---------------------------->
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header ">
@@ -197,10 +200,8 @@ date_default_timezone_set('America/Mexico_City');
               </div>
             </div>
           </div>
-          <!--------------------------- FIN GRAFICA DE BARRAS SEMANAL ------------------------------>
         </div>
         <div class="row">
-          <!----------------------------- INICIO GRAFICA DE DONA ----------------------------------->
           <div class="col-md-4">
             <div class="card ">
               <div class="card-header ">
@@ -220,9 +221,7 @@ date_default_timezone_set('America/Mexico_City');
                 </div>
               </div>
             </div>
-          <!------------------------------- FIN GRAFICA DE DONA ------------------------------------>
           </div>
-          <!--------------------------- INICIO GRAFICA LINEAL SEMESTRAL ---------------------------->
           <div class="col-md-8">
             <div class="card card-chart">
               <div class="card-header">
@@ -243,8 +242,6 @@ date_default_timezone_set('America/Mexico_City');
             </div>
           </div>
         </div>
-        <!---------------------------- FIN GRAFICA LINEAL SEMESTRAL ------------------------------>
-<!--=========================================== FIN GRAFICAS =============================================-->
         <!-- Button trigger modal -->
 
 

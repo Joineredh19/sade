@@ -9,15 +9,24 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 ?>
 
-<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
- <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <?php 
-            include '../includes/logo.php';
-        ?>
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../Resource/img/UDG - Vector Blanco.png">
+          </div>
+          <!-- <p>CT</p> -->
+        </a>
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
+        SADE
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -117,7 +126,10 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?= $key->__GET('rol') ?></td>
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
                                     <td align="center" style="padding: 0;"> <a href="recucontra.php?IdUsuario=<?= $key->__GET('id') ?>" title="Cambiar contraseña" class="btn btn-success"><i class="fa fa-lock"></i></a></td>
+<<<<<<< HEAD
                                     
+=======
+>>>>>>> 2ec8f3c22b428a075cd8916e291283d767333669
                                     <script>
 
 </script>

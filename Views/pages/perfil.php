@@ -12,15 +12,25 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 
 ?>
- <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
- <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
+ <link rel="icon" type="image/png" href="../Resource/img/UDG- VectorR.png">
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <?php 
-            include '../includes/logo.php';
-        ?>
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <title>Mi perfil</title>
+            <img src="../Resource/img/UDG - Vector Blanco.png">
+          </div>
+          <!-- <p>CT</p> -->
+        </a>
+        <a href="http://www.cuc.udg.mx/" class="simple-text logo-normal">
+        SADE
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -76,29 +86,25 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-body">
                 <div class="author">
                   <a href="#">
-                  <?php
-                    include '../../Actions/UsuarioPerfil/UsuarioImagen.php'
-                  ?>
+                  <img class="avatar border-gray" src="../Resource/img/icon.png" alt="..." style="border-top-width: 0px;margin-bottom: 25px;top: 30px;">
                     <h5 class="title"><?= $data->__GET('Nombres').' '.$data->__GET('Apellidos')?></h5>
                   </a>
                   <p class="description">
-                  <?php
-                    echo "".$data->__GET('Email')."";
-                  ?>
+                    E-mail
                   </p>
-                  </p>
-                  <form action="#" method="POST" enctype="multipart/form-data" >
-                    <input type="file" id="file-uploader" name="fotoperfil">
-                      <div id="feedback">
-                      </div>
-                      <div>
-                        <br>
-                        <label id="progress-label" class="progress-bar progress-bar-striped bg-info" ></label>
-                        <progress id="progress" value="0" max="100"> </progress>
-                      </div>
-                    <input type="submit" class="btn btn-info" name="FotoPerfil" value="Actualizar Foto">
-                  </form>
-                </div>   
+                    <form action="/action_page.php">
+                    <input type="file" id="file-uploader">
+              <div id="feedback">  
+              </div>
+              <div>
+                <br>
+              <label id="progress-label" class="progress-bar progress-bar-striped bg-info" ></label>
+              <progress id="progress" value="0" max="100"> </progress>
+              </div>
+              <input type="submit" class="btn btn-info">
+                                </form>
+                            </div>
+                        
               </div>
             </div>
             <div class="card">
@@ -225,7 +231,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Calle y Numero</label>
-                        <input type="text" class="form-control" placeholder="Calle y Numero" value="">
+                        <input type="text" class="form-control" placeholder="Calle y Numero" value="Calle y número">
                       </div>
                     </div>
                   </div>
@@ -245,7 +251,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label>CURP</label>
-                        <input type="text" class="form-control" placeholder="CURP">
+                        <input type="number" class="form-control" placeholder="CURP">
                       </div>
                     </div>
                   </div>
@@ -280,7 +286,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Observaciones</label>
-                        <textarea class="form-control textarea"></textarea>
+                        <textarea class="form-control textarea">Comentarios</textarea>
                       </div>
                     </div>
                   </div>
