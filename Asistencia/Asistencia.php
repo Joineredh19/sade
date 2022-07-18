@@ -56,7 +56,7 @@
 						$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
@@ -89,7 +89,7 @@
 								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
@@ -160,7 +160,7 @@
 								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
@@ -191,7 +191,7 @@
 								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
