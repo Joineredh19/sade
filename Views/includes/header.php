@@ -88,7 +88,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
 
 
 
-
+<?php include '../../Actions/CorteAsistencia/GListaAsistencias.php';?>
 <div class="modal fade" id="generars" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -99,13 +99,13 @@ $_SESSION['LAST_ACTIVITY'] = time();
       <div class="modal-body">
       
       
-      <form method="post" id="formularioScript" name="formularioScript" action="../../Actions/CorteAsistencia/CortarAsistencia.php">
-     <select name="SelectTurno" id="SelectTurno" class="form-control" value=""> </select>
-  <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <input type="submit" class="btn btn-success" id="btnRegistrarse" value="Generar script">
-      </div>
-    </form>
+      <form method="post" id="formularioScript" name="formularioScript" action="#">
+        <select name="SelectTurno" id="SelectTurno" class="form-control" value=""> </select>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <input type="submit" class="btn btn-success" name="GenerarScript" id="btnRegistrarse" value="Generar script">
+        </div>
+      </form>
 
    
     </div>
