@@ -90,9 +90,14 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->CompletarInfo($Id,$Selecolonia,$Calleynum);
 			return $var;
 		}
-		public function ListarUsuario_tutor(){
+		public function ListarUsuario_tutor($id){
 			$model = new UsuarioModel ();
-			$var = $model -> ListarUsuario_tutor();
+			$var = $model -> ListarUsuario_tutor($id);
+			return $var;
+		}
+		public function ListarUsuario_Padre($id){
+			$model = new UsuarioModel ();
+			$var = $model -> ListarUsuario_Padre($id);
 			return $var;
 		}
 		public function vistaalumnos_tutor(){

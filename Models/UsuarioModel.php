@@ -198,27 +198,51 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->UsuarioModel->Agregar()");
 			}
 		}
-		function obtener_id_tutor($id){
+
+		public function ListarUsuario_tutor($id)
+		{
 			try{
 				$Array = array();
-				$HomeController = new HomeController();
-				$stm = $this->pdo->prepare("select id from ttutoresacademicos where TUsuarios_id = ?");
+				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id,tdatosalumnos.TTutoresAcademicos_id,tdatosalumnos.TTutoresPadres_id,ttutoresacademicos.TUsuarios_id
+				FROM  tusuarios
+				INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  
+				INNER JOIN troles ON tusuarios.TRoles_id = troles.id 
+				join tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+				join ttutoresacademicos ON tdatosalumnos.TTutoresAcademicos_id = ttutoresacademicos.id where ttutoresacademicos.TUsuarios_id =?");
 				$stm->execute(array($id));
-				$r = $stm->fetch(PDO::FETCH_OBJ);
-				$entity = new TutoresAcademicos;
-				$entity->__SET('id',$r->id);
-				return $entity;
+
+				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
+					
+					$entity = new Usuarios();
+					$entity->__SET('id',$r->id);
+					$entity->__SET('Nombres',$r->Nombres);
+					$entity->__SET('Apellidos',$r->Apellidos);
+					$entity->__SET('Email',$r->Email);
+					$entity->__SET('Telefono',$r->Telefono);
+					$entity->__SET('rol',$r->rol);
+					$entity->__SET('genero',$r->genero);
+					$entity->__SET('TTutoresAcademicos_id',$r->TTutoresAcademicos_id);
+					$entity->__SET('TTutoresPadres_id',$r->TTutoresPadres_id);
+									
+					$Array[] = $entity;
+
+				}
+				return $Array;
 			}catch(Exception $e){
 				die($e->getMessage()." ->UsuarioModel->Ver()");
 			}
 		}
-		public function ListarUsuario_tutor()
+		public function ListarUsuario_Padre($id)
 		{
 			try{
 				$Array = array();
-				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id,tdatosalumnos.TTutoresAcademicos_id,tdatosalumnos.TTutoresPadres_id
-				FROM  tusuarios INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  INNER JOIN troles ON tusuarios.TRoles_id = troles.id join tdatosalumnos on tusuarios.id = tdatosalumnos.TUsuarios_id ");
-				$stm->execute(array());
+				$stm = $this->pdo->prepare("SELECT tusuarios.id,tusuarios.Nombres, tusuarios.Apellidos, tusuarios.Email, tusuarios.Telefono, tgeneros.genero,troles.rol,tusuarios.TRoles_id,tdatosalumnos.TTutoresAcademicos_id,tdatosalumnos.TTutoresPadres_id,ttutorespadres.TUsuarios_id
+				FROM  tusuarios
+				INNER JOIN tgeneros ON tusuarios.tgeneros_id = tgeneros.id  
+				INNER JOIN troles ON tusuarios.TRoles_id = troles.id 
+				join tdatosalumnos ON tusuarios.id = tdatosalumnos.TUsuarios_id 
+				join ttutorespadres ON tdatosalumnos.TTutoresPadres_id = ttutorespadres.id where ttutorespadres.TUsuarios_id =?");
+				$stm->execute(array($id));
 
 				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
 					
@@ -279,5 +303,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		  <?php	}
 
 		}
+
+
 	
 	?>
