@@ -21,9 +21,11 @@
 /*=================================================================================================================================================*/
 
 			/*------------Validar datos de alumno------------*/
-			$query_alumno = mysqli_query($conn, "SELECT Codigo FROM `tdatosalumnos` WHERE Codigo = '$Codigo'");
+			$query_alumno = mysqli_query($conn, "SELECT Codigo, Falta FROM `tbitacorasalumnosdia` WHERE DATE(FHoraAsistencia) = DATE(NOW()) AND Codigo = '$Codigo'");
 				$result_alumno = mysqli_num_rows($query_alumno);
 				$data_alumno = mysqli_fetch_assoc($query_alumno);
+			$query_alumno2 = mysqli_query($conn, "SELECT Codigo FROM `tdatosalumnos` WHERE Codigo = '$Codigo'");
+				$data_alumno2 = mysqli_fetch_assoc($query_alumno2);
 			/*-----------------------------------------------*/
 
 			/*------------Validar datos de trabajador------------*/
@@ -35,8 +37,14 @@
 /*=================================================================================================================================================*/
 
 			if($result_alumno < 1 && $result_trabajador < 1){
-				$msg->error('No se encuentra registrado en la base de datos!');
-				$msg->display();
+
+				if(isset($data_alumno2['Codigo'])){
+					$msg->error('Aún no se ha generado la lista de asistencias!');
+					$msg->display();
+				}else if(!isset($data_alumno2['Codigo']) OR !isset($data_trabajador['Codigo'])){
+					$msg->error('No se encuentra registrado en la base de datos!');
+					$msg->display();
+				}
 			?>
 				<script language="JavaScript">
     				function redireccionar() {
@@ -56,10 +64,23 @@
 						$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
+						
+								if(isset($data_alumno['Codigo']) && $data_alumno['Falta'] == 0){
+									$query_entrada4 = mysqli_query($conn, "SELECT id, Codigo, Falta, DesFalta FROM tbitacorasalumnosdia 
+																		WHERE DATE(FHoraAsistencia) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraAsistencia DESC LIMIT 1");
+									$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+	
+									$actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnosdia` SET
+										`Falta`= 1,
+										`DesFalta` = 'Asistencia'
+									WHERE
+										id = '$data_entrada4[id]';
+									");
+								}
 	
 								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
@@ -89,10 +110,23 @@
 								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
+
+								if(isset($data_alumno['Codigo']) && $data_alumno['Falta'] == 0){
+									$query_entrada4 = mysqli_query($conn, "SELECT id, Codigo, Falta, DesFalta FROM tbitacorasalumnosdia 
+																		WHERE DATE(FHoraAsistencia) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraAsistencia DESC LIMIT 1");
+									$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+	
+									$actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnosdia` SET
+										`Falta`= 1,
+										`DesFalta` = 'Asistencia'
+									WHERE
+										id = '$data_entrada4[id]';
+									");
+								}
 	
 								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
@@ -160,10 +194,23 @@
 								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
+
+								if(isset($data_alumno['Codigo']) && $data_alumno['Falta'] == 0){
+									$query_entrada4 = mysqli_query($conn, "SELECT id, Codigo, Falta, DesFalta FROM tbitacorasalumnosdia 
+																		WHERE DATE(FHoraAsistencia) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraAsistencia DESC LIMIT 1");
+									$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+	
+									$actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnosdia` SET
+										`Falta`= 1,
+										`DesFalta` = 'Asistencia'
+									WHERE
+										id = '$data_entrada4[id]';
+									");
+								}
 	
 								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 
@@ -191,10 +238,23 @@
 								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
 								( NULL,
 								 '$Codigo',
-								 DEFAULT,
+								 CURRENT_TIMESTAMP,
 								 '$ObservacionEntrada'
 								)";
 								$query=mysqli_query($conn, $insertar);
+
+								if(isset($data_alumno['Codigo']) && $data_alumno['Falta'] == 0){
+									$query_entrada4 = mysqli_query($conn, "SELECT id, Codigo, Falta, DesFalta FROM tbitacorasalumnosdia 
+																		WHERE DATE(FHoraAsistencia) = DATE(NOW()) AND Codigo = '$Codigo' ORDER BY FHoraAsistencia DESC LIMIT 1");
+									$data_entrada4 = mysqli_fetch_assoc($query_entrada4);
+	
+									$actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnosdia` SET
+										`Falta`= 1,
+										`DesFalta` = 'Asistencia'
+									WHERE
+										id = '$data_entrada4[id]';
+									");
+								}
 	
 								$query=mysqli_query($conn, "SELECT tusuarios.Nombres, tusuarios.Imagen, troles.Rol, tdatosalumnos.Codigo, tbitacorasalumnos.FHoraEntrada FROM tbitacorasalumnos 
 																			INNER JOIN tdatosalumnos ON tdatosalumnos.Codigo = tbitacorasalumnos.Codigo 

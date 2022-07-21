@@ -16,6 +16,7 @@ class Usuarios
     private $rol;
     private $TTutoresPadres_id;
     private $TTutoresAcademicos_id;
+    private $Imagen;
     
 
     public function __GET($k)
