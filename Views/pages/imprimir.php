@@ -92,19 +92,75 @@ if (isset($_GET['IdServicio'])) {
     <td> <?php echo "Identificación: "?></td>
     <td> <?php echo "T Identificación: " ?></td>
     <td> <?php echo "Edad: " ?></td>
-    </tr>
-    <tr>
     <td><?php echo "Fecha Nacimiento: " ?></td>
-    <td><?php echo "Entidad: " ?></td>
-    <td><?php echo "Regimen: "?></td>
+    
+    
   </tr>
    <tr>
   <td> <?php echo "Telefono: " ?> </td>
-  <td></td>
+ 
   <td><?php echo "Direccion: " ?></td>
   </tr>
   <tr>
-    <th colspan="4">Informacion Del Tutor</th>
+  
+    <th colspan="4">Información Adicional Del Estudiante</th>
+  </tr>
+   <tr>
+   </tr>
+  <tr>
+    <td><?php echo 'Código:  '?></td>
+     <td><?php echo 'E-mail:  '?></td>
+    <td></td>
+    <td><?php echo 'N° de seguro social:  '?></td>
+    </tr>
+    <tr>
+    <td><?php echo 'Nombres:  '?></td>
+    <td><?php echo 'Teléfono:  '?></td>
+    <td></td>
+    <td><?php echo 'RFC:  '?></td>
+  </tr>
+  <tr>
+    <td><?php echo 'Apellidos:  '?></td>
+    <td><?php echo 'Status:  '?></td>
+    <td></td>
+    <td><?php echo 'CURP:  '?></td>
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr>
+  
+ </tr>
+ <tr>
+    <td><?php echo 'Tipo de sangre:  '?></td>
+     <td><?php echo 'Alergias:  '?></td>
+    <td></td>
+    <td><?php echo 'País:  '?></td>
+    </tr>
+    <tr>
+    <td><?php echo 'Estado:  '?></td>
+    <td><?php echo 'Ciudad:  '?></td>
+    <td></td>
+    <td><?php echo 'Código Postal:  '?></td>
+  </tr>
+  <tr>
+    <td><?php echo 'Colonia:  '?></td>
+    <td><?php echo 'Calle y número:  '?></td>
+    <td></td>
+    <td><?php echo 'Tutor académico:  '?></td>
+    <tr>
+    <td><?php echo 'Tutor padre:  '?></td>
+     <td><?php echo 'Turno:  '?></td>
+    
+    
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr>
+  
+ </tr>
+ <th colspan="4">Informacion Del Tutor</th>
   </tr>
    <tr>
     <td colspan="2"><?php echo 'Nombres: ' ?></td>
@@ -119,35 +175,6 @@ if (isset($_GET['IdServicio'])) {
   <br>
   <table style="width:100% ">
    <tr>
-    <th colspan="4">Información Adicional</th>
-  </tr>
-   <tr>
-   </tr>
-  <tr>
-    <td><?php echo 'Origen 1:  '?></td>
-     <td><?php echo 'Llegada:  '?></td>
-    <td></td>
-    <td><?php echo 'Salida:  '?></td>
-    </tr>
-    <tr>
-    <td><?php echo 'Destino 1:  '?></td>
-    <td><?php echo 'Llegada:  '?></td>
-    <td></td>
-    <td><?php echo 'Salida:  '?></td>
-  </tr>
-  <tr>
-    <td><?php echo 'Destino 2:  '?></td>
-    <td><?php echo 'Llegada:  '?></td>
-    <td></td>
-    <td><?php echo 'Salida:  '?></td>
-  </tr>
-  <tr>
-   <td><?php echo 'Complejidad Del Servicio:  '?></td>
-   <td><?php echo 'Tipo De Servicio:  '?></td>
-  </tr>
-  <tr>
-  <td><?php echo 'Examen Solicitado: '?></td>
- </tr>
 </table>
 <br>
  <table style="width:100% ">
@@ -175,115 +202,7 @@ if (isset($_GET['IdServicio'])) {
  </table>
  <table style="width:100% ">
  <tr>
-   <th colspan="4">Ginecológicos</th>
- </tr>
-</table>
- <table style="width:100% ">
- <tr>
-   <td><?php echo 'G: '?></td>
-   <td><?php echo 'P: '?></td>
-   <td><?php echo 'C: '?></td>
-   <td><?php echo 'A: '?></td>
-   <td><?php echo 'V: '?></td>
-   </tr>
-   </table>
-   <table style="width:100% ">
- <tr>
-   <th colspan="4">Convenciones</th>
- </tr>
-</table>
-   <table style="width:100% ">
- <tr>
-   <td><?php echo 'SAT.O2: '?></td>
-   <td><?php echo 'SIST: '?></td>
-   <td><?php echo 'F.R: '?></td>
-   <td><?php echo 'F.C: '?></td>
-   <td><?php echo 'TEMP: '?></td>
-   <td><?php echo 'Días: '?></td>
-   </tr>
-   <tr>
-  <td><?php echo 'Observacoines: '?></td>
- </tr>
-   </table>
-
- <table style="width:100% ">
-   <tr>
-   <th colspan="4">Ventilacion Mecánica</th>
- </tr>
-   <tr>
-  <td><?php echo 'Oxígeno: '?></td>
-   <td><?php echo 'VOL:'?></td>
-   <td><?php echo 'P.E.E.P.: '?></td>
-   </tr>
-   <tr>
-   <td><?php echo 'Inotropia: '?></td>
-   <td><?php echo 'FR: '?></td>
-   <td><?php echo 'FIOZ: '?></td>
-   </tr>
-   </table>
-
-   <table style="width:100% ">
-     <tr>
-      <th colspan="4">Signos Vitales</th>
-    </tr>
-    </table>
    
-   
-   <table style="width:100% ">
-   <tr>
-      <th colspan="4">Estado Del Paciente Al Finalizar Traslado</th>
-    </tr>
-     <tr>
-      <td><?php echo 'Estado Del Paciente Al Finalizar Traslado: '?></td>
-    </tr>
-    <tr>
-      <td><?php echo 'Observaciones Al Momento De La Entrega: '?></td>
-    </tr>
-</table>
-<hr>
-<table style="width:100% ">
-<tr>
-  <td><?php echo '<img src='?>></td>
-  <td><?php echo '<img src='?>></td>
-</tr>
-<tr>
-  <td> Firma Paciente o Acompañante</td>
-  <td>Firma Médico o Enfermera(o) Que Recibe</td>
-   </tr>
-    </table>
-
-    <br>
-
-    <table style="width:100% ">
-   <tr>
-      <th colspan="4">Tripulación que Realiza Traslado</th>
-    </tr>
-    <br>
-    <tr>
-      <td>Paramedico</td>
-      <td>Medico</td>
-      <td>Comandante</td>
-    </tr>
-    <br>
-    <tr>
-    <td><img src="" alt=""></td>
-    <td><img src="" alt=""></td> 
-    <td><img src="" alt=""></td>
-    </tr>
-
-     <tr>
-     <td></td>
-     <td></td>
-     <td></td>
-      
-    </tr>
-    <tr>
-    <td></td>
-      <td</td>
-      <td></td> <br>
-    </tr>
-</table>
-</body>
 </html>
 
 
