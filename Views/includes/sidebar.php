@@ -42,7 +42,7 @@
           </li>
 
           <li>
-            <a href="./Tablas.php" style="margin-left: 5px;">
+            <a href="./tablas.php" style="margin-left: 5px;">
               <i class="bi bi-person-lines-fill"></i>
               <p>USUARIOS</p>
             </a>

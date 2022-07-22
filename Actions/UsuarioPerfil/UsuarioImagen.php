@@ -4,10 +4,10 @@ $imagenUser = $HomeController->VerUsuarioxRol($_SESSION['id']);
 $USER = $imagenUser->__GET('id');
 
 function Conexion(){
-    $conn = mysqli_connect("cuc-udg22.mysql.database.azure.com",
-    "SADE22@cuc-udg22", "Sade_2022", "bzya6emoafjbqjkolhiy");
- 
-     return $conn;
+    $conn = mysqli_connect("softwarela.com.mx",
+    "softwa60_sade22", "Sade2022*", "softwa60_sade22");
+  //  mysqli_connect($serverName, $connectionOptions);
+      return $conn;
 }
 $conn = Conexion();
 
