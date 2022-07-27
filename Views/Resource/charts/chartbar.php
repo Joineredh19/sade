@@ -12,22 +12,22 @@
                   const yChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                              labels: ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO','DOMINGO'],
+                              labels: ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES'],
                               datasets: [{
                                           label: 'FALTAS TOTALES',
-                                          data: [30, 44, 27, 24, 23,3,4],
+                                          data: [30, 44, 27, 24, 23],
                                           backgroundColor: ['rgba(141, 153, 174)',],
                                           borderColor:'rgb(43,45,66)',
                                         },
                                         {
                                           label: 'FALTAS ATENDIDAS',
-                                          data: [20, 26, 12, 16, 10,2,3],
+                                          data: [20, 26, 12, 16, 10],
                                           backgroundColor: ['rgba(27, 157, 51)',],
                                           borderColor:'rgb(27, 157, 51)',
                                         },
                                         {
                                           label: 'FALTAS SIN ATENDER',
-                                          data: [10, 18, 15, 8, 13,1,1],
+                                          data: [10, 18, 15, 8, 13],
                                           backgroundColor: ['rgba(207,4,41)',],
                                           borderColor:'rgb(207,4,41)',
                                         }]
