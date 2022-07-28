@@ -8,6 +8,10 @@ if(!session_id()) @session_start();
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 date_default_timezone_set('America/Mexico_City');
+
+ $conn = mysqli_connect("softwarela.com.mx",
+ "softwa60_sade22", "Sade2022*", "softwa60_sade22");
+
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
  <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
@@ -86,7 +90,13 @@ date_default_timezone_set('America/Mexico_City');
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Faltas</p>
-                      <p class="card-title">50<p>
+                      
+                      <?php
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0";
+                $query = $conn->query($sql);
+
+                echo '<p class="card-title">'.$query->num_rows.'<p>'
+              ?>
                     </div>
                   </div>
                 </div>
@@ -113,7 +123,12 @@ date_default_timezone_set('America/Mexico_City');
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Faltas atendidas</p>
-                      <p class="card-title">30<p>
+                      <?php
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 2";
+                $query = $conn->query($sql);
+
+                echo '<p class="card-title">'.$query->num_rows.'<p>'
+              ?>
                     </div>
                   </div>
                 </div>
@@ -139,7 +154,12 @@ date_default_timezone_set('America/Mexico_City');
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Faltas sin atender</p>
-                      <p class="card-title">20<p>
+                      <?php
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0";
+                $query = $conn->query($sql);
+
+                echo '<p class="card-title">'.$query->num_rows.'<p>'
+              ?>
                     </div>
                   </div>
                 </div>
@@ -165,7 +185,12 @@ date_default_timezone_set('America/Mexico_City');
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Faltas totales</p>
-                      <p class="card-title">500<p>
+                      <?php
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0";
+                $query = $conn->query($sql);
+
+                echo '<p class="card-title">'.$query->num_rows.'<p>'
+              ?>
                     </div>
                   </div>
                 </div>

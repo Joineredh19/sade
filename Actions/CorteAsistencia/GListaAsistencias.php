@@ -1,7 +1,7 @@
 <?php
 function Conexion(){
-    $conn = mysqli_connect("cuc-udg22.mysql.database.azure.com",
-  			"SADE22@cuc-udg22", "Sade_2022", "bzya6emoafjbqjkolhiy");
+    $conn = mysqli_connect("softwarela.com.mx",
+    "softwa60_sade22", "Sade2022*", "softwa60_sade22");
  
      return $conn;
  }
