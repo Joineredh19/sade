@@ -3,14 +3,6 @@ $HomeController = new HomeController;
 $imagenUser = $HomeController->VerUsuarioxRol($_SESSION['id']);
 $USER = $imagenUser->__GET('id');
 
-function Conexion(){
-    $conn = mysqli_connect("softwarela.com.mx",
-    "softwa60_sade22", "Sade2022*", "softwa60_sade22");
-  //  mysqli_connect($serverName, $connectionOptions);
-      return $conn;
-}
-$conn = Conexion();
-
 if (isset($_POST["FotoPerfil"])) {
         $imagen  = $_FILES['fotoperfil'];
         $name    = $imagen['name'];
