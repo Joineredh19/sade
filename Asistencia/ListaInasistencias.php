@@ -24,7 +24,10 @@ $query_inasistencia = mysqli_query($conn, "SELECT tbitacorasalumnosdia.id, tbita
 				<td align="center"><?php echo $data["DesAptitud"]; ?></td>
 				<td align="center"><?php echo $data["DesAprovechamiento"]; ?></td>
 
-                <td align="center" style="padding: 0;"> <a href="controlasistencias.php?id=<?php echo $data["id"];?>" target="_blank" title="Actualizar Asistencia" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+				<?php if($data['Falta'] == 0 OR $data['Falta'] == 2) {?>
+					<td align="center" style="padding: 0;"> <a href="controlasistencias.php?id=<?php echo $data["id"];?>" target="_blank" title="Actualizar Asistencia" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+				<?php }?>
+                
 			</tr>	
 <?php
 		}
