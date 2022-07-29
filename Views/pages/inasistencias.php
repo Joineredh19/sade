@@ -49,7 +49,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Usuarios Registrados</a>
+            <a class="navbar-brand" href="javascript:;">Registros de Inasistencias</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -82,56 +82,46 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               <div class="card-body">
               <?php  $msg->display(); ?>
                 <div class="table-responsive">
-                <input class="form-control mb-4" id="tableSearch" type="text"
-    placeholder="Buscar">
+                <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar">
                   <table class="table">
                     <thead class=" text-primary">
-                      <th>
-                     Código
+                      <th class="text-center">
+                        id
                       </th>
-                      <th>
+                      <th class="text-center">
+                        Código
+                      </th>
+                      <th class="text-center">
+                        Turno
+                      </th>
+                      <th class="text-center">
                         Nombre
                       </th>
-                      <th>
+                      <th class="text-center">
                         Apellido
                       </th>
                       <th class="text-center">
-                        Jornada 
+                        Fecha/Hora de Inasistencia
                       </th>
                       <th class="text-center">
-                        Teléfono
+                        Descripción de Falta 
                       </th>
                       <th class="text-center">
-                    EMail
+                        Aptitud
                       </th>
                       <th class="text-center">
-                        Fecha de falta
+                        Aprovechamiento
                       </th>
                       <th class="text-center">
                         Acción
                       </th>
-                    </thead>
-                    <tbody id="myTable">
+                      </thead>
+                      <tbody id="myTable">
                     
+                        <?php 
+                          include '../../Asistencia/ListaInasistencias.php';
+                        ?>
                       
-                      
-                            <?php foreach ($HomeController->ListarUsuario() as $key){ ?>
-                                <tr>
-                                    <td align="center"><?= $key->__GET('id') ?></td>
-                                    <td align="center"><?= $key->__GET('Nombres') ?></td>
-                                    <td  align="center"><?= $key->__GET('Apellidos') ?></td>
-                                    <td  align="center"><?= $key->__GET('Email') ?></td>
-                                    <td  align="center"><?= $key->__GET('Telefono') ?></td>
-                                    <td  align="center"><?= $key->__GET('genero') ?></td>
-                                    <td  align="center"><?= $key->__GET('rol') ?></td>
-                                    <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Completar Información" class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
-                                    <td align="center" style="padding: 0;"> <a href="recucontra.php?IdUsuario=<?= $key->__GET('id') ?>" title="Cambiar contraseña" class="btn btn-success"><i class="fa fa-lock"></i></a></td>
-                                    
-                                    <script>
-
-</script>
-                                  </tr>
-                          <?php } ?>
                     </tbody>
                     </tbody>
                   </table>

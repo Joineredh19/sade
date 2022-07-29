@@ -12,15 +12,15 @@ if (isset($_POST["GenerarScript"])) {
     $turno = $_POST["SelectTurno"];
     
     $query_consulta = mysqli_query($conn, "SELECT tbitacorasalumnosdia.FHoraAsistencia, tdatosalumnos.TTurnos_id FROM tdatosalumnos 
-                                                INNER JOIN tbitacorasalumnosdia
+                                                INNER JOIN tbitacorasalumnosdia ON CONVERT(tbitacorasalumnosdia.Codigo using utf8) collate utf8_spanish_ci = tdatosalumnos.Codigo
                                                 WHERE DATE(tbitacorasalumnosdia.FHoraAsistencia) = DATE(NOW()) AND tdatosalumnos.TTurnos_id = 1");
         $consulta = mysqli_fetch_assoc($query_consulta);
     $query_consulta2 = mysqli_query($conn, "SELECT tbitacorasalumnosdia.FHoraAsistencia, tdatosalumnos.TTurnos_id FROM tdatosalumnos 
-                                                INNER JOIN tbitacorasalumnosdia
+                                                INNER JOIN tbitacorasalumnosdia ON CONVERT(tbitacorasalumnosdia.Codigo using utf8) collate utf8_spanish_ci = tdatosalumnos.Codigo
                                                 WHERE DATE(tbitacorasalumnosdia.FHoraAsistencia) = DATE(NOW()) AND tdatosalumnos.TTurnos_id = 2");
         $consulta2 = mysqli_fetch_assoc($query_consulta2);
     $query_consulta3 = mysqli_query($conn, "SELECT tbitacorasalumnosdia.FHoraAsistencia, tdatosalumnos.TTurnos_id FROM tdatosalumnos 
-                                                INNER JOIN tbitacorasalumnosdia
+                                                INNER JOIN tbitacorasalumnosdia ON CONVERT(tbitacorasalumnosdia.Codigo using utf8) collate utf8_spanish_ci = tdatosalumnos.Codigo
                                                 WHERE DATE(tbitacorasalumnosdia.FHoraAsistencia) = DATE(NOW()) AND tdatosalumnos.TTurnos_id = 3");
         $consulta3 = mysqli_fetch_assoc($query_consulta3);
    
