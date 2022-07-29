@@ -101,7 +101,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                         Apellido
                       </th>
                       <th class="text-center">
-                        Fecha/Hora de Inasistencia
+                        Fecha/Hora de Registro
                       </th>
                       <th class="text-center">
                         Descripción de Falta 
