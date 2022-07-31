@@ -59,7 +59,7 @@ if (isset($_GET['IdUsuario'])) {
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Completar Información</a>
+            <a class="navbar-brand" href="javascript:;">Seguimiento del regitro de inasistencia</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -85,21 +85,50 @@ if (isset($_GET['IdUsuario'])) {
 
       <div class="content">
         <div class="row">
-       <!-- Login Form -->
-     <form method="post"  action="<?php echo '../../Actions/register/actualizar.php';?>"  enctype="multipart/form-data">
+        <!-- Login Form -->
+        <?php 
+          include '../../Asistencia/SeguiAsistencia.php';
+        ?>
+        <form method="post"  action="#"  enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<?php echo $data['id'];?>">
+          <label>ID</label>
+          <input type="text"  class="form-control" id="descripcionfalta"  name="asisID" disabled value="<?php echo $data['id']?>">
+          <br>
+          <label>Fecha/Hora de Inasistencia</label>
+          <input type="text"  class="form-control" id="descripcionfalta"  name="asiscodigo" disabled value="<?php echo $data['FHoraAsistencia']?>">
+          <br>
+          <label>Codigo</label>
+          <input type="text"  class="form-control" id="descripcionfalta"  name="asiscodigo" disabled value="<?php echo $data['Codigo']?>">
+          <br>
+          <label>Descripcion de Falta</label>
+          <input type="text"  class="form-control" id="descripcionfalta"  name="desfalta" disabled value="<?php echo $data['DesFalta']?>">
+          <br>
+          <label>Aptitud</label>
+          <select name="Aptitud" id="Aptitud" class="form-control" aria-label="Aptitud">
+            <?php if (isset($data['Aptitud'])) {?>
+              <option value="<?php echo $data['Aptitud'];?>" selected><?php echo $data["DesAptitud"];?></option>
+            <?php }?>
+              <option value="#">Elige un tipo de aptitud</option>
+              <option value="0">Mala Conducta</option>
+              <option value="1">Regular Conducta</option>
+              <option value="2">Buena Conducta</option>
+              <option value="3">Excelente Conducta</option>
+          </select>
+          <br>
+          <label>Aprovechamiento</label>
+          <select name="Aprovechamiento" id="Aprovechamiento" class="form-control " aria-label="Aprovechamiento">
+            <?php if (isset($data['Aptitud'])) {?>
+              <option value="<?php echo $data['Aprovechamiento'];?>" selected><?php echo $data["DesAprovechamiento"];?></option>
+            <?php }?>
+              <option value="#">Elige un tipo de aprovechamiento</option>
+              <option value="0">Mal Aprovechamiento</option>
+              <option value="1">Regular Aprovechamiento</option>
+              <option value="2">Buen Aprovechamiento</option>
+              <option value="3">Excelente Aprovechamiento</option>
+          </select>
+          <button type="submit" class="btn btn-success " id="btnRegistrarse" name="SeguiAsistencia" value="Actualizar">Actualizar</button>
+        </form>
+      </div>
    
-  
-  <input type="text"  class="form-control" id="descripcionfalta"  name="curp1" placeholder="Descripción de falta">
-  <br>
-  <select name="Aptitud" id="Aprovechamiento" class="form-control " aria-label="Aptitud"> </select>
-  <br>
-  <select name="Aprovechamiento" id="Aprovechamiento" class="form-control " aria-label="Aprovechamiento"> </select>
- 
- 
-    <button type="submit" class="btn btn-success " id="btnRegistrarse" value=""> Enviar</button>
-    </form>
-        </div>
-   
-
       <?php include '../includes/footer.php';?>
    
