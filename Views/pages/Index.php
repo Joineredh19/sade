@@ -11,7 +11,7 @@ date_default_timezone_set('America/Mexico_City');
 
  $conn = mysqli_connect("softwarela.com.mx",
  "softwa60_sade22", "Sade2022*", "softwa60_sade22");
-
+ $today = date('Y-m-d');
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
  <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
@@ -78,7 +78,7 @@ date_default_timezone_set('America/Mexico_City');
       <!-- End Navbar -->
       <div class="content">
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -92,7 +92,7 @@ date_default_timezone_set('America/Mexico_City');
                       <p class="card-category">Faltas</p>
                       
                       <?php
-                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0";
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE date (FHoraAsistencia) = '$today' AND Falta = 0";
                 $query = $conn->query($sql);
 
                 echo '<p class="card-title">'.$query->num_rows.'<p>'
@@ -111,7 +111,7 @@ date_default_timezone_set('America/Mexico_City');
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
+          <div class="col-lg-4 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -124,7 +124,7 @@ date_default_timezone_set('America/Mexico_City');
                     <div class="numbers">
                       <p class="card-category">Faltas atendidas</p>
                       <?php
-                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 2";
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE date (FHoraAsistencia) = '$today' AND Falta = 2";
                 $query = $conn->query($sql);
 
                 echo '<p class="card-title">'.$query->num_rows.'<p>'
@@ -142,7 +142,7 @@ date_default_timezone_set('America/Mexico_City');
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 2px;">
+          <div class="col-lg-4 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 2px;">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -168,42 +168,12 @@ date_default_timezone_set('America/Mexico_City');
                 <hr>
                 <div class="stats">
                   <i class="fa fa-minus-square"></i>
-                  Faltas diarias sin atender
+                  Faltas totales sin atender
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="bi bi-journals text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Faltas totales</p>
-                      <?php
-                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0";
-                $query = $conn->query($sql);
-
-                echo '<p class="card-title">'.$query->num_rows.'<p>'
-              ?>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-bar-chart"></i>
-                  Faltas totales del curso
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
         <div class="row">
           <div class="col-md-12">
