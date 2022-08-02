@@ -94,7 +94,7 @@ if (isset($_GET['IdUsuario'])) {
           <label>ID</label>
           <input type="text"  class="form-control" id="descripcionfalta"  name="asisID" disabled value="<?php echo $data['id']?>">
           <br>
-          <label>Fecha/Hora de Inasistencia</label>
+          <label>Fecha/Hora de Registro</label>
           <input type="text"  class="form-control" id="descripcionfalta"  name="asiscodigo" disabled value="<?php echo $data['FHoraAsistencia']?>">
           <br>
           <label>Codigo</label>

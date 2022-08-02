@@ -1,3 +1,16 @@
+<?php 
+  session_start();
+
+  require_once('../../Controllers/HomeController.php');
+  $HomeController = new HomeController();
+  $datos = $HomeController->VerUsuarioxRol($_SESSION['id']);
+
+  if(!isset($_SESSION["id"])){
+    header("location: ../../Views/pages/loginAdmin.php");
+  } else if (($datos->__GET('TRoles_id') != '1') xor ($datos->__GET('TRoles_id') != '2') xor ($datos->__GET('TRoles_id') != '3')){
+    header("location: ../../Views/pages/Index.php");
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -51,7 +64,7 @@
     <!-- Remind Passowrd -->
     <label> ¿Eres administrador? </label>
     <div id="formFooter">
-      <a class="underlineHover" href="loginAdmin.php">Iniciar sesión</a>
+      <a class="underlineHover" href="Index.php">Regresar</a>
     </div>
 
   </div>
