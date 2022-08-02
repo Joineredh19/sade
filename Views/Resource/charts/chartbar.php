@@ -5,6 +5,10 @@
     </head>
 <!-- INICIO TABLA SEMANAL -->
 <div>
+<?php 
+$DIASSEMANA = array('LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES');
+$dias = json_encode($DIASSEMANA);
+?>
                   <canvas id="yChart" width="200" height="80"></canvas>
                 </div>
                 <script>
@@ -12,7 +16,7 @@
                   const yChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                              labels: ['LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES'],
+                              labels: <?php echo $dias;?>,
                               datasets: [{
                                           label: 'FALTAS TOTALES',
                                           data: [30, 44, 27, 24, 23],
