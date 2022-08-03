@@ -8,7 +8,7 @@
   if(!isset($_SESSION["id"])){
     header("location: ../../Views/pages/loginAdmin.php");
   } else if (($datos->__GET('TRoles_id') != '1') xor ($datos->__GET('TRoles_id') != '2') xor ($datos->__GET('TRoles_id') != '3')){
-    header("location: ../../Views/pages/Index.php");
+    header("location: ../../Views/pages/index.php");
   }
 ?>
 
@@ -64,7 +64,7 @@
     <!-- Remind Passowrd -->
     <label> ¿Eres administrador? </label>
     <div id="formFooter">
-      <a class="underlineHover" href="Index.php">Regresar</a>
+      <a class="underlineHover" href="index.php">Regresar</a>
     </div>
 
   </div>
