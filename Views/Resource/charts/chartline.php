@@ -5,6 +5,9 @@
     </head>
 <!--INICIO TABLA SEMESTRAL -->
 <div>
+<?php
+include '../../Asistencia/GraficaInasistencia.php'; 
+?>
                   <canvas id="myChart" width="400" height="187"></canvas>
                 </div>
                 <script>
@@ -12,16 +15,16 @@
                   const myChart = new Chart(linechart, {
                         type: 'line',
                         data: {
-                              labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                              labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
                               datasets: [{
                                           label: 'FALTAS ATENDIDAS',
-                                          data: [20, 26, 12, 16, 10, 24],
+                                          data: [<?php echo $EneroAten.', '.$FebreroAten.', '.$MarzoAten.', '.$AbrilAten.', '.$MayoAten.', '.$JunioAten.', '.$JulioAten.', '.$AgostoAten.', '.$SeptAten.', '.$OctAten.', '.$NovAten.', '.$DicAten?>],
                                           backgroundColor: ['rgba(27, 157, 51)',],
                                           borderColor:'rgb(27, 157, 51)',
                                         },
                                         {
                                           label: 'FALTAS SIN ATENDER',
-                                          data: [10, 18, 15, 8, 13, 14],
+                                          data: [<?php echo $EneroIna.', '.$FebreroIna.', '.$MarzoIna.', '.$AbrilIna.', '.$MayoIna.', '.$JunioIna.', '.$JulioIna.', '.$AgostoIna.', '.$SeptIna.', '.$OctIna.', '.$NovIna.', '.$DicIna?>],
                                           backgroundColor: ['rgba(207, 4, 41)',],
                                           borderColor:'rgb(204,4,41)',
                                         }]
