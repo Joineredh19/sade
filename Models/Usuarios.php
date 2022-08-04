@@ -16,6 +16,7 @@ class Usuarios
     private $rol;
     private $TTutoresPadres_id;
     private $TTutoresAcademicos_id;
+    private $TTutorAcademico_nombre;
     private $Imagen;
     
 
