@@ -27,7 +27,7 @@
                   <a class="dropdown-item" href="../pages/inasistencias.php">Ver las Inasistencias</a>
                   <?php } ?>
                   <a class="dropdown-item" href="./perfil.php">Ver perfil</a>
-                  <a class="dropdown-item" href="../pages/loginAdmin.php" <?php   session_unset(); session_destroy(); ?>>Cerrar sesión</a>
+                  <a class="dropdown-item" href="../../Actions/login/logout.php">Cerrar sesión</a>
                 </div>
               </li>
               <li class="nav-item">
