@@ -12,6 +12,7 @@ date_default_timezone_set('America/Mexico_City');
  $conn = mysqli_connect("softwarela.com.mx",
  "softwa60_sade22", "Sade2022*", "softwa60_sade22");
  $today = date('Y-m-d');
+ $yearactual = date('Y');
 ?>
  <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/SLALogo.png">
  <link rel="icon" type="image/png" href="../Resource/img/SLALogo.png">
@@ -190,7 +191,7 @@ date_default_timezone_set('America/Mexico_City');
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-bar-chart"></i> SLA, 2022
+                  <i class="fa fa-bar-chart"></i> SLA, <?php echo $yearactual; ?>
                 </div>
               </div>
             </div>
@@ -212,7 +213,7 @@ date_default_timezone_set('America/Mexico_City');
 
                 <hr>
                 <div class="stats">
-                  <i class="fa fa-pie-chart" aria-hidden="true"></i> SLA, 2022
+                  <i class="fa fa-pie-chart" aria-hidden="true"></i> SLA, <?php echo $yearactual; ?>
                 </div>
               </div>
             </div>
@@ -231,7 +232,7 @@ date_default_timezone_set('America/Mexico_City');
               <div class="card-footer">
                 <hr />
                 <div class="card-stats">
-                  <i class="fa fa-area-chart" aria-hidden="true"></i> SLA, 2022
+                  <i class="fa fa-area-chart" aria-hidden="true"></i> SLA, <?php echo $yearactual; ?>
                 </div>
               </div>
             </div>
