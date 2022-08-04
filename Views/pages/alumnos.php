@@ -106,6 +106,9 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                         Rol
                       </th>
                       <th class="text-center">
+                        Tutor Academico
+                      </th>
+                      <th class="text-center">
                         Acción
                       </th>
                     </thead>
@@ -129,6 +132,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Email') ?></td>
                                     <td  align="center"><?= $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('Telefono') ?></td>
                                     <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('tgeneros_id')?></td>
+                                    <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')?></td>
                                     <td  align="center"><?php echo $HomeController->VerUsuarioxId($_SESSION['id'])->__GET('TRoles_id')?></td>
                                     <td align="center" style="padding: 0;"> <a href="completarinfo.php?IdUsuario=<?= $key->__GET('id') ?>" target="_blank" title="Alumnos" class="btn btn-success"><i class="fa fa-eye"></i></a></td>
                                     <td align="center" style="padding: 0;"> <a href="imprimir.php?IdUsuario=<?= $key->__GET('id') ?>" title="Imprimir datos" class="btn btn-success"><i class="fa fa-print"></i></a></td>
