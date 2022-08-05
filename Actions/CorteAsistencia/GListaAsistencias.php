@@ -41,12 +41,14 @@ if (isset($_POST["GenerarScript"])) {
                                                         WHERE tdatosalumnos.TTurnos_id = 1 AND tusuarios.Estatus = true ");
     
                 while ($data_asistencia = mysqli_fetch_array($queryAsistencia)) {
-                    $insertar = "INSERT INTO `tbitacorasalumnosdia`(`id`, `Codigo`, `FHoraAsistencia`, `Falta`, `DesFalta`) VALUES 
+                    $insertar = "INSERT INTO `tbitacorasalumnosdia`(`id`, `Codigo`, `FHoraAsistencia`, `Falta`, `DesFalta`, `EstatusReg`, `DesEstatusReg`) VALUES 
                         (NULL,
                         $data_asistencia[Codigo],
                         DEFAULT,
                         0,
-                        'Inasistencia'
+                        'Inasistencia',
+                        1,
+                        'Habilitado'
                         )";
                         $query=mysqli_query($conn, $insertar);
                 }                                           
@@ -78,12 +80,14 @@ if (isset($_POST["GenerarScript"])) {
                                                         WHERE tdatosalumnos.TTurnos_id = 2 AND tusuarios.Estatus = true ");
     
                 while ($data_asistencia = mysqli_fetch_array($queryAsistencia)) {
-                    $insertar = "INSERT INTO `tbitacorasalumnosdia`(`id`, `Codigo`, `FHoraAsistencia`, `Falta`, `DesFalta`) VALUES 
+                    $insertar = "INSERT INTO `tbitacorasalumnosdia`(`id`, `Codigo`, `FHoraAsistencia`, `Falta`, `DesFalta`, `EstatusReg`, `DesEstatusReg`) VALUES 
                         (NULL,
                         $data_asistencia[Codigo],
                         DEFAULT,
                         0,
-                        'Inasistencia'
+                        'Inasistencia',
+                        1,
+                        'Habilitado'
                         )";
                         $query=mysqli_query($conn, $insertar);
                 }
@@ -116,12 +120,14 @@ if (isset($_POST["GenerarScript"])) {
                                                          ");
     
                 while ($data_asistencia = mysqli_fetch_array($queryAsistencia)) {
-                    $insertar = "INSERT INTO `tbitacorasalumnosdia`(`id`, `Codigo`, `FHoraAsistencia`, `Falta`, `DesFalta`) VALUES 
+                    $insertar = "INSERT INTO `tbitacorasalumnosdia`(`id`, `Codigo`, `FHoraAsistencia`, `Falta`, `DesFalta`, `EstatusReg`, `DesEstatusReg`) VALUES 
                         (NULL,
                         $data_asistencia[Codigo],
                         DEFAULT,
                         0,
-                        'Inasistencia'
+                        'Inasistencia',
+                        1,
+                        'Habilitado'
                         )";
                         $query=mysqli_query($conn, $insertar);
                 }

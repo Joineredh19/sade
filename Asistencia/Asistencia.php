@@ -61,11 +61,13 @@
 
 					if (empty($data_entrada['FHoraEntrada'])) {
 					
-						$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+						$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`, `EstatusReg`, `DesEstatusReg`) VALUES 
 								( NULL,
 								 '$Codigo',
 								 CURRENT_TIMESTAMP,
-								 '$ObservacionEntrada'
+								 '$ObservacionEntrada',
+								 1,
+								 'Habilitado'
 								)";
 								$query=mysqli_query($conn, $insertar);
 						
@@ -107,11 +109,13 @@
 							
 						if ($result_entrada3 == $result_salida3) {
 		
-								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`, `EstatusReg`, `DesEstatusReg`) VALUES 
 								( NULL,
 								 '$Codigo',
 								 CURRENT_TIMESTAMP,
-								 '$ObservacionEntrada'
+								 '$ObservacionEntrada',
+								 1,
+								 'Habilitado'
 								)";
 								$query=mysqli_query($conn, $insertar);
 
@@ -191,11 +195,13 @@
 	
 							if ($result_entrada2 == $result_salida2) {
 		
-								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`, `EstatusReg`, `DesEstatusReg`) VALUES 
 								( NULL,
 								 '$Codigo',
 								 CURRENT_TIMESTAMP,
-								 '$ObservacionEntrada'
+								 '$ObservacionEntrada',
+								 1,
+								 'Habilitado'
 								)";
 								$query=mysqli_query($conn, $insertar);
 
@@ -235,11 +241,13 @@
 			
 							}else if ($result_entrada2 > $result_salida2) {
 		
-								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`) VALUES 
+								$insertar="INSERT INTO `tbitacorasalumnos`(`id`, `Codigo`, `FHoraEntrada`, `ObservacionEntrada`, `EstatusReg`, `DesEstatusReg`) VALUES 
 								( NULL,
 								 '$Codigo',
 								 CURRENT_TIMESTAMP,
-								 '$ObservacionEntrada'
+								 '$ObservacionEntrada',
+								 1,
+								 'Habilitado'
 								)";
 								$query=mysqli_query($conn, $insertar);
 

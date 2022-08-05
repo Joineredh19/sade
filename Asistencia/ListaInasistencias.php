@@ -5,7 +5,7 @@ $query_inasistencia = mysqli_query($conn, "SELECT tbitacorasalumnosdia.id, tbita
                                         INNER JOIN tdatosalumnos ON CONVERT(tbitacorasalumnosdia.Codigo using utf8) collate utf8_spanish_ci = tdatosalumnos.Codigo
 										INNER JOIN tusuarios ON tdatosalumnos.TUsuarios_id = tusuarios.id
                                         INNER JOIN tturnos ON tdatosalumnos.TTurnos_id = tturnos.id
-                                        /*WHERE tbitacorasalumnosdia.Falta = 0*/ ORDER BY tbitacorasalumnosdia.id ASC");
+                                        WHERE tbitacorasalumnosdia.EstatusReg = 1 ORDER BY tbitacorasalumnosdia.id ASC");
     
     $result = mysqli_num_rows($query_inasistencia);
     

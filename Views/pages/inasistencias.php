@@ -3,10 +3,11 @@
 require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
 
+$datos = $HomeController->VerUsuarioxRol($_SESSION['id']);
+
 require '../../Lib/FlashMessages.php';
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
-
 ?>
 
 <link rel="apple-touch-icon" sizes="76x76" href="../Resource/img/UDG- VectorR.png">
@@ -80,52 +81,72 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
               
               </div>
               <div class="card-body">
-              <?php  $msg->display(); ?>
+              <?php if (($datos->__GET('TRoles_id') == '1') xor ($datos->__GET('TRoles_id') == '2') xor ($datos->__GET('TRoles_id') == '3')){ 
+                include '../../Asistencia/HabilitarAsistencia.php';  
+              ?>
+              <?php  $msg->display(); ?>  
                 <div class="table-responsive">
-                <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar">
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th class="text-center">
-                        id
-                      </th>
-                      <th class="text-center">
-                        Código
-                      </th>
-                      <th class="text-center">
-                        Turno
-                      </th>
-                      <th class="text-center">
-                        Nombre
-                      </th>
-                      <th class="text-center">
-                        Apellido
-                      </th>
-                      <th class="text-center">
-                        Fecha/Hora de Registro
-                      </th>
-                      <th class="text-center">
-                        Descripción de Falta 
-                      </th>
-                      <th class="text-center">
-                        Aptitud
-                      </th>
-                      <th class="text-center">
-                        Aprovechamiento
-                      </th>
-                      <th class="text-center">
-                        Acción
-                      </th>
-                      </thead>
-                      <tbody id="myTable">
+                <form method="post"  action="#"  enctype="multipart/form-data" style="text-align: center;">
+                  <label style="font-size: 15px;">Habilitar registros por rango de fecha</label>
+                  <br>
+                  <label>Fecha Inicio:</label>
+                  <input type="date" name="FechaStartHab" style="margin-right: 10px;" required>
+                  <label>Fecha Final:</label>
+                  <input type="date" name="FechaEndHab" required>
+                  <br>
+                  <button type="submit" class="btn btn-success " id="btnRegistrarse" name="HabilitarIna" value="HabilitarIna">Habilitar</button>
+                </form>
+                <form method="post"  action="#"  enctype="multipart/form-data"  style="text-align: center;">
+                  <label style="font-size: 15px;">Inhabilitar registros a partir de la fecha actual</label>
+                  <br>
+                  <button type="submit" class="btn btn-success" id="btnRegistrarse" name="InhabilitarIna" value="InhabilitarIna" onclick="return ConfirmacionInhabilitar()">Inhabilitar</button>
+                </form>
+                <br>
+                  <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar">
+                    <table class="table">
+                      <thead class=" text-primary">
+                        <th class="text-center">
+                          id
+                        </th>
+                        <th class="text-center">
+                          Código
+                        </th>
+                        <th class="text-center">
+                          Turno
+                        </th>
+                        <th class="text-center">
+                          Nombre
+                        </th>
+                        <th class="text-center">
+                          Apellido
+                        </th>
+                        <th class="text-center">
+                          Fecha/Hora de Registro
+                        </th>
+                        <th class="text-center">
+                          Descripción de Falta 
+                        </th>
+                        <th class="text-center">
+                          Aptitud
+                        </th>
+                        <th class="text-center">
+                          Aprovechamiento
+                        </th>
+                        <th class="text-center">
+                          Acción
+                        </th>
+                        </thead>
+                        <tbody id="myTable">
                     
-                        <?php 
-                          include '../../Asistencia/ListaInasistencias.php';
-                        ?>
+                          <?php 
+                            include '../../Asistencia/ListaInasistencias.php';
+                          ?>
                       
-                    </tbody>
-                    </tbody>
-                  </table>
+                      </tbody>
+                      </tbody>
+                    </table>
                 </div>
+                <?php } ?>
               </div>
             </div>
           </div>
