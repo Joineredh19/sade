@@ -14,17 +14,21 @@ $fecha_hoy = date('Y-m-d');
 if (isset($_POST['HabilitarIna'])) {
     $FechaInicio = $_POST['FechaStartHab'];
     $FechaFinal = $_POST['FechaEndHab'];
+
+    //Incrementando 1 dia
+    $mod_date = strtotime($FechaFinal."+ 1 days");
+    $FechaFinalNueva = date("Y-m-d",$mod_date);
         
     $actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnosdia` SET 
                                         `EstatusReg`= 1,
                                         `DesEstatusReg`= 'Habilitado' 
-                                        WHERE FHoraAsistencia BETWEEN date('$FechaInicio') AND date('$FechaFinal')
+                                        WHERE FHoraAsistencia BETWEEN date('$FechaInicio') AND date('$FechaFinalNueva')
                                         ");
 
     $actualizar2 = mysqli_query($conn, "UPDATE `tbitacorasalumnos` SET 
                                         `EstatusReg`= 1,
                                         `DesEstatusReg`= 'Habilitado' 
-                                        WHERE FHoraEntrada BETWEEN date('$FechaInicio') AND date('$FechaFinal')"
+                                        WHERE FHoraEntrada BETWEEN date('$FechaInicio') AND date('$FechaFinalNueva')"
                                         );
     
     $msg->success('Registros Habilitados');
@@ -45,13 +49,13 @@ if (isset($_POST['InhabilitarIna'])) {
     $actualizar = mysqli_query($conn, "UPDATE `tbitacorasalumnosdia` SET 
                                         `EstatusReg`= NULL,
                                         `DesEstatusReg`='Inhabilitado' 
-                                        WHERE date(FHoraAsistencia) < date('$fecha_hoy')"
+                                        WHERE date(FHoraAsistencia) <= date('$fecha_hoy')"
                                         );
 
     $actualizar2 = mysqli_query($conn, "UPDATE `tbitacorasalumnos` SET 
                                         `EstatusReg`= NULL,
                                         `DesEstatusReg`='Inhabilitado' 
-                                        WHERE date(FHoraEntrada) < date('$fecha_hoy')"
+                                        WHERE date(FHoraEntrada) <= date('$fecha_hoy')"
                                         );
     
     $msg->success('Registros Inhabilitados');

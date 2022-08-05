@@ -93,7 +93,7 @@ date_default_timezone_set('America/Mexico_City');
                       <p class="card-category">Faltas</p>
                       
                       <?php
-                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE date (FHoraAsistencia) = '$today' AND Falta = 0";
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE date (FHoraAsistencia) = '$today' AND Falta = 0 AND EstatusReg = 1";
                 $query = $conn->query($sql);
 
                 echo '<p class="card-title">'.$query->num_rows.'<p>'
@@ -125,7 +125,7 @@ date_default_timezone_set('America/Mexico_City');
                     <div class="numbers">
                       <p class="card-category">Faltas atendidas</p>
                       <?php
-                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE date (FHoraAsistencia) = '$today' AND Falta = 2";
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE date (FHoraAsistencia) = '$today' AND Falta = 2 AND EstatusReg = 1";
                 $query = $conn->query($sql);
 
                 echo '<p class="card-title">'.$query->num_rows.'<p>'
@@ -156,7 +156,7 @@ date_default_timezone_set('America/Mexico_City');
                     <div class="numbers">
                       <p class="card-category">Faltas sin atender</p>
                       <?php
-                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0";
+                $sql = "SELECT * FROM tbitacorasalumnosdia WHERE Falta = 0 AND EstatusReg = 1";
                 $query = $conn->query($sql);
 
                 echo '<p class="card-title">'.$query->num_rows.'<p>'
