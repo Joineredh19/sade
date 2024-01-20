@@ -4,7 +4,7 @@ require_once('../../Controllers/HomeController.php');
 $HomeController = new HomeController();
 
 require '../../Lib/FlashMessages.php';
-// Instantiate the class
+// Intancia clase
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 ?>
